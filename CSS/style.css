@@ -3,12 +3,13 @@
     padding: 0;
 }
 body {
- background-image: url();
+ background-image:url(../FOTOS/LogoElegantedeIsabellaAtacadista.png);
 background-size: cover; 
 background-repeat: no-repeat; 
 background-position: center;
 color: black;
-    
+
+
 }
 .header-desktop {
     position: sticky;
@@ -25,35 +26,40 @@ color: black;
 }
 
 #conta-simples {
+    max-width: 192000px; /* Define um limite máximo de largura */
     display: flex; /* Alinha os itens horizontalmente */
     list-style: none; /* Remove os marcadores padrão */
     text-transform: uppercase; /* Deixa o texto em maiúsculas */
     color: black; /* Define a cor do texto */
-    font-size: 8px; /* Define o tamanho da fonte */
-    gap: 5px; /* Espaçamento entre os itens */
-    margin: 24px; /* Margem superior */  
+    font-size: 15px; /* Define o tamanho da fonte */
+    gap: 25px; /* Espaçamento entre os itens */  
+     background-color: #f8f8f8; /* (Opcional) Adiciona uma cor de fundo */
 }
 
 .header-baixo-desktop {
-    display: flex; /* Alinha os itens horizontalmente */
-    justify-content: center; /* Centraliza o conteúdo */
+   
+    background-color: rgba(255, 255, 255, 0.938); /* Branco com 80% de opacidade */
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Alinha verticalmente */
-    padding: 10px 20px; /* Espaçamento interno */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destacar o header */
-    align-items: center; /* Alinha verticalmente */
-    list-style: none;
+    padding: 10px 0; /* Espaçamento interno */
+    width: 80%; /* Reduz a largura para 80% */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
-.nav-desktop {
+.nav-desktop .list-desktop {
     display: flex; /* Alinha os itens horizontalmente */
     list-style: none; /* Remove os marcadores padrão */
     gap: 20px; /* Espaçamento entre os itens */
+    padding: 0; /* Remove o padding padrão */
+    margin: 10px;
     
 }
 
-.nav-desktop a {
-    text-decoration: none; /* Remove o sublinhado dos links */
+.nav-desktop .list-desktop li a {
+    text-decoration: none; /* Remove o sublinhado */
     color: black; /* Define a cor do texto */
-    font-size: 14px; /* Tamanho da fonte */
-    text-transform: uppercase; /* Texto em maiúsculas */
+    font-size: 27px; /* Define o tamanho da fonte */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+   
 }
