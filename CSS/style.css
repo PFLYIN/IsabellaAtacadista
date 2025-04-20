@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
- background-image:url(../FOTOS/LogoElegantedeIsabellaAtacadista.png);
+ background-image:url(../IMAGEN/imagenbranca.png);
 background-size: cover; 
 background-repeat: no-repeat; 
 background-position: center;
@@ -25,15 +25,30 @@ color: black;
     box-shadow:  0 1px 0 1px rgba(131, 131, 131, 0.075); /* (Opcional) Adiciona uma sombra */
 }
 
+.div-logo {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%; /* Ocupa toda a largura do header */
+    height: 200px; /* Adiciona altura para centralizar melhor */
+    margin-left: 130px; /* Move o logo para a direita */
+}
+
+.div-logo img {
+    max-width: 300px; /* Aumenta o tamanho máximo do logo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
 #conta-simples {
-    max-width: 192000px; /* Define um limite máximo de largura */
     display: flex; /* Alinha os itens horizontalmente */
     list-style: none; /* Remove os marcadores padrão */
     text-transform: uppercase; /* Deixa o texto em maiúsculas */
     color: black; /* Define a cor do texto */
     font-size: 15px; /* Define o tamanho da fonte */
-    gap: 25px; /* Espaçamento entre os itens */  
-     background-color: #f8f8f8; /* (Opcional) Adiciona uma cor de fundo */
+    gap: 10px; /* Espaçamento entre os itens */  
+    background-color: #f8f8f8; /* (Opcional) Adiciona uma cor de fundo */
+    white-space: nowrap; /* Impede a quebra de linha */
+    color: black;
 }
 
 .header-baixo-desktop {
