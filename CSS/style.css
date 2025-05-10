@@ -127,8 +127,8 @@ body {
 }
 
 #carouselExampleAutoplaying {
-    width: 53%;
-    height: 400px;
-    margin: auto;
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 15px; /* Define uma altura máxima para manter a imagem pequena */
     
 }
