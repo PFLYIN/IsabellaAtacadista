@@ -9,8 +9,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     color: black;
-
-
 }
 
 .header-desktop {
@@ -76,11 +74,15 @@ body {
     /* (Opcional) Adiciona uma cor de fundo */
     white-space: nowrap;
     /* Impede a quebra de linha */
+    text-decoration: none;
+    
 
 }
 
 .header-baixo-desktop {
     position: sticky;
+    display: block;
+    
     top: 0;
     z-index: 1000;
     /* Garante que o header fique acima de outros elementos */

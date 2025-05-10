@@ -1,56 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Isabella Atacadista</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
-     <!--Utilizando o site da PRIVALIA como referência-->
-      <!--https://br.privalia.com/public/index-->
+    <!--Utilizando o site da PRIVALIA como referência-->
+    <!--https://br.privalia.com/public/index-->
 
-    
-    <header class="header-desktop">
-        <div class="div-logo">
-            <a><img src="LOGO/logoIsabella.png" alt="Isabella Atacadista"></a>
-        </div>
-        <!--tentar deixar a barra de pesquisa entre a logo e a div-conta-->
-            
-           
-         <!-- teentar deixar do lado do logo, -->
-            <div id="div-conta"> 
-                <ul id="conta-simples">
-                    <li><a href="">Minha conta</a></li>
-                    <li><a href="">Criar conta</a></li>
-                </ul>
-            </div>
-    </header>
- <!--Esse é o header que vai ficar na parte de baixo do outro header, como no site -->
-    <header class="header-baixo-desktop">    
-        <nav class="nav-desktop">
-            <ul class="list-desktop">
-                <li><a href="">Home</a></li>
-                <li><a href="">Vestidos</a></li>
-                <li><a href="">Conjuntos</a></li>
-                <li><a href="">Sobre Nós</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>  
-    </header>
-    
+<?php include "header.php"; ?>
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="IMAGEN/VestidoBranco2 (1).jpg class="d-block w-100" alt="...">
+            <img src="IMAGEN/VestidoBranco2 (1).jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="IMAGEN/VestidoSalmão.jpg class="d-block w-100" alt="...">
+            <img src="IMAGEN/VestidoSalmão.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <img src="IMAGEN/logovestidomarroncomletras.jpg" class="d-block w-100" alt="...">
@@ -68,7 +41,8 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
+      
+    
 
 
 
@@ -81,5 +55,8 @@
 
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+<?php include "footer.php"; ?>
 </body>
 </html>
+
