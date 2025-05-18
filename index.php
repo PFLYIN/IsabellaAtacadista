@@ -17,7 +17,7 @@
 
 
 
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide"      data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="IMAGEN/VestidoBranco2 (1).jpg" class="d-block w-100" alt="...">
@@ -41,28 +41,13 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+  <main>
+    <div class="grid_poster">
       
-      <h1> Catalago Vestidos</h1>
+
+    </div>
+  </main>
     
-
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem saepe inventore illum voluptates dignissimos nam facilis veniam itaque a ipsum consequatur praesentium expedita impedit accusantium natus magni, eum blanditiis facere?</p>
-    
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum aut neque molestiae modi, veritatis ducimus ex at, excepturi eveniet quisquam qui dolorem non molestias quas cumque reprehenderit repudiandae cum atque?</p>
-    
-    
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus odio nemo itaque ex eveniet. Consequuntur odit tenetur labore repudiandae id, minus, eum quas nulla impedit asperiores doloribus laboriosam qui explicabo.</p>
-
-
-
-
-
-
-
-
-
-
-
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 <script src="carrinho.js"></script>
