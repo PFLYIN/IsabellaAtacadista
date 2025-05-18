@@ -9,8 +9,7 @@
          <!-- teentar deixar do lado do logo, -->
             <div id="div-conta"> 
                 <ul id="conta-simples">
-                    <li><a href="">Minha conta</a></li>
-                    <li><a href="">Criar conta</a></li>
+                    <li><a href="carrinho.php">🛒 Carrinho</a></li>
                 </ul>
             </div>
     </header>
@@ -19,7 +18,7 @@
         <nav class="nav-desktop">
             <ul class="list-desktop">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="vestidos.php">Vestidos</a></li>
+                <li><a href="catalago1.php">Vestidos</a></li>
                 <li><a href="">Conjuntos</a></li>
                 <li><a href="">Sobre Nós</a></li>
                 <li><a href="">Contato</a></li>
@@ -29,71 +28,46 @@
 
 <style>
     .header-desktop {
-    
     width: 90%;
-    /* Define a largura do header (ajuste conforme necessário) */
-    max-width: 192000px;
-    /* Define um limite máximo de largura */
-    top: 0;
+    max-width: 1200px; /* Ajuste conforme o design desejado */
+    margin: 0 auto; /* Centraliza o header */
     display: flex;
-    /* Ativa o Flexbox */
-    justify-content: space-between;
-    /* Espaço entre os elementos */
+    justify-content: space-between; /* Espaça o logo e a conta */
     align-items: center;
-    /* Alinha verticalmente */
     padding: 10px 20px;
-    /* Espaçamento interno */
-    margin: 0 auto;
-    /* Centraliza o header horizontalmente */
-    border-radius: 0;
-    /* (Opcional) Adiciona bordas arredondadas */
-    box-shadow: 0 1px 0 1px rgba(131, 131, 131, 0.075);
-    /* (Opcional) Adiciona uma sombra */
+  
 }
 
 .div-logo {
-    display: flex;
-    /* Ativa o Flexbox */
-    justify-content: center;
-    /* Centraliza horizontalmente */
-    align-items: center;
-    /* Centraliza verticalmente */
-    width: 100%;
-    /* Ocupa toda a largura do header */
-    height: 210px;
-    /* Adiciona altura para centralizar melhor */
-    margin-left: 190px;
-    /* Move o logo para a direita */
+     margin-left: 525px;
 }
 
 .div-logo img {
-    max-width: 300px;
-    /* Aumenta o tamanho máximo do logo */
+    max-width: 250px; /* Ajuste o tamanho do logo */
     height: auto;
-    /* Mantém a proporção da imagem */
 }
 
 #conta-simples {
-    font-family: serif;
-    display: flex;
-    /* Alinha os itens horizontalmente */
+    font-family: 'Oswald', sans-serif; /* Usando a fonte Oswald carregada */
     list-style: none;
-    /* Remove os marcadores padrão */
-    text-transform: uppercase;
-    /* Deixa o texto em maiúsculas */
-    color: black;
-    /* Define a cor do texto */
-    font-size: 15px;
-    /* Define o tamanho da fonte */
-    gap: 10px;
-    /* Espaçamento entre os itens */
-    background-color: #f8f8f8;
-    /* (Opcional) Adiciona uma cor de fundo */
-    white-space: nowrap;
-    /* Impede a quebra de linha */
-    text-decoration: none;
-    
+    padding: 0; /* Remova padding se não for necessário */
+    margin: 0; /* Remova margin se não for necessário */
+    display: flex;
+    align-items: center;
+}
 
+#conta-simples li a {
+    text-decoration: none;
+    color: #333; /* Cor mais escura para melhor contraste */
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#conta-simples li a:hover {
+    background-color: rgb(122, 0, 67); /* Cor de destaque do seu site */
+    color: white;
 }
 
 .header-baixo-desktop {

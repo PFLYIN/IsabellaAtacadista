@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+.titulo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 5 produtos por linha em desktop */
+  gap: 20px;
+  max-width: 100vw; /* Ocupe toda a largura da tela */
+  width: 100%;
+  margin: 0; /* Remove o margin auto */
+}
+/* Responsivo para telas menores */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.produto {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s;
+}
+.produto:hover {
+  transform: translateY(-5px);
+}
+.produto img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.info {
+  padding: 10px;
+  text-align: center;
+}
+.quantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+}
+.quantidade button {
+  padding: 4px 10px;
+  margin: 0 6px;
+  font-weight: bold;
+}
+.add-carrinho {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.add-carrinho:hover {
+  background: #e457a0;
+}
+.modal {
+  display: none; /* Oculto por padrão */
+  position: fixed; /* Fica fixo na tela */
+  z-index: 1001; /* Fica na frente de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite rolagem se a imagem for grande */
+  background-color: rgba(0,0,0,0.7); /* Fundo escuro semi-transparente */
+}
+
+.modal-conteudo {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  display: none; /* Oculto por padrão */
+  position: fixed; /* Fica fixo na tela */
+  z-index: 1001; /* Fica na frente de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite rolagem se a imagem for grande */
+  background-color: rgba(0,0,0,0.7); /* Fundo escuro semi-transparente */
+}
+
+.modal-conteudo {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,4 +1,4 @@
-
+<?php include "header.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +15,7 @@
     <!--Utilizando o site da PRIVALIA como referência-->
     <!--https://br.privalia.com/public/index-->
 
-<?php include "header.php"; ?>
+
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -65,7 +65,8 @@
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
-<?php include "footer.php"; ?>
+<script src="carrinho.js"></script>
+<?php include "footer.php";?>
 </body>
 </html>
 

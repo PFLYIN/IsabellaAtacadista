@@ -14,36 +14,33 @@
 </footer>
 
 <style>
-    .footer {
-    margin-top: auto;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+ 
+.footer {
+    background-color: #222; /* Um tom de cinza escuro */
+    color: #f1f1f1; /* Cor de texto mais clara */
+    padding: 20px 0; /* Mais espaçamento vertical */
     text-align: center;
+    margin-top: 40px; /* Adiciona um espaço acima do rodapé */
+    font-family: 'Oswald', sans-serif; /* Consistência de fonte */
 }
 
 .footer-content p {
-    margin: 10px;
-    font-size: 18px;
-    font-weight: bold;
+    margin: 5px 0; /* Espaçamento menor entre as linhas de texto */
+    font-size: 14px; /* Tamanho de fonte um pouco menor */
 }
 
 .social-links {
-    margin-top: 10px;
-}
-
-.social-links a {
-    margin: 0 10px;
-    display: inline-block;
+    margin-top: 15px; /* Espaçamento acima dos ícones */
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
+    width: 24px; /* Ícones um pouco menores */
+    height: 24px;
+    transition: opacity 0.3s; /* Transição mais suave */
 }
 
 .social-icon:hover {
-    transform: scale(1.1);
+    opacity: 0.7; /* Efeito de hover mais sutil que o scale */
+    transform: none; /* Remove o scale se preferir */
 }
 </style>
