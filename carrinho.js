@@ -70,13 +70,56 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Galeria de imagens no modal
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("imgZoom");
+  const btnFechar = document.querySelector(".fechar");
+  const btnProximo = document.querySelector(".proximo");
+  const btnAnterior = document.querySelector(".anterior");
+
+  let imagensGaleria = [];
+  let indiceAtual = 0;
+
   document.querySelectorAll(".zoom-img").forEach(img => {
     img.addEventListener("click", () => {
+      const produto = img.closest(".produto");
+      const imagens = produto.getAttribute("data-imagens");
+      imagensGaleria = imagens ? JSON.parse(imagens) : [img.src];
+      indiceAtual = 0;
+      modalImg.src = imagensGaleria[indiceAtual];
       modal.style.display = "block";
-      modalImg.src = img.src;
+      atualizarBotoesGaleria();
     });
   });
-  document.querySelector(".fechar").addEventListener("click", () => modal.style.display = "none");
+
+  function atualizarBotoesGaleria() {
+    if (btnAnterior) btnAnterior.style.display = imagensGaleria.length > 1 ? "inline-block" : "none";
+    if (btnProximo) btnProximo.style.display = imagensGaleria.length > 1 ? "inline-block" : "none";
+  }
+
+  if (btnProximo) {
+    btnProximo.addEventListener("click", () => {
+      if (imagensGaleria.length > 0) {
+        indiceAtual = (indiceAtual + 1) % imagensGaleria.length;
+        modalImg.src = imagensGaleria[indiceAtual];
+      }
+    });
+  }
+
+  if (btnAnterior) {
+    btnAnterior.addEventListener("click", () => {
+      if (imagensGaleria.length > 0) {
+        indiceAtual = (indiceAtual - 1 + imagensGaleria.length) % imagensGaleria.length;
+        modalImg.src = imagensGaleria[indiceAtual];
+      }
+    });
+  }
+
+  if (btnFechar) {
+    btnFechar.addEventListener("click", () => {
+      modal.style.display = "none";
+      imagensGaleria = [];
+      indiceAtual = 0;
+    });
+  }
 });
