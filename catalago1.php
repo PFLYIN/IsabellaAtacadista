@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <title>Catálogo de Vestidos</title>
   <link rel="stylesheet" href="CSS/catalago1.css">
 </head>
@@ -12,11 +13,11 @@
 <h1 class="titulo">Catálogo de Vestidos</h1>
 
 <div class="grid">
-  <div class="produto" data-id="1" data-nome="Vestido Marrom" data-preco="149.00"
-    data-imagens='["IMAGEN/VestidoSalmão.jpg","IMAGEN/VestidoMarrom2.jpg","IMAGEN/VestidoMarrom3.jpg"]'>
-    <img src="IMAGEN/VestidoSalmão.jpg" alt="Vestido Marrom" class="zoom-img">
+  <div class="produto" data-id="1" data-nome="VestidoRafaelaRosa" data-preco="149.00"
+    data-imagens='["IMG-VESTIDO-RAFAELA/VestidoRosa-FT1.jpg","IMG-VESTIDO-RAFAELA/VESTIDOROSA-FT2.jpg","IMG-VESTIDO-RAFAELA/VestidoRosa-FT3.jpg"]'>
+    <img src="IMG-VESTIDO-RAFAELA/VestidoRosa-FT1.jpg" alt="VestidoRafaela" class="zoom-img">
     <div class="info">
-      <h2>Vestido Marrom</h2>
+      <h2>Vestido Rafaela Rosa</h2>
       <p>R$ 149,00</p>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -27,11 +28,11 @@
     </div>
   </div>
 
-  <div class="produto" data-id="2" data-nome="Vestido Roxo" data-preco="139.00"
-    data-imagens='["IMAGEN/VestidoRoxo.jpg","IMAGEN/VestidoRoxo2.jpg","IMAGEN/VestidoRoxo3.jpg"]'>
-    <img src="IMAGEN/VestidoRoxo.jpg" alt="Vestido Roxo" class="zoom-img">
+  <div class="produto" data-id="2" data-nome="VestidoPretoRafaela" data-preco="139.00"
+    data-imagens='["IMG-VESTIDO-RAFAELA/PRETOVESTIDO-FT1.jpg","IMG-VESTIDO-RAFAELA/PretoVestido-FT2.jpg"]'>
+    <img src="IMG-VESTIDO-RAFAELA/PRETOVESTIDO-FT1.jpg" alt="Vestido Preto" class="zoom-img">
     <div class="info">
-      <h2>Vestido Roxo</h2>
+      <h2>Vestido Rafaela Preto</h2>
       <p>R$ 139,00</p>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -41,6 +42,37 @@
       <button class="add-carrinho">🛒 + Adicionar</button>
     </div>
   </div>
+
+  <div class="produto" data-id="2" data-nome="VestidoAmareloIris" data-preco="139.00"
+    data-imagens='["IMG-VSTD-IRIS/VstdAmarelo-FT1.jpg","IMG-VSTD-IRIS/VstdAmarelo-FT2.jpg","IMG-VSTD-IRIS/VstdAmarelo-FT3.jpg"]'>
+    <img src="IMG-VSTD-IRIS/VstdAmarelo-FT1.jpg" alt="Vestido Preto" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Iris Amarelo</h2>
+      <p>R$ 139,00</p>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+
+  <div class="produto" data-id="2" data-nome="VestidoBrancoIris" data-preco="139.00"
+    data-imagens='["IMG-VSTD-IRIS/VSTDBranco-FT1.jpg","IMG-VSTD-IRIS/VSTDBranco-FT2.jpg"]'>
+    <img src="IMG-VSTD-IRIS/VSTDBranco-FT1.jpg" alt="Vestido Preto" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Rafaela Preto</h2>
+      <p>R$ 139,00</p>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+
 
  
 
