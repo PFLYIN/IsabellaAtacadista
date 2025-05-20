@@ -41,12 +41,26 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-  <main>
-    <div class="grid_poster">
+ 
+ <main>
+  <section class="banner-slider">
+    <div class="banner">
+      <picture>
+        <source srcset="Canva/Banner Vestido Mirian_20250520_093438_0000.png" media="(max-width: 768px)">
+        <img src="Canva/Banner Vestido Mirian_20250520_093438_0000.png" alt="Banner Vestido Mirian">
+      </picture>
+    </div>
+    <div class="banner">
+      <picture>
+        <source srcset="Canva/Banner para Site Moda Feminina Conjunto Plush _20250518_160227_0000.png" media="(max-width: 768px)">
+        <img src="Canva/Banner para Site Moda Feminina Conjunto Plush _20250518_160227_0000.png" alt="Banner Vestido Ester">
+      </picture>
+    </div>
+  </section>
       
 
     </div>
-  </main>
+ </main>
     
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 

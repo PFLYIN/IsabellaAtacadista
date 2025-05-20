@@ -9,9 +9,30 @@ body {
   padding: 20px;
 }
 
+.banner-slider {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+
+.banner {
+  width: 100%;
+  display: none;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner.active {
+  display: block;
+}
 
 
-#carouselExampleAutoplaying {
+
+#carouselExampleAutoplaying 
     width: 100%; /* Faz a imagem ocupar toda a largura */
     height: auto; /* Mantém a proporção da imagem */
     max-height: 15px; /* Define uma altura máxima para manter a imagem pequena */
