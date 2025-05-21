@@ -39,7 +39,7 @@
 }
 
 .div-logo {
-     margin-left: 525px;
+     margin-left: 470px;
 }
 
 .div-logo img {

@@ -64,7 +64,7 @@ body {
   font-weight: bold;
 }
 .add-carrinho {
-  background: #ff69b4;
+  background: rgb(122, 0, 67);
   color: white;
   border: none;
   padding: 8px 14px;
@@ -72,7 +72,7 @@ body {
   cursor: pointer;
 }
 .add-carrinho:hover {
-  background: #e457a0;
+  background: rgb(65, 0, 35);
 }
 .modal {
   display: none; /* Oculto por padrão */

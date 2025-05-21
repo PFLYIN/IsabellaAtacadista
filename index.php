@@ -1,6 +1,7 @@
 <?php include "header.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,64 +9,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Isabella Atacadista</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Isabella Atacadista</title>
 </head>
+
 <body>
-    <!--Utilizando o site da PRIVALIA como referência-->
-    <!--https://br.privalia.com/public/index-->
 
-
-
-    <div id="carouselExampleAutoplaying" class="carousel slide"      data-bs-ride="carousel">
+    <!-- Carrossel do Bootstrap -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="IMAGEN/VestidoBranco2 (1).jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="IMAGEN/VestidoSalmão.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="IMAGEN/logovestidomarroncomletras.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="IMAGEN/logovestidomarroncomletras.jpg" class="d-block w-100" alt="...">
-          </div>
+            <div class="carousel-item active">
+                <img src="Canva/VESTIDO ESTER BANNER_20250518_215946_0000.png" class="d-block w-100" alt="Vestido Branco">
+            </div>
+            <div class="carousel-item">
+                <img src="Canva/reallygreatsite.com_20250515_212439_0000.png" class="d-block w-100" alt="Vestido Salmão">
+            </div>
+            <div class="carousel-item">
+                <img src="Canva/Os Melhores Vestidos_20250515_190109_0000.png" class="d-block w-100" alt="Logo Vestido Marrom">
+            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
- 
- <main>
-  <section class="banner-slider">
-    <div class="banner">
-      <picture>
-        <source srcset="Canva/Banner Vestido Mirian_20250520_093438_0000.png" media="(max-width: 768px)">
-        <img src="Canva/Banner Vestido Mirian_20250520_093438_0000.png" alt="Banner Vestido Mirian">
-      </picture>
     </div>
-    <div class="banner">
-      <picture>
-        <source srcset="Canva/Banner para Site Moda Feminina Conjunto Plush _20250518_160227_0000.png" media="(max-width: 768px)">
-        <img src="Canva/Banner para Site Moda Feminina Conjunto Plush _20250518_160227_0000.png" alt="Banner Vestido Ester">
-      </picture>
-    </div>
-  </section>
-      
 
-    </div>
- </main>
-    
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- Imagens fora do carrossel -->
+    <main>
+        <section class="banner-slider">
+            <div class="banner">
+                <picture>
+                    <source srcset="Canva/Banner Vestido Mirian_20250520_093438_0000.png" media="(max-width: 768px)">
+                    <img src="Canva/Banner Vestido Mirian_20250520_093438_0000.png" alt="Banner Vestido Mirian">
+                </picture>
+            </div>
+            <div class="banner">
+                <picture>
+                    <source srcset="Canva/Banner para Site Moda Feminina Conjunto Plush _20250518_160227_0000.png" media="(max-width: 768px)">
+                    <img src="Canva/Banner para Site Moda Feminina Conjunto Plush _20250518_160227_0000.png" alt="Banner Vestido Ester">
+                </picture>
+            </div>
+        </section>
+    </main>
 
-<script src="carrinho.js"></script>
-<?php include "footer.php";?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="carrinho.js"></script>
+    <?php include "footer.php"; ?>
 </body>
-</html>
 
+</html>

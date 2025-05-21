@@ -1,6 +1,6 @@
 * {
 
-    padding: 0;
+  padding: 0;
 }
 
 body {
@@ -13,11 +13,17 @@ body {
   overflow: hidden;
   position: relative;
   max-width: 100%;
+  z-index: 1;
+  /* Garante que o banner esteja acima de outros elementos */
+  min-height: 300px;
+  /* Define uma altura mínima */
 }
 
 .banner {
   width: 100%;
-  display: none;
+  display: block;
+  /* Garante que o banner esteja visível */
+  visibility: visible;
 }
 
 .banner img {
@@ -30,11 +36,29 @@ body {
   display: block;
 }
 
-
-
-#carouselExampleAutoplaying 
-    width: 100%; /* Faz a imagem ocupar toda a largura */
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 15px; /* Define uma altura máxima para manter a imagem pequena */
-    
+#carouselExampleAutoplaying {
+  width: 100%;
+  /* Faz o carrossel ocupar toda a largura */
+  height: 450px;
+  /* Define uma altura fixa para o carrossel */
 }
+
+.carousel-inner img {
+  width: 10%;
+  /* Garante que a imagem ocupe toda a largura */
+  height: 120%;
+  /* Faz a imagem preencher toda a altura do contêiner */
+  object-fit: cover;
+  /* Ajusta a imagem para cobrir o espaço sem margens */
+  object-position: center;
+  /* Centraliza a imagem */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adiciona contraste aos ícones */
+  border-radius: 50%;
+}
+
+.img.d-block.w-100 {}
