@@ -1,7 +1,4 @@
-* {
-
-  padding: 0;
-}
+* {}
 
 body {
   font-family: Arial, sans-serif;
@@ -15,7 +12,7 @@ body {
   max-width: 100%;
   z-index: 1;
   /* Garante que o banner esteja acima de outros elementos */
-  min-height: 300px;
+  min-height: 250px;
   /* Define uma altura mínima */
 }
 
@@ -27,7 +24,7 @@ body {
 }
 
 .banner img {
-  width: 100%;
+  width: 110%;
   height: auto;
   display: block;
 }
@@ -36,17 +33,10 @@ body {
   display: block;
 }
 
-#carouselExampleAutoplaying {
-  width: 100%;
-  /* Faz o carrossel ocupar toda a largura */
-  height: 450px;
-  /* Define uma altura fixa para o carrossel */
-}
-
 .carousel-inner img {
-  width: 10%;
+  width: 100%;
   /* Garante que a imagem ocupe toda a largura */
-  height: 120%;
+  height: 100%;
   /* Faz a imagem preencher toda a altura do contêiner */
   object-fit: cover;
   /* Ajusta a imagem para cobrir o espaço sem margens */
@@ -54,11 +44,35 @@ body {
   /* Centraliza a imagem */
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Adiciona contraste aos ícones */
-  border-radius: 50%;
+.carousel-item {
+  display: block;
+  /* Garante que os itens do carrossel sejam exibidos corretamente */
 }
 
-.img.d-block.w-100 {}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Adiciona contraste aos ícones */
+  border-radius: 50%;
+  padding: 10px;
+  /* Adiciona espaçamento interno aos ícones */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  /* Reduz a largura dos botões de controle */
+}
+
+#carouselExampleAutoplaying {
+  width: 100%;
+  /* Faz o carrossel ocupar toda a largura */
+  height: 400px;
+  /* Mantém a altura proporcional */
+  overflow: hidden;
+  /* Garante que o conteúdo não ultrapasse o contêiner */
+  border-radius: 10px;
+  /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Adiciona sombra ao contêiner */
+}
