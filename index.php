@@ -19,13 +19,16 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Canva/VESTIDO ESTER BANNER_20250518_215946_0000.png" class="d-block w-100" alt="Vestido Branco">
+                <img src="Isabella-Atacadista/IMG-Carrossel/Banner para loja online de roupas conforto e estilo para cada ocasião (1900_20250521_224246_0000.png" class="d-block w-100" alt="Vestido Branco">
             </div>
             <div class="carousel-item">
-                <img src="Canva/reallygreatsite.com_20250515_212439_0000.png" class="d-block w-100" alt="Vestido Salmão">
+                <img src="Isabella-Atacadista/IMG-Carrossel/VESTIDO ESTER BANNER (1900 x 520 px)_20250521_221124_0000.png" class="d-block w-100" alt="Vestido Salmão">
             </div>
             <div class="carousel-item">
-                <img src="Canva/Os Melhores Vestidos_20250515_190109_0000.png" class="d-block w-100" alt="Logo Vestido Marrom">
+                <img src="Isabella-Atacadista/IMG-Carrossel/reallygreatsite.com (1900 x 520 px)_20250521_221859_0000.png" class="d-block w-100" alt="Logo Vestido Marrom">
+            </div>
+            <div class="carousel-item">
+                <img src="Isabella-Atacadista/IMG-Carrossel/Banner loja de vestidos delicado laranja _20250522_014319_0000.png" class="d-block w-100" alt="Logo Vestido Marrom">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
