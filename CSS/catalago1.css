@@ -2,11 +2,15 @@ body {
   font-family: Poppins, sans-serif; 
   background: #f4f4f4;
   padding: 20px;
+  /* Define a fonte, cor de fundo e espaçamento da página */
 }
+
 .titulo {
   text-align: center;
   margin-bottom: 30px;
+  /* Centraliza e estiliza o título */
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 5 produtos por linha em desktop */
@@ -14,23 +18,31 @@ body {
   max-width: 100vw; /* Ocupe toda a largura da tela */
   width: 100%;
   margin: 0; /* Remove o margin auto */
+  /* Configura o layout em grade para os produtos */
 }
+
 /* Responsivo para telas menores */
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  /* Ajusta a grade para telas médias */
 }
+
 @media (max-width: 800px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  /* Ajusta a grade para telas pequenas */
 }
+
 @media (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
+  /* Ajusta a grade para telas muito pequenas */
 }
+
 .produto {
   background: white;
   border-radius: 12px;
@@ -38,31 +50,43 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   position: relative;
   transition: transform 0.3s;
+  /* Estiliza os cartões de produtos */
 }
+
 .produto:hover {
   transform: translateY(-5px);
+  /* Adiciona efeito de hover nos produtos */
 }
+
 .produto img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   cursor: pointer;
+  /* Ajusta as imagens dos produtos */
 }
+
 .info {
   padding: 5%;
   text-align: center;
+  /* Estiliza a seção de informações dos produtos */
 }
+
 .quantidade {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 8px 0;
+  /* Configura o layout para os botões de quantidade */
 }
+
 .quantidade button {
   padding: 4px 10px;
   margin: 0 6px;
   font-weight: bold;
+  /* Estiliza os botões de quantidade */
 }
+
 .add-carrinho {
   background: rgb(122, 0, 67);
   color: white;
@@ -70,10 +94,14 @@ body {
   padding: 8px 14px;
   border-radius: 20px;
   cursor: pointer;
+  /* Estiliza o botão de adicionar ao carrinho */
 }
+
 .add-carrinho:hover {
   background: rgb(65, 0, 35);
+  /* Adiciona efeito de hover no botão de adicionar ao carrinho */
 }
+
 .modal {
   display: none; /* Oculto por padrão */
   position: fixed; /* Fica fixo na tela */
@@ -84,6 +112,7 @@ body {
   height: 100%;
   overflow: auto; /* Permite rolagem se a imagem for grande */
   background-color: rgba(0,0,0,0.7); /* Fundo escuro semi-transparente */
+  /* Configura o modal para exibição de imagens */
 }
 
 .modal-conteudo {
@@ -95,6 +124,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* Estiliza o conteúdo do modal */
 }
 
 .modal .anterior,
@@ -110,7 +140,9 @@ body {
   z-index: 1002;
   border-radius: 50%;
   user-select: none;
+  /* Estiliza os botões de navegação do modal */
 }
+
 .modal .anterior { left: 20px; }
 .modal .proximo { right: 20px; }
 .modal .fechar {
@@ -121,5 +153,6 @@ body {
   font-size: 40px;
   cursor: pointer;
   z-index: 1003;
+  /* Estiliza o botão de fechar o modal */
 }
 

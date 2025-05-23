@@ -19,7 +19,7 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Isabella-Atacadista/IMG-Carrossel/Banner para loja online de roupas conforto e estilo para cada ocasião (1900_20250521_224246_0000.png" class="d-block w-100" alt="Vestido Branco">
+                <img src="IMG-Carrossel\Banner para loja online de roupas conforto e estilo para cada ocasião (1900_20250521_224246_0000.png" class="d-block w-100" alt="Vestido Branco">
             </div>
             <div class="carousel-item">
                 <img src="Isabella-Atacadista/IMG-Carrossel/VESTIDO ESTER BANNER (1900 x 520 px)_20250521_221124_0000.png" class="d-block w-100" alt="Vestido Salmão">
@@ -28,7 +28,7 @@
                 <img src="Isabella-Atacadista/IMG-Carrossel/reallygreatsite.com (1900 x 520 px)_20250521_221859_0000.png" class="d-block w-100" alt="Logo Vestido Marrom">
             </div>
             <div class="carousel-item">
-                <img src="Isabella-Atacadista/IMG-Carrossel/Banner loja de vestidos delicado laranja _20250522_014319_0000.png" class="d-block w-100" alt="Logo Vestido Marrom">
+                <img src="Isabella-Atacadista/IMG-Carrossel/Banner loja de vestidos delicado laranja _20250522_014319_0000.png" class="d-block w-100" alt="">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -46,8 +46,8 @@
         <section class="banner-slider">
             <div class="banner">
                 <picture>
-                    <source srcset="Canva/Banner Vestido Mirian_20250520_093438_0000.png" media="(max-width: 768px)">
-                    <img src="Canva/Banner Vestido Mirian_20250520_093438_0000.png" alt="Banner Vestido Mirian">
+                    <source srcset="IMG-BannersHome/Banner Vestido1.png" media="(max-width: 768px)">
+                    <img src="IMG-BannersHome/Banner Vestido1.png" alt="Banner Vestido Mirian">
                 </picture>
             </div>
             <div class="banner">

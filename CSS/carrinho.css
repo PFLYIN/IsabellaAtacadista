@@ -1,50 +1,71 @@
 body {
+  /* Define a fonte, cor de fundo e espaçamento da página */
   font-family: Arial, sans-serif;
   background: #f4f4f4;
   padding: 20px;
 }
+
 .titulo {
+  /* Centraliza e estiliza o título */
   text-align: center;
   margin-bottom: 30px;
 }
+
 .grid {
+  /* Configura o layout em grade para os itens do carrinho */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: auto;
 }
+
 .produto {
+  /* Estiliza os cartões de produtos no carrinho */
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: transform 0.3s;
 }
-.produto:hover { transform: translateY(-5px); }
+
+.produto:hover {
+  /* Adiciona efeito de hover nos produtos */
+  transform: translateY(-5px);
+}
+
 .produto img {
+  /* Ajusta as imagens dos produtos */
   width: 100%;
   height: 300px;
   object-fit: cover;
   cursor: pointer;
 }
+
 .info {
+  /* Estiliza a seção de informações dos produtos */
   padding: 10px;
   text-align: center;
 }
+
 .quantidade {
+  /* Configura o layout para os botões de quantidade */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 8px 0;
 }
+
 .quantidade button {
+  /* Estiliza os botões de quantidade */
   padding: 4px 10px;
   margin: 0 6px;
   font-weight: bold;
 }
+
 .add-carrinho {
+  /* Estiliza o botão de adicionar ao carrinho */
   background: #ff69b4;
   color: white;
   border: none;
@@ -52,37 +73,52 @@ body {
   border-radius: 20px;
   cursor: pointer;
 }
+
 .add-carrinho:hover {
+  /* Adiciona efeito de hover no botão de adicionar ao carrinho */
   background: #e457a0;
 }
+
 .modal {
+  /* Configura o modal para exibição de imagens */
   display: none;
   position: fixed;
   z-index: 99;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
 }
+
 .modal-conteudo {
+  /* Estiliza o conteúdo do modal */
   display: block;
   max-width: 90%;
   margin: 5% auto;
 }
+
 .fechar {
+  /* Estiliza o botão de fechar o modal */
   position: absolute;
-  top: 20px; right: 30px;
+  top: 20px;
+  right: 30px;
   color: white;
   font-size: 40px;
   cursor: pointer;
 }
+
 .carrinho-container .item {
+  /* Estiliza os itens do carrinho */
   background: white;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .carrinho-img {
+  /* Ajusta as imagens dos itens no carrinho */
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -91,11 +127,15 @@ body {
   margin-right: 8px;
   vertical-align: middle;
 }
+
 .total {
+  /* Centraliza e estiliza a seção de totalização */
   text-align: center;
   margin-top: 30px;
 }
+
 .botao-wpp {
+  /* Estiliza o botão de WhatsApp */
   background: #25d366;
   color: white;
   padding: 10px 18px;

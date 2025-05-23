@@ -1,4 +1,5 @@
 * {
+  margin: 0%;
   /* Define estilos padrão para todos os elementos */
 }
 
@@ -6,7 +7,7 @@ body {
   /* Define a fonte, cor de fundo e espaçamento da página */
   font-family: Arial, sans-serif;
   background: #f4f4f4;
-  padding: 20px;
+  padding: 0px;
 }
 
 .banner-slider {

@@ -1,16 +1,28 @@
-<footer class="footer">
-    <div class="footer-content">
-        <p><p>&copy; 2025 Isabella Atacadista. Todos os direitos reservados.</p>
-</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/seu_usuario" target="_blank" class="instagram-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" class="social-icon">
-            </a>
-            <a href="https://wa.me/seunumerodetelefone" target="_blank" class="whatsapp-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/WhatsApp.svg" alt="WhatsApp" class="social-icon"> 
-            </a>
+<footer class="site-footer">
+    <div class="site-footer-content">
+        <div class="footer-logo">
+            <h3>ISABELLA ATACADISTA</h3>
+            <div class="footer-colum">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="catalago1.php">vestidos</a></li>
+                    <li><a href="catalagoconjunto.php">Conjuntos</a></li>
+                    <li><a href="sobrenos.php">Sobre Nós</a></li>
+                    <li><a href="persona.php">A Nossa Persona</a></li>
+                    <li><a href="contato.php">Contato</a></li>
+                    <li><a href="carrinho.js">Carrinho</a></li>
+                </ul>
+            </div>
+            <div class="footer-colum">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/isabella_atacadista/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/IsabellaAtacadista" target="_blank">Facebook</a></li>
+                    
         </div>
     </div>
+   
 </footer>
 
 <style>
