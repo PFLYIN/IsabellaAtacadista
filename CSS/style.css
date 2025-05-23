@@ -1,12 +1,16 @@
-* {}
+* {
+  /* Define estilos padrão para todos os elementos */
+}
 
 body {
+  /* Define a fonte, cor de fundo e espaçamento da página */
   font-family: Arial, sans-serif;
   background: #f4f4f4;
   padding: 20px;
 }
 
 .banner-slider {
+  /* Configura o contêiner do slider de banners */
   overflow: hidden;
   position: relative;
   max-width: 100%;
@@ -17,6 +21,7 @@ body {
 }
 
 .banner {
+  /* Estiliza o banner principal */
   width: 100%;
   display: block;
   /* Garante que o banner esteja visível */
@@ -24,16 +29,19 @@ body {
 }
 
 .banner img {
+  /* Ajusta o tamanho e exibição das imagens do banner */
   width: 110%;
   height: auto;
   display: block;
 }
 
 .banner.active {
+  /* Define o estilo do banner ativo */
   display: block;
 }
 
 .carousel-inner img {
+  /* Ajusta as imagens internas do carrossel */
   width: 100%;
   /* Garante que a imagem ocupe toda a largura */
   height: 100%;
@@ -45,12 +53,14 @@ body {
 }
 
 .carousel-item {
+  /* Estiliza os itens do carrossel */
   display: block;
   /* Garante que os itens do carrossel sejam exibidos corretamente */
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
+  /* Estiliza os ícones de controle do carrossel */
   background-color: rgba(0, 0, 0, 0.7);
   /* Adiciona contraste aos ícones */
   border-radius: 50%;
@@ -60,11 +70,13 @@ body {
 
 .carousel-control-prev,
 .carousel-control-next {
+  /* Ajusta os botões de controle do carrossel */
   width: 5%;
   /* Reduz a largura dos botões de controle */
 }
 
 #carouselExampleAutoplaying {
+  /* Configura o carrossel principal */
   width: 100%;
   /* Faz o carrossel ocupar toda a largura */
   height: 400px;
