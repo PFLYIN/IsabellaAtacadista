@@ -1,91 +1,236 @@
+/* Reset e configurações globais */
 * {
-  margin: 0%;
-  /* Define estilos padrão para todos os elementos */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
-  /* Define a fonte, cor de fundo e espaçamento da página */
   font-family: Arial, sans-serif;
   background: #f4f4f4;
-  padding: 0px;
+  color: #222;
 }
 
-.banner-slider {
-  /* Configura o contêiner do slider de banners */
-  overflow: hidden;
-  position: relative;
-  max-width: 100%;
-  z-index: 1;
-  /* Garante que o banner esteja acima de outros elementos */
-  min-height: 250px;
-  /* Define uma altura mínima */
+/* Seção de apresentação da home */
+.apresentacao-home {
+  text-align: center;
+  margin: 56px 0 36px 0;
+  padding: 0 10px;
 }
 
-.banner {
-  /* Estiliza o banner principal */
+.apresentacao-home h1 {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 3rem;
+  color: rgb(122, 0, 67);
+  margin-bottom: 16px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(122,0,67,0.07);
+}
+
+.apresentacao-home .marca {
+  color: #a6004f;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.apresentacao-home p {
+  font-size: 1.3rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Banners de destaque - grid de 2 colunas */
+.banners-destaque {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 0 60px 0;
+  max-width: 1600px;
+  margin: 0 auto 40px auto;
+  align-items: stretch;
+}
+
+/* Banner individual */
+.banners-destaque a {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   width: 100%;
+  min-width: 0;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #fff;
+  border: 1.5px solid #e9e9e9;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+  height: 520px;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container da imagem do banner */
+.banners-destaque .banner-img-container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 32px 32px 0 0;
+  position: relative;
+}
+
+/* Imagem do banner */
+.banners-destaque img {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+  transition: transform 0.2s, filter 0.2s;
   display: block;
-  /* Garante que o banner esteja visível */
+  border: none;
+}
+
+/* Hover no banner */
+.banners-destaque a:hover {
+
+  transform: translateY(-6px) scale(1.02);
+  z-index: 2;
+}
+
+.banners-destaque a:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.08) contrast(1.08) saturate(1.12);
+}
+
+/* Legenda sobreposta no banner (título do banner) */
+.banners-destaque .banner-legenda {
+  width: 100%;
+  background: none;
+  color: #a6004f; /* Cor vinho da marca */
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1.5rem;
+  padding: 22px 0 14px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 0 0 32px 32px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  text-decoration: none;
+  opacity: 1;
   visibility: visible;
 }
 
-.banner img {
-  /* Ajusta o tamanho e exibição das imagens do banner */
-  width: 110%;
-  height: auto;
-  display: block;
+/* Responsividade */
+@media (max-width: 1400px) {
+  .banners-destaque {
+    max-width: 98vw;
+    gap: 28px;
+  }
+  .banners-destaque a {
+    height: 380px;
+    border-radius: 24px;
+  }
+  .banners-destaque .banner-img-container {
+    border-radius: 24px 24px 0 0;
+  }
+  .banners-destaque img {
+    max-height: 380px;
+  }
+  .banners-destaque .banner-legenda {
+    background: none;
+    color: #a6004f;
+    border-radius: 0 0 24px 24px;
+    font-size: 1.1rem;
+    padding: 12px 0 7px 0;
+  }
 }
 
-.banner.active {
-  /* Define o estilo do banner ativo */
-  display: block;
+@media (max-width: 900px) {
+  .banners-destaque {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 98vw;
+    padding: 18px 0 24px 0;
+  }
+  .banners-destaque a {
+    height: 220px;
+    border-radius: 16px;
+  }
+  .banners-destaque .banner-img-container {
+    border-radius: 16px 16px 0 0;
+  }
+  .banners-destaque img {
+    max-height: 220px;
+  }
+  .banners-destaque .banner-legenda {
+    background: none;
+    color: #a6004f;
+    border-radius: 0 0 16px 16px;
+    font-size: 1rem;
+    padding: 8px 0 4px 0;
+  }
 }
 
+@media (max-width: 600px) {
+  .banners-destaque {
+    gap: 8px;
+    padding: 10px 0 20px 0;
+  }
+  .banners-destaque a {
+    height: 110px;
+    border-radius: 8px;
+  }
+  .banners-destaque .banner-img-container {
+    border-radius: 8px 8px 0 0;
+  }
+  .banners-destaque img {
+    max-height: 110px;
+  }
+  .banners-destaque .banner-legenda {
+    background: none;
+    color: #a6004f;
+    border-radius: 0 0 8px 8px;
+    font-size: 0.8rem;
+    padding: 5px 0 2px 0;
+  }
+}
+
+/* Carrossel do Bootstrap */
 .carousel-inner img {
-  /* Ajusta as imagens internas do carrossel */
-  width: 100%;
-  /* Garante que a imagem ocupe toda a largura */
-  height: 100%;
-  /* Faz a imagem preencher toda a altura do contêiner */
+  width: 70%;
+  height: 90%;
   object-fit: cover;
-  /* Ajusta a imagem para cobrir o espaço sem margens */
   object-position: center;
-  /* Centraliza a imagem */
 }
-
 .carousel-item {
-  /* Estiliza os itens do carrossel */
   display: block;
-  /* Garante que os itens do carrossel sejam exibidos corretamente */
 }
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  /* Estiliza os ícones de controle do carrossel */
   background-color: rgba(0, 0, 0, 0.7);
-  /* Adiciona contraste aos ícones */
   border-radius: 50%;
   padding: 10px;
-  /* Adiciona espaçamento interno aos ícones */
 }
-
 .carousel-control-prev,
 .carousel-control-next {
-  /* Ajusta os botões de controle do carrossel */
   width: 5%;
-  /* Reduz a largura dos botões de controle */
 }
-
 #carouselExampleAutoplaying {
-  /* Configura o carrossel principal */
   width: 100%;
-  /* Faz o carrossel ocupar toda a largura */
-  height: 400px;
-  /* Mantém a altura proporcional */
+  height: 600px;
   overflow: hidden;
-  /* Garante que o conteúdo não ultrapasse o contêiner */
   border-radius: 10px;
-  /* Adiciona bordas arredondadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Adiciona sombra ao contêiner */
 }
