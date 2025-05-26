@@ -51,6 +51,7 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   position: relative;
   transition: transform 0.3s;
+  font-weight: 300;
   /* Estiliza os cartões de produtos */
 }
 
@@ -70,6 +71,7 @@ body {
 .info {
   padding: 5%;
   text-align: center;
+  font-weight: 300;
   /* Estiliza a seção de informações dos produtos */
 }
 
@@ -85,7 +87,11 @@ body {
   padding: 4px 10px;
   margin: 0 6px;
   font-weight: bold;
-  /* Estiliza os botões de quantidade */
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 1.4rem;
+  
 }
 
 .add-carrinho {
@@ -156,5 +162,22 @@ body {
   cursor: pointer;
   z-index: 1003;
   /* Estiliza o botão de fechar o modal */
+}
+
+.produto,
+.info {
+  font-weight: 300;
+}
+
+/* Deixa títulos dentro dos containers também finos */
+.produto h1,
+.produto h2,
+.produto h3,
+.produto h4,
+.info h1,
+.info h2,
+.info h3,
+.info h4 {
+  font-weight: 300;
 }
 
