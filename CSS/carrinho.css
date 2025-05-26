@@ -144,3 +144,36 @@ body {
   display: inline-block;
   margin-top: 10px;
 }
+
+.remover-item {
+  background: #e45757;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 14px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.remover-item:hover {
+  background: #b80000;
+}
+
+.remover-um-item {
+  background: #f7b731;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 14px;
+  margin-top: 8px;
+  margin-right: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.remover-um-item:hover {
+  background: #c49000;
+}

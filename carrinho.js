@@ -3,23 +3,32 @@ let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".add-carrinho").forEach(btn => {
     btn.addEventListener("click", () => {
+      // Sempre recarrega o carrinho atualizado do localStorage
+      let carrinhoAtual = JSON.parse(localStorage.getItem("carrinho")) || [];
+
       const produto = btn.closest(".produto");
       const id = produto.dataset.id;
       const nome = produto.dataset.nome;
       const preco = parseFloat(produto.dataset.preco);
       const qtd = parseInt(produto.querySelector(".qtd").textContent);
-      const imagem = produto.querySelector("img") ? produto.querySelector("img").src : ""; // pega o caminho da imagem
+      const imagem = produto.querySelector("img") ? produto.querySelector("img").src : "";
 
-      const existente = carrinho.find(p => p.id === id);
-      if (existente) {
-        existente.qtd += qtd;
-        existente.imagem = imagem; // sempre atualiza a imagem
-      } else {
-        carrinho.push({ id, nome, preco, qtd, imagem }); // <-- aqui estava IMAGEN, corrija para imagem
+      // Adiciona preço normal (varejo)
+      if (!isNaN(preco)) {
+        const existente = carrinhoAtual.find(p => p.id === id && (!p.tipo || p.tipo === "normal"));
+        if (existente) {
+          existente.qtd += qtd;
+          existente.imagem = imagem;
+        } else {
+          carrinhoAtual.push({ id, nome, preco, qtd, imagem, tipo: "normal" });
+        }
       }
 
-      localStorage.setItem("carrinho", JSON.stringify(carrinho));
-      alert("Produto adicionado!");
+      localStorage.setItem("carrinho", JSON.stringify(carrinhoAtual));
+      mostrarNotificacao(`${nome} adicionado ao carrinho!`);
+
+      // Atualiza a quantidade exibida para 1 após adicionar ao carrinho
+      produto.querySelector(".qtd").textContent = "1";
     });
   });
 
@@ -39,34 +48,67 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const carrinhoContainer = document.getElementById("carrinho-itens");
+  // Sempre recarrega o carrinho atualizado do localStorage para exibição
+  carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
   if (carrinhoContainer) {
     if (carrinho.length === 0) {
       carrinhoContainer.innerHTML = "<p>Seu carrinho está vazio.</p>";
     } else {
       let total = 0;
-      carrinhoContainer.innerHTML = carrinho.map(item => {
+      carrinhoContainer.innerHTML = carrinho.map((item, idx) => {
+        // Ajusta nome para exibir corretamente no carrinho
+        let nomeExibicao = item.nome;
+        if (item.tipo === "atacado") {
+          nomeExibicao = `${item.nome} (Atacado)`;
+        }
         const subtotal = item.preco * item.qtd;
         total += subtotal;
         return `
-          <div class="item">
-            <img src="${item.imagem || ''}" class="carrinho-img" alt="${item.nome}" style="width:60px;height:60px;object-fit:cover;border-radius:8px;margin-bottom:8px;margin-right:8px;vertical-align:middle;">
-            <strong>${item.nome}</strong><br>
+          <div class="item" data-idx="${idx}">
+            <img src="${item.imagem || ''}" class="carrinho-img" alt="${nomeExibicao}" style="width:60px;height:60px;object-fit:cover;border-radius:8px;margin-bottom:8px;margin-right:8px;vertical-align:middle;">
+            <strong>${nomeExibicao}</strong><br>
             Quantidade: ${item.qtd}<br>
             Preço: R$ ${item.preco.toFixed(2)}<br>
-            Subtotal: R$ ${subtotal.toFixed(2)}
+            Subtotal: R$ ${subtotal.toFixed(2)}<br>
+            <button class="remover-um-item" data-idx="${idx}">Remover 1</button>
+            <button class="remover-item" data-idx="${idx}">Remover tudo</button>
           </div>
         `;
-      }).join("");
+      }).join(""); // <-- aqui estava .join("")), corrija para .join("")
 
       document.getElementById("valor-total").textContent = total.toFixed(2);
       const mensagem = `Essas são as peças escolhidas:%0A` +
         carrinho.map(p => 
-          `• ${p.nome} (x${p.qtd}) - R$ ${p.preco.toFixed(2)}%0AImagem: ${p.imagem || ''}`
+          `• ${p.nome}${p.tipo === "atacado" ? " (Atacado)" : ""} (x${p.qtd}) - R$ ${p.preco.toFixed(2)}%0AImagem: ${p.imagem || ''}`
         ).join("%0A") +
         `%0ATotal: R$ ${total.toFixed(2)}`;
 
       const link = `https://wa.me/554499230507?text=${mensagem}`; // Substitua pelo número real
       document.getElementById("whatsapp-link").href = link;
+
+      // Adiciona evento para remover item
+      document.querySelectorAll(".remover-item").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = parseInt(btn.getAttribute("data-idx"));
+          carrinho.splice(idx, 1);
+          localStorage.setItem("carrinho", JSON.stringify(carrinho));
+          location.reload();
+        });
+      });
+
+      // Adiciona evento para remover apenas uma unidade
+      document.querySelectorAll(".remover-um-item").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = parseInt(btn.getAttribute("data-idx"));
+          if (carrinho[idx].qtd > 1) {
+            carrinho[idx].qtd -= 1;
+          } else {
+            carrinho.splice(idx, 1);
+          }
+          localStorage.setItem("carrinho", JSON.stringify(carrinho));
+          location.reload();
+        });
+      });
     }
   }
 
@@ -123,3 +165,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function mostrarNotificacao(msg) {
+  let notif = document.createElement("div");
+  notif.textContent = msg;
+  notif.style.position = "fixed";
+  notif.style.top = "30px";
+  notif.style.right = "30px";
+  notif.style.background = "#a0005a"; // Roxo escuro, combina com o tema
+  notif.style.color = "#fff";
+  notif.style.padding = "14px 28px";
+  notif.style.borderRadius = "24px";
+  notif.style.fontSize = "1rem";
+  notif.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)";
+  notif.style.zIndex = "9999";
+  notif.style.opacity = "0.95";
+  notif.style.transition = "opacity 0.5s";
+  document.body.appendChild(notif);
+  setTimeout(() => {
+    notif.style.opacity = "0";
+    setTimeout(() => notif.remove(), 500);
+  }, 1800);
+}
