@@ -353,6 +353,162 @@
       <button class="add-carrinho">🛒 + Adicionar</button>
     </div>
   </div>
+  <div class="produto" data-id="20" data-nome="Vestido Karen Branco" data-preco="139.00"
+    data-imagens='["Vestidos Karen/1BrancoKaren.jpg","Vestidos Karen/2BrancoKaren.jpg","Vestidos Karen/3BrancoKaren.jpg"]'>
+    <img src="Vestidos Karen/1BrancoKaren.jpg" alt="Vestido Branco" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Karen Branco</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="21" data-nome="Vestido Karen Violeta" data-preco="139.00"
+    data-imagens='["Vestidos Karen/1Lilas.jpg","Vestidos Karen/2LilasKaren.jpg","Vestidos Karen/3LilaSKaren.jpg"]'>
+    <img src="Vestidos Karen/1Lilas.jpg" alt="Vestido Violeta" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Karen Violeta</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="22" data-nome="Vestido Karen Roxo " data-preco="139.00"
+    data-imagens='["Vestidos Karen/1RoxoKaren.jpg","Vestidos Karen/2RoxoKaren.jpg","Vestidos Karen/3RoxoKaren.jpg"]'>
+    <img src="Vestidos Karen/1RoxoKaren.jpg" alt="Vestido Roxo" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Karen Roxo
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="23" data-nome="Vestido Karen Rosa " data-preco="139.00"
+    data-imagens='["Vestidos Karen/1RosaKaren.jpg","Vestidos Karen/2RosaKaren.jpg","Vestidos Karen/3RosaKaren.jpg"]'>
+    <img src="Vestidos Karen/1RosaKaren.jpg" alt="Vestido Rosa" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Karen Rosa
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="24" data-nome="Vestido Miss Vermelho " data-preco="139.00"
+    data-imagens='["Vestidos Karen/1RosaKaren.jpg"]'>
+    <img src="Vestido Miss/1VermelhoMiss.jpg" alt="Vestido Vermelho" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Miss Vermelho
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="25" data-nome="Vestido Miss Vermelho e Verde" data-preco="139.00"
+    data-imagens='["Vestido Miss/3VermelhoMiss.jpg"]'>
+    <img src="Vestido Miss/1VermelhoMiss.jpg" alt="Vestido Vermelho e Verde" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Miss Vermelho e Verde
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+   <div class="produto" data-id="26" data-nome="Vestido Miss Vermelho e Preto" data-preco="139.00"
+    data-imagens='["Vestido Miss/2VermelhoMiss.jpg"]'>
+    <img src="Vestido Miss/2VermelhoMiss.jpg" alt="Vestido Vermelho e Preto" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Miss Vermelho e Preto
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="27" data-nome="Vestido Boneca Branco " data-preco="139.00"
+    data-imagens='["Vestido Boneca/1BrancoBOneca.jpg","Vestido Boneca/2BrancoBOneca.jpg","Vestido Boneca/3BrancoBOneca.jpg"]'>
+    <img src="Vestido Boneca/1BrancoBOneca.jpg" alt="Vestido Branco" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Boneca Branco
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="28" data-nome="Vestido Boneca Roxo " data-preco="139.00"
+    data-imagens='["Vestido Boneca/1RoxoBoneca.jpg","Vestido Boneca/2RoxoBoneca.jpg"]'>
+    <img src="Vestido Boneca/1RoxoBoneca.jpg" alt="Vestido Roxo" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Boneca Roxo
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  
+
+
 
 
 
