@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts Oswald -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
     <!-- CSS principal do site -->
     <link rel="stylesheet" href="CSS/style.css">
     <!-- Bootstrap CSS -->
@@ -16,7 +16,8 @@
 </head>
 <body>
     <!-- Carrossel do Bootstrap -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- O data-bs-interval="3000" define o tempo em milissegundos (3 segundos) -->
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
@@ -53,11 +54,11 @@
 
     <main>
         <!-- Seção de apresentação da home -->
-        <section class="apresentacao-home novo-home">
+        <section class="apresentacao-home">
             <div class="novo-home-titulo">
                 <h1>Isabella Atacadista</h1>
-                <p>Moda feminina para todas as ocasiões.<br>
-                Encontre vestidos, conjuntos e muito mais com o melhor preço!</p>
+                <p>Descubra a elegância em cada peça.<br>
+                Encontre vestidos únicos, conjuntos deslumbrantes e uma seleção exclusiva para realçar sua beleza.</p>
             </div>
         </section>
 

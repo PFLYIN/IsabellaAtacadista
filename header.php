@@ -1,5 +1,4 @@
-
-    <header class="header-desktop">
+<header class="header-desktop">
         <div class="div-logo">
             <a><img src="LOGO/logoIsabella.png" alt="Isabella Atacadista"></a>
         </div>
@@ -19,9 +18,10 @@
             <ul class="list-desktop">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="catalago1.php">Vestidos</a></li>
-                <li><a href="">Conjuntos</a></li>
-                <li><a href="">Sobre Nós</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="blusinhas.php">Blusinhas</a></li>
+                <li><a href="catalagoconjunto.php">Conjuntos</a></li>
+                <li><a href="sobrenos.php">Sobre Nós</a></li>
+                <li><a href="contato.php">Contato</a></li>
             </ul>
         </nav>  
     </header>
@@ -74,10 +74,11 @@
     position: sticky;
     display: block;
     
+    
     top: 0;
     z-index: 1000;
     /* Garante que o header fique acima de outros elementos */
-    background: rgba(255, 255, 255, 0.938);
+    background:rgba(255, 230, 242, 0.84);
     /* Branco com 80% de opacidade */
     display: flex;
     /* Ativa o Flexbox */
@@ -116,6 +117,29 @@
     /* Define o tamanho da fonte */
     text-transform: uppercase;
     /* Deixa o texto em maiúsculas */
+    transition: all 0.3s ease;
+    position: relative;
+}
 
+.nav-desktop .list-desktop li a:hover {
+    color: #ff00bf;
+    transform: translateY(-2px);
+}
+
+.nav-desktop .list-desktop li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -4px;
+    left: 50%;
+    background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.nav-desktop .list-desktop li a:hover::after {
+    width: 100%;
 }
 </style>
