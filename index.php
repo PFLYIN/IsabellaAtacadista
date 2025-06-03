@@ -16,7 +16,7 @@
 </head>
 <body>
     <!-- Carrossel do Bootstrap -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
         <!-- O data-bs-interval="3000" define o tempo em milissegundos (3 segundos) -->
         <div class="carousel-inner">
             <!-- Slide 1 -->
@@ -91,6 +91,52 @@
         </section>
     </main>
 
+    <section class="carousel-container">
+    <div class="carousel">
+      <!-- Comentário 1 -->
+      <div class="testimonial">
+        <img src="images/sabrina.jpg" alt="Sabrina" />
+        <p class="text">"Os vestidos são simplesmente lindos! Me senti valorizada como mulher cristã. Atendimento impecável."</p>
+        <h4>Sabrina</h4>
+      </div>
+
+      <!-- Comentário 2 -->
+      <div class="testimonial">
+        <img src="images/leticia.jpg" alt="Letícia" />
+        <p class="text">"Comprei para um culto especial e fiquei encantada com o caimento. Elegância e modéstia em um só lugar."</p>
+        <h4>Letícia</h4>
+      </div>
+
+      <!-- Comentário 3 -->
+      <div class="testimonial">
+        <img src="images/emilly.jpg" alt="Emilly" />
+        <p class="text">"Amei cada detalhe! O tecido é maravilhoso e a entrega foi super rápida. Já virei cliente fiel."</p>
+        <h4>Emilly</h4>
+      </div>
+
+      <!-- Comentário 4 -->
+      <div class="testimonial">
+        <img src="images/fabiane.jpg" alt="Fabiane" />
+        <p class="text">"É difícil encontrar vestidos com essa delicadeza. Me senti elegante sem abrir mão da minha fé."</p>
+        <h4>Fabiane</h4>
+      </div>
+
+      <!-- Comentário 5 -->
+      <div class="testimonial">
+        <img src="images/marcia.jpg" alt="Márcia" />
+        <p class="text">"Foi minha primeira compra e fiquei emocionada com o cuidado no envio. A loja transmite amor em tudo."</p>
+        <h4>Márcia</h4>
+      </div>
+
+      <!-- Comentário 6 -->
+      <div class="testimonial">
+        <img src="images/bruna.jpg" alt="Bruna" />
+        <p class="text">"Além da beleza, os vestidos têm um toque espiritual. É mais do que moda, é propósito."</p>
+        <h4>Bruna</h4>
+      </div>
+    </div>
+
+    <script src="carrcomentario.js"></script>
     <!-- Scripts Bootstrap e carrinho -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="carrinho.js"></script>

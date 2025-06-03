@@ -184,7 +184,71 @@ main {
   height: 600px;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(122, 0, 67, 0.15);
+   box-shadow: 0 8px 25px rgba(122, 0, 67, 0.15);
   margin: 35px auto;
   max-width: 1800px;
+}
+
+.carousel-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;  /* Mudado de auto para hidden */
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding: 20px 0;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;  /* Adiciona snap de scroll */
+  -webkit-overflow-scrolling: touch;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 25px;
+  min-width: 300px;
+  max-width: 340px;
+  box-shadow: 0 8px 20px rgba(122, 0, 67, 0.1);
+  flex: none;
+  text-align: left;
+  border: 1px solid rgba(122, 0, 67, 0.1);
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;  /* Adiciona snap point */
+  flex: 0 0 auto;  /* Previne redimensionamento */
+  width: 300px;  /* Largura fixa */
+  margin-right: 30px;  /* Espaçamento consistente */
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(122, 0, 67, 0.15);
+}
+
+.testimonial .text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.testimonial h4 {
+  font-size: 15px;
+  color: #a6004f;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 5px;
+  border-top: 2px solid rgba(166, 0, 79, 0.1);
+}
+
+.cta {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #a6004f;
+  font-weight: 500;
 }
