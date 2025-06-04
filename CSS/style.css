@@ -190,60 +190,88 @@ main {
 }
 
 .carousel-container {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 0 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 60px auto 0 auto;
+  padding: 0 10px;
   text-align: center;
+  position: relative;
 }
 
 .carousel {
+  width: 100%;
   display: flex;
-  overflow-x: hidden;  /* Mudado de auto para hidden */
-  scroll-behavior: smooth;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  position: relative;
+  min-height: 320px;
   gap: 30px;
-  padding: 20px 0;
-  scrollbar-width: none;
-  scroll-snap-type: x mandatory;  /* Adiciona snap de scroll */
-  -webkit-overflow-scrolling: touch;
 }
 
 .testimonial {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  padding: 25px;
-  min-width: 300px;
-  max-width: 340px;
-  box-shadow: 0 8px 20px rgba(122, 0, 67, 0.1);
-  flex: none;
-  text-align: left;
-  border: 1px solid rgba(122, 0, 67, 0.1);
-  transition: transform 0.3s ease;
-  scroll-snap-align: start;  /* Adiciona snap point */
-  flex: 0 0 auto;  /* Previne redimensionamento */
-  width: 300px;  /* Largura fixa */
-  margin-right: 30px;  /* Espaçamento consistente */
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(122,0,67,0.10);
+  padding: 32px 20px 24px 20px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 10px;
+  border: 1.5px solid #f3e6ef;
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  display: flex;
+  transition: none;
 }
 
-.testimonial:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(122, 0, 67, 0.15);
+.testimonial .text, .testimonial img {
+  opacity: 1;
+  transition:
+    opacity 0.7s cubic-bezier(.4,0,.2,1),
+    transform 0.7s cubic-bezier(.4,0,.2,1);
+  will-change: opacity, transform;
+}
+
+.testimonial .text.fade-out, .testimonial img.fade-out {
+  opacity: 0;
+  transform: translateY(20px) scale(0.97);
+  pointer-events: none;
+}
+
+.testimonial .text.fade-in, .testimonial img.fade-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
 .testimonial .text {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 1.1em;
   color: #444;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   font-style: italic;
+  line-height: 1.6;
 }
 
 .testimonial h4 {
-  font-size: 15px;
+  font-size: 1em;
   color: #a6004f;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
-  padding-top: 5px;
-  border-top: 2px solid rgba(166, 0, 79, 0.1);
+  letter-spacing: 1px;
+  border-top: 1px solid #f3e6ef;
+  padding-top: 8px;
+  width: 100%;
+  text-align: center;
 }
 
 .cta {
