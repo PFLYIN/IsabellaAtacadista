@@ -184,7 +184,6 @@ main {
   height: 600px;
   overflow: hidden;
   border-radius: 20px;
-   box-shadow: 0 8px 25px rgba(122, 0, 67, 0.15);
   margin: 35px auto;
   max-width: 1800px;
 }
@@ -227,7 +226,7 @@ main {
   transition: none;
 }
 
-.testimonial .text, .testimonial img {
+.testimonial .text, .testimonial img, .testimonial .stars {
   opacity: 1;
   transition:
     opacity 0.7s cubic-bezier(.4,0,.2,1),
@@ -235,13 +234,17 @@ main {
   will-change: opacity, transform;
 }
 
-.testimonial .text.fade-out, .testimonial img.fade-out {
+.testimonial .text.fade-out, 
+.testimonial img.fade-out,
+.testimonial .stars.fade-out {
   opacity: 0;
   transform: translateY(20px) scale(0.97);
   pointer-events: none;
 }
 
-.testimonial .text.fade-in, .testimonial img.fade-in {
+.testimonial .text.fade-in, 
+.testimonial img.fade-in,
+.testimonial .stars.fade-in {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;

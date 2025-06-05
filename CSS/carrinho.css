@@ -116,7 +116,7 @@ body {
 .modal-conteudo {
   /* Estiliza o conteúdo do modal */
   display: block;
-  max-width: 90%;
+  max-width: 100%;
   margin: 5% auto;
 }
 
@@ -132,22 +132,23 @@ body {
 
 .carrinho-container .item {
   /* Estiliza os itens do carrinho */
-  background: white;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .carrinho-img {
   /* Ajusta as imagens dos itens no carrinho */
-  width: 60px;
-  height: 60px;
+  width: 120px !important; /* Forçando o tamanho com !important */
+  height: 110px !important; /* Forçando o tamanho com !important */
+  min-width: 120px; /* Garante largura mínima */
+  min-height: 145px; /* Garante altura mínima */
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 8px;
-  margin-right: 8px;
+  margin-right: 12px;
   vertical-align: middle;
+  flex-shrink: 0; /* Impede que a imagem encolha */
 }
 
 .total {
@@ -168,34 +169,39 @@ body {
 }
 
 .remover-item {
-  background: #e45757;
-  color: #fff;
-  border: none;
-  border-radius: 16px;
-  padding: 6px 14px;
-  margin-top: 8px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: background 0.2s;
+  background: #ffffff;
+  color: rgb(70, 0, 38);
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 2px solid rgb(122, 0, 67);
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .remover-item:hover {
-  background: #b80000;
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(160,0,90,0.2);
 }
 
 .remover-um-item {
-  background: #f7b731;
-  color: #fff;
-  border: none;
-  border-radius: 16px;
-  padding: 6px 14px;
-  margin-top: 8px;
-  margin-right: 6px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: background 0.2s;
+  background: #ffffff;
+  color: rgb(70, 0, 38);
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 2px solid rgb(122, 0, 67);
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .remover-um-item:hover {
-  background: #c49000;
+    background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(160,0,90,0.2);
 }

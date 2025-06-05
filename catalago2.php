@@ -169,6 +169,96 @@
       <button class="add-carrinho">🛒 + Adicionar</button>
     </div>
   </div>
+  <div class="produto" data-id="10" data-nome="Vestido 3 Maria Vermelho" data-preco="149.00"
+    data-imagens='["VTDS-TMRS/Vestido 3 Maria/1Vermelho3Marias.jpg","VTDS-TMRS/Vestido 3 Maria/2Vermelho3Marias.jpg","VTDS-TMRS/Vestido 3 Maria/3Vermelho3Marias.jpg"]'>
+    <img src="VTDS-TMRS/Vestido 3 Maria/1Vermelho3Marias.jpg" alt="Vestido 3 Maria Vermelho" class="zoom-img">
+    <div class="info">
+      <h2>Vestido 3 Maria Vermelho</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 149,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  
+  <div class="produto" data-id="11" data-nome="Vestido 3 Maria Preto" data-preco="149.00"
+    data-imagens='["VTDS-TMRS/Vestido 3 Maria/1Preto3Marias.jpg","VTDS-TMRS/Vestido 3 Maria/2Preto3Marias.jpg","VTDS-TMRS/Vestido 3 Maria/3Preto3Marias.jpg"]'>
+    <img src="VTDS-TMRS/Vestido 3 Maria/1Preto3Marias.jpg" alt="Vestido 3 Maria Preto" class="zoom-img">
+    <div class="info">
+      <h2>Vestido 3 Maria Preto</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 149,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  
+  <div class="produto" data-id="12" data-nome="Vestido Gola V Azul" data-preco="149.00"
+    data-imagens='["VTDS-TMRS/Vestido Gola V/1AzulGolaV.jpg","VTDS-TMRS/Vestido Gola V/2AzulGolaV.jpg","VTDS-TMRS/Vestido Gola V/3AzulGolaV.jpg"]'>
+    <img src="VTDS-TMRS/Vestido Gola V/1AzulGolaV.jpg" alt="Vestido Gola V Azul" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Gola V Azul</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 149,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+
+  <div class="produto" data-id="13" data-nome="Vestido Gola V Bege" data-preco="149.00"
+    data-imagens='["VTDS-TMRS/Vestido Gola V/1BegeGolaV.jpg","VTDS-TMRS/Vestido Gola V/2BegeGolaV.jpg","VTDS-TMRS/Vestido Gola V/3BegeGolaV.jpg"]'>
+    <img src="VTDS-TMRS/Vestido Gola V/1BegeGolaV.jpg" alt="Vestido Gola V Bege" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Gola V Bege</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 149,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+
+  <div class="produto" data-id="14" data-nome="Vestido Gola V Preto" data-preco="149.00"
+    data-imagens='["VTDS-TMRS/Vestido Gola V/1PretoGolaV.jpg","VTDS-TMRS/Vestido Gola V/2PretoGolaV.jpg","VTDS-TMRS/Vestido Gola V/3PretoGolaV.jpg"]'>
+    <img src="VTDS-TMRS/Vestido Gola V/1PretoGolaV.jpg" alt="Vestido Gola V Preto" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Gola V Preto</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 149,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+
 </div>
 
 <div class="paginacao-container">

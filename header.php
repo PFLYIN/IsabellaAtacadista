@@ -18,8 +18,8 @@
             <ul class="list-desktop">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="catalago1.php">Vestidos</a></li>
-                <li><a href="blusinhas.php">Blusinhas</a></li>
                 <li><a href="catalagoconjunto.php">Conjuntos</a></li>
+                <li><a href="blusinhas.php">Blusinhas</a></li>
                 <li><a href="sobrenos.php">Sobre Nós</a></li>
                 <li><a href="contato.php">Contato</a></li>
             </ul>
@@ -57,17 +57,20 @@
 }
 
 #conta-simples li a {
-    text-decoration: none;
-    color: #333; /* Cor mais escura para melhor contraste */
-    padding: 8px 15px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+  color: rgb(122, 0, 67);
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.,9rem;
+  border: 2px solid rgb(122, 0, 67);
+  transition: all 0.3s ease;
 }
 
 #conta-simples li a:hover {
-    background-color: rgb(122, 0, 67); /* Cor de destaque do seu site */
-    color: white;
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(160,0,90,0.2);
 }
 
 .header-baixo-desktop {
@@ -133,13 +136,15 @@
     height: 3px;
     bottom: -4px;
     left: 50%;
-    background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+    background: linear-gradient(180deg, #fcdaea 0%, #fff 100%);
     transition: all 0.3s ease;
     transform: translateX(-50%);
     border-radius: 3px;
 }
 
 .nav-desktop .list-desktop li a:hover::after {
-    width: 100%;
+    width: 100%; 
+    background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+
 }
 </style>
