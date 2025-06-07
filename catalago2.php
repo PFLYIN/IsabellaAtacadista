@@ -68,8 +68,8 @@
     </div>
   </div>
   <div class="produto" data-id="4" data-nome="Vestido Longo Laxtex Branco" data-preco="149.00"
-    data-imagens='["Vestido longo Laxtex/1BrancoLaxtex.jpg"]'>
-    <img src="Vestido longo Laxtex/1BrancoLaxtex.jpg" alt="Vestido Longo Laxtex Branco" class="zoom-img">
+    data-imagens='["VTDS-TMRS/Vestido Longo Laxtex/1BrancoLaxtex.jpg"]'>
+    <img src="VTDS-TMRS/Vestido Longo Laxtex/1BrancoLaxtex.jpg" alt="Vestido Longo Laxtex Branco" class="zoom-img">
     <div class="info">
       <h2>Vestido Longo Laxtex Branco</h2>
       <div class="precos">
@@ -85,8 +85,8 @@
     </div>
   </div>
   <div class="produto" data-id="5" data-nome="Vestido Longo Laxtex Marron" data-preco="149.00"
-    data-imagens='["Vestido longo Laxtex/3MarronLaxtex.jpg"]'>
-    <img src="Vestido longo Laxtex/3MarronLaxtex.jpg" alt="Vestido Longo Laxtex Marron" class="zoom-img">
+    data-imagens='["VTDS-TMRS/Vestido Longo Laxtex/3MarronLaxtex.jpg"]'>
+    <img src="VTDS-TMRS/Vestido Longo Laxtex/3MarronLaxtex.jpg" alt="Vestido Longo Laxtex Marron" class="zoom-img">
     <div class="info">
       <h2>Vestido Longo Laxtex Marron</h2>
       <div class="precos">
@@ -188,8 +188,8 @@
   </div>
   
   <div class="produto" data-id="11" data-nome="Vestido 3 Maria Preto" data-preco="149.00"
-    data-imagens='["VTDS-TMRS/Vestido 3 Maria/1Preto3Marias.jpg","VTDS-TMRS/Vestido 3 Maria/2Preto3Marias.jpg","VTDS-TMRS/Vestido 3 Maria/3Preto3Marias.jpg"]'>
-    <img src="VTDS-TMRS/Vestido 3 Maria/1Preto3Marias.jpg" alt="Vestido 3 Maria Preto" class="zoom-img">
+    data-imagens='["VTDS-TMRS/Vestido 3 Maria/1Preto3Maria.jpg","VTDS-TMRS/Vestido 3 Maria/2Preto3Maria.jpg","VTDS-TMRS/Vestido 3 Maria/3Preto3Maria.jpg"]'>
+    <img src="VTDS-TMRS/Vestido 3 Maria/1Preto3Maria.jpg" alt="Vestido 3 Maria Preto" class="zoom-img">
     <div class="info">
       <h2>Vestido 3 Maria Preto</h2>
       <div class="precos">
