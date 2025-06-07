@@ -18,6 +18,22 @@ body {
   color: #222;
 }
 
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Container para seções específicas */
+.container-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 /* Corpo da página */
 main {
   flex: 1;

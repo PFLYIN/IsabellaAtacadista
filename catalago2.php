@@ -258,6 +258,58 @@
       <button class="add-carrinho">🛒 + Adicionar</button>
     </div>
   </div>
+  <div class="produto" data-id="15" data-nome="Vestido Rebeca Vinho" data-preco="149.00"
+    data-imagens='["Vtds-MissIris/Vestidos Rebeca/1VinhoRebeca.jpg","Vtds-MissIris/Vestidos Rebeca/2VinhoRebeca.jpg","Vtds-MissIris/Vestidos Rebeca/3VinhoRebeca.jpg"]'>
+    <img src="Vtds-MissIris/Vestidos Rebeca/1VinhoRebeca.jpg" alt="Vestido Rebeca Vinho" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Rebeca Vinho</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 149,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="16" data-nome="Vestido Rebeca Azul" data-preco="149.00"
+    data-imagens='[Vtds-MissIris/Vestidos Rebeca/1AzulRebeca.jpg","Vtds-MissIris/Vestidos Rebeca/2AzulRebeca.jpg","Vtds-MissIris/Vestidos Rebeca/3AzulRebeca.jpg"]'>
+    <img src="Vtds-MissIris/Vestidos Rebeca/1AzulRebeca.jpg" alt="Vestido Rebeca Azul" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Rebeca Azul</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 149,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+  <div class="produto" data-id="17" data-nome="Vestido Rebeca Vinho e Preto" data-preco="149.00"
+    data-imagens='[Vtds-MissIris/Vestidos Rebeca/1VinhoePretoRebeca.jpg","Vtds-MissIris/Vestidos Rebeca/2VinhoePretoRebeca.jpg","Vtds-MissIris/Vestidos Rebeca/3VinhoePretoRebeca.jpg"]'>
+    <img src="Vtds-MissIris/Vestidos Rebeca/1VinhoePretoRebeca.jpg" alt="Vestido Rebeca Vinho e Preto" class="zoom-img">
+    <div class="info">
+      <h2>Vestido Rebeca Vinho e Preto</h2>
+      <div class="precos">
+        <span class="preco-varejo">Varejo R$ 149,00</span><br>
+        <span class="preco-atacado">Atacado R$ 80,00</span>
+      </div>
+      <div class="quantidade">
+        <button class="menos">-</button>
+        <span class="qtd">1</span>
+        <button class="mais">+</button>
+      </div>
+      <button class="add-carrinho">🛒 + Adicionar</button>
+    </div>
+  </div>
+
 
 </div>
 

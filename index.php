@@ -16,28 +16,32 @@
 </head>
 <body>
     <!-- Carrossel do Bootstrap -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-wrap="true">
+    <div class="container-section">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-wrap="true">
         <!-- O data-bs-interval="3000" define o tempo em milissegundos (3 segundos) -->
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img src="IMG-Carrossel/Banner para loja online de roupas conforto e estilo para cada ocasião (1900_20250521_224246_0000.png" class="d-block w-100" alt="Vestido Branco">
+                <img src="Carrossel/Banner para loja.png" class="d-block w-100" alt="Vestido Miss ">
             </div>
             <!-- Slide 2 -->
             <div class="carousel-item">
-                <img src="IMG-Carrossel/VESTIDO ESTER BANNER (1900 x 520 px)_20250521_221124_0000.png" class="d-block w-100" alt="Vestido Salmão">
+                <img src="Carrossel/Tri Conjunto Verônica.png" class="d-block w-100" alt="Vestido Salmão">
             </div>
             <!-- Slide 3 -->
             <div class="carousel-item">
-                <img src="IMG-Carrossel/reallygreatsite.com (1900 x 520 px)_20250521_221859_0000.png" class="d-block w-100" alt="Logo Vestido Marrom">
+                <img src="Carrossel/Banner dos Vestidos.png" class="d-block w-100" alt="amostra de vestidos">
             </div>
             <!-- Slide 4 -->
             <div class="carousel-item">
-                <img src="IMG-Carrossel/Banner loja de vestidos delicado laranja _20250522_014319_0000.png" class="d-block w-100" alt="Banner Laranja">
+                <img src="Carrossel/VESTIDO ESTER.png" class="d-block w-100" alt="Vestidos Ester">
             </div>
             <!-- Slide 5 -->
             <div class="carousel-item">
-                <img src="IMG-Carrossel/I_20250524_235000_0000.png" class="d-block w-100" alt="Banner Laranja">
+                <img src="Carrossel/Conjunto Tedw.png" class="d-block w-100" alt="Conjuntp TEDW">
+            </div>
+             <div class="carousel-item">
+                <img src="Carrossel/Tri Conjunto Eliza.png" class="d-block w-100" alt="Conjuntp TEDW">
             </div>
         </div>
         <!-- Botão anterior do carrossel -->
@@ -51,44 +55,63 @@
             <span class="visually-hidden">Próximo</span>
         </button>
     </div>
+    </div>
 
     <main>
         <!-- Seção de apresentação da home -->
-        <section class="apresentacao-home">
+        <div class="container">
+          <section class="apresentacao-home">
             <div class="novo-home-titulo">
                 <h1>Isabella Atacadista</h1>
                 <p>Descubra a elegância em cada peça.<br>
                 Encontre vestidos únicos, conjuntos deslumbrantes e uma seleção exclusiva para realçar sua beleza.</p>
             </div>
         </section>
+        </div>
 
         <!-- Seção de banners de destaque -->
-        <section class="banners-destaque">
+        <div class="container-section">
+          <section class="banners-destaque">
             <a href="catalago1.php">
                 <div class="banner-img-container">
-                    <img src="IMG-BannersHome/Banner Vestido1.png" alt="Vestidos">
+                    <img src="Home-Destaque/Banner Estilo.png" alt="Vestidos">
                     <div class="banner-legenda">Vestidos</div>
                 </div>
             </a>
             <a href="catalagoconjunto.php">
                 <div class="banner-img-container">
-                    <img src="IMG-BannersHome/Banner Conjunto Plush.png" alt="Conjuntos">
+                    <img src="Home-Destaque/Conjunto Plush.png" alt="Conjuntos">
                     <div class="banner-legenda">Conjuntos</div>
                 </div>
             </a>
             <a href="blusinhas.php">
                 <div class="banner-img-container">
-                    <img src="IMG-BannersHome/Design sem nome_20250525_152744_0000.png" alt="Blusinhas">
+                    <img src="Home-Destaque/Blusinhas Gospel.png" alt="Blusinhas">
                     <div class="banner-legenda">Blusinhas</div>
                 </div>
             </a>
-            <a href="catalago1.php">
+            <a href="catalago2.php">
                 <div class="banner-img-container">
-                    <img src="IMG-BannersHome/Os Melhores Vestidos.png" alt="Os Melhores Vestidos">
-                    <div class="banner-legenda">Os Melhores Vestidos</div>
+                    <img src="Home-Destaque/Beige Cream Aesthetic.jpg" alt="Os Melhores Vestidos">
+                    <div class="banner-legenda">Nova Coleção</div>
+                </div>
+        
+            
+             <a href="catalagoconjunto.php">
+                <div class="banner-img-container">
+                    <img src="Home-Destaque/Conjunto Alice e Luana.png" alt="Tri Conjunto">
+                    <div class="banner-legenda">Tri Conjunto</div>
                 </div>
             </a>
-        </section>
+           
+            <a href="catalago1.php">
+                <div class="banner-img-container">
+                    <img src="Home-Destaque/Vestido mãe e fillha.png" alt="Mãe e Filha">
+                    <div class="banner-legenda">Mãe e Filha</div>
+                </div>
+            </a>
+          </section>
+        </div>
     </main>
 
     <section class="carousel-container">
