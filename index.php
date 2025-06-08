@@ -12,49 +12,42 @@
     <link rel="stylesheet" href="CSS/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <title>Isabella Atacadista</title>
 </head>
 <body>
     <!-- Carrossel do Bootstrap -->
-    <div class="container-section">
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-wrap="true">
-        <!-- O data-bs-interval="3000" define o tempo em milissegundos (3 segundos) -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
         <div class="carousel-inner">
-            <!-- Slide 1 -->
             <div class="carousel-item active">
-                <img src="Carrossel/Banner para loja.png" class="d-block w-100" alt="Vestido Miss ">
+                <img src="Carrossel/Banner para loja.png" class="d-block w-100" alt="Vestido Miss">
             </div>
-            <!-- Slide 2 -->
             <div class="carousel-item">
                 <img src="Carrossel/Tri Conjunto Verônica.png" class="d-block w-100" alt="Vestido Salmão">
             </div>
-            <!-- Slide 3 -->
             <div class="carousel-item">
                 <img src="Carrossel/Banner dos Vestidos.png" class="d-block w-100" alt="amostra de vestidos">
             </div>
-            <!-- Slide 4 -->
             <div class="carousel-item">
                 <img src="Carrossel/VESTIDO ESTER.png" class="d-block w-100" alt="Vestidos Ester">
             </div>
-            <!-- Slide 5 -->
             <div class="carousel-item">
-                <img src="Carrossel/Conjunto Tedw.png" class="d-block w-100" alt="Conjuntp TEDW">
+                <img src="Carrossel/Conjunto Tedw.png" class="d-block w-100" alt="Conjunto TEDW">
             </div>
-             <div class="carousel-item">
-                <img src="Carrossel/Tri Conjunto Eliza.png" class="d-block w-100" alt="Conjuntp TEDW">
+            <div class="carousel-item">
+                <img src="Carrossel/Tri Conjunto Eliza.png" class="d-block w-100" alt="Conjunto TEDW">
             </div>
         </div>
-        <!-- Botão anterior do carrossel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <!-- Botão próximo do carrossel -->
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-        </button>
-    </div>
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="5"></button>
+        </div>
     </div>
 
     <main>
@@ -114,51 +107,66 @@
         </div>
     </main>
 
-    <section class="carousel-container">
-      <div class="carousel">
-        <div class="testimonial">
-          <img src="images/sabrina.jpg" alt="Sabrina" />
-          <div class="stars">★★★★★</div>
-          <p class="text">"Os vestidos são simplesmente lindos! Me senti valorizada como mulher cristã. Atendimento impecável."</p>
-          <h4>Sabrina</h4>
-        </div>
-        <div class="testimonial">
-          <img src="images/leticia.jpg" alt="Letícia" />
-          <div class="stars">★★★★★</div>
-          <p class="text">"Comprei para um culto especial e fiquei encantada com o caimento. Elegância e modéstia em um só lugar."</p>
-          <h4>Letícia</h4>
-        </div>
-        <div class="testimonial">
-          <img src="images/emilly.jpg" alt="Emilly" />
-          <div class="stars">★★★★★</div>
-          <p class="text">"Amei cada detalhe! O tecido é maravilhoso e a entrega foi super rápida. Já virei cliente fiel."</p>
-          <h4>Emilly</h4>
-        </div>
-        <div class="testimonial">
-          <img src="images/fabiane.jpg" alt="Fabiane" />
-          <div class="stars">★★★★★</div>
-          <p class="text">"É difícil encontrar vestidos com essa delicadeza. Me senti elegante sem abrir mão da minha fé."</p>
-          <h4>Fabiane</h4>
-        </div>
-        <div class="testimonial">
-          <img src="images/marcia.jpg" alt="Márcia" />
-          <div class="stars">★★★★★</div>
-          <p class="text">"Foi minha primeira compra e fiquei emocionada com o cuidado no envio. A loja transmite amor em tudo."</p>
-          <h4>Márcia</h4>
-        </div>
-        <div class="testimonial">
-          <img src="images/bruna.jpg" alt="Bruna" />
-          <div class="stars">★★★★★</div>
-          <p class="text">"Além da beleza, os vestidos têm um toque espiritual. É mais do que moda, é propósito."</p>
-          <h4>Bruna</h4>
-        </div>
-      </div>
-    </section>
+   <section class="carousel-container">
+  <div class="carousel-track" id="carousel-track">
+    <div class="testimonial">
+      <img src="Fotos das pessoas dos comentários/Aelem.png" alt="Sabrina" />
+      <p>"Os vestidos são simplesmente lindos! Me senti valorizada como mulher cristã."</p>
+      <div class="stars">★★★★★</div>
+      <h4>Sabrina</h4>
+    </div>
+    <div class="testimonial">
+      <img src="Fotos das pessoas dos comentários/Naty.png" alt="Letícia" />
+      <p>"Comprei para um culto especial e fiquei encantada com o caimento."</p>
+      <div class="stars">★★★★★</div>
+      <h4>Letícia</h4>
+    </div>
+    <div class="testimonial">
+      <img src="images/emilly.jpg" alt="Emilly" />
+      <p>"Amei cada detalhe! O tecido é maravilhoso e a entrega foi super rápida."</p>
+      <div class="stars">★★★★★</div>
+      <h4>Emilly</h4>
+    </div>
+    <div class="testimonial">
+      <img src="images/fabiane.jpg" alt="Fabiane" />
+      <p>"É difícil encontrar vestidos com essa delicadeza. Me senti elegante."</p>
+      <div class="stars">★★★★★</div>
+      <h4>Fabiane</h4>
+    </div>
+    <div class="testimonial">
+      <img src="images/marcia.jpg" alt="Márcia" />
+      <p>"Foi minha primeira compra e fiquei emocionada com o cuidado no envio."</p>
+      <div class="stars">★★★★★</div>
+      <h4>Márcia</h4>
+    </div>
+    <div class="testimonial">
+      <img src="images/bruna.jpg" alt="Bruna" />
+      <p>"Além da beleza, os vestidos têm um toque espiritual. É mais do que moda."</p>
+      <div class="stars">★★★★★</div>
+      <h4>Bruna</h4>
+    </div>
+  </div>
 
-    <script src="carrcomentario.js"></script>
+  <div class="indicators">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+
+
     <!-- Scripts Bootstrap e carrinho -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+   
     <script src="carrinho.js"></script>
+   
+    <script src="carrcomentario.js"></script>
+   
     <?php include "footer.php"; ?>
 </body>
 </html>
