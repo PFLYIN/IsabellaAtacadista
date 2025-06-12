@@ -1,1 +1,15 @@
-m
+RewriteEngine On
+RewriteBase /IsabellaAtacadista/
+
+# Remover extensão .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Redirecionar todas as requisições para o index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
+
+# Página de erro 404
+ErrorDocument 404 /IsabellaAtacadista/erro404.php

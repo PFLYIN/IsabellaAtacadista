@@ -276,3 +276,39 @@ main {
 .dot.active {
   background: #333;
 }
+
+/* Estilo para o vídeo de fundo */
+.container-video-fundo {
+    position: relative;
+    width: 100%;
+    height: 110vh; /* Reduzido um pouco para melhor proporção */
+    overflow: hidden;
+}
+
+.video-fundo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mudado para 'cover' para preencher todo o container */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    width: 100%;
+    padding: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.658); /* Adicionado para melhor legibilidade */
+}
+
+.video-logo {
+    width: 250px; /* Logo um pouco maior */
+    height: auto;
+    margin-bottom: 20px;
+}

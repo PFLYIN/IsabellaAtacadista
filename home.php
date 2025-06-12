@@ -17,6 +17,19 @@
     <title>Isabella Atacadista</title>
 </head>
 <body>
+    <div class="container-video-fundo">
+        <video autoplay muted loop class="video-fundo">
+            <source src="video-de-Fundo/home-video-fundo.mp4" type="video/mp4">
+        </video>
+        <div class="video-content">
+            <img src="logo/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
+            <div class="video-text">
+                <h2>Moda Evangélica Atacado</h2>
+                <p>Elegância e modéstia para mulheres de valor</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Carrossel do Bootstrap -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
         <div class="carousel-inner">

@@ -18,7 +18,7 @@
     <header class="header-baixo-desktop">    
         <nav class="nav-desktop">
             <ul class="list-desktop">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="home.php">Home</a></li>
                 <li><a href="catalago1.php">Vestidos</a></li>
                 <li><a href="catalagoconjunto.php">Conjuntos</a></li>
                 <li><a href="blusinhas.php">Blusinhas</a></li>
@@ -172,7 +172,7 @@
 <nav class="menu-overlay" data-visible="false">
     <button class="close-btn" aria-label="Fechar">×</button>
     <ul>
-        <li><a href="index.php">Home</a></li>
+        <li><a href="home.php">Home</a></li>
         <li><a href="catalago1.php">Vestidos</a></li>
         <li><a href="catalagoconjunto.php">Conjuntos</a></li>
         <li><a href="blusinhas.php">Blusinhas</a></li>
