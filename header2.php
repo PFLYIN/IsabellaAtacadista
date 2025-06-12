@@ -1,43 +1,35 @@
 <body>
 <!-- ESTILOS DESKTOP -->
-<header class="header-desktop">
-        <div class="div-logo">
-            <a><img src="Logo-Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
-        </div>
-        <!--tentar deixar a barra de pesquisa entre a logo e a div-conta-->
-            
-           
-         <!-- teentar deixar do lado do logo, -->
-            <div id="div-conta"> 
-                <ul id="conta-simples">
-                    <li><a href="carrinho.php">🛒 Carrinho</a></li>
-                </ul>
-            </div>
-    </header>
- <!--Esse é o header que vai ficar na parte de baixo do outro header, como no site -->
-    <header class="header-baixo-desktop">    
-        <nav class="nav-desktop">
-            <ul class="list-desktop">
-                <li><a href="home.php">Home</a></li>
-                <li><a href="catalago1.php">Vestidos</a></li>
-                <li><a href="catalagoconjunto.php">Conjuntos</a></li>
-                <li><a href="blusinhas.php">Blusinhas</a></li>
-                <li><a href="sobrenos.php">Sobre Nós</a></li>
-                <li><a href="contato.php">Contato</a></li>
-            </ul>
-        </nav>  
-    </header>
+<header class="header-desktop">    
+    <div id="div-conta"> 
+        <ul id="conta-simples">
+            <li><a href="carrinho.php">🛒 Carrinho</a></li>
+        </ul>
+    </div>
+</header>
+
+<!--Esse é o header que vai ficar na parte de baixo do outro header, como no site -->
+<header class="header-baixo-desktop">    
+    <nav class="nav-desktop">
+        <ul class="list-desktop">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="catalago1.php">Vestidos</a></li>
+            <li><a href="catalagoconjunto.php">Conjuntos</a></li>
+            <li><a href="blusinhas.php">Blusinhas</a></li>
+            <li><a href="sobrenos.php">Sobre Nós</a></li>
+            <li><a href="contato.php">Contato</a></li>
+        </ul>
+    </nav>  
+</header>
 
 <style>
     .header-desktop {
-    width: 90%;
-    max-width: 1200px; /* Ajuste conforme o design desejado */
-    margin: 0 auto; /* Centraliza o header */
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto 5px;  /* Aumentado margin-top para 40px */
     display: flex;
-    justify-content: space-between; /* Espaça o logo e a conta */
-    align-items: center;
-    padding: 10px 20px;
-  
+    justify-content: flex-end;
+    padding: 5px 20px;
 }
 
 .div-logo {
@@ -78,25 +70,15 @@
 .header-baixo-desktop {
     position: sticky;
     display: block;
-    
-    
     top: 0;
     z-index: 1000;
-    /* Garante que o header fique acima de outros elementos */
-    background:rgba(255, 230, 242, 0.84);
-    /* Branco com 80% de opacidade */
+    background: rgba(255, 230, 242, 0.84);
     display: flex;
-    /* Ativa o Flexbox */
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Alinha verticalmente */
     padding: 10px 0;
-    /* Espaçamento interno */
     width: 80%;
-    /* Reduz a largura para 80% */
-    margin: auto;
-    /* Centraliza horizontalmente */
+    margin: 15px auto 0;  /* Adicionado margin-top de 15px */
     font-family: Oswald;
 }
 
@@ -155,7 +137,7 @@
 <div class="mobile-container">
     <!-- Logo -->
     <div class="mobile-logo">
-        <img src="Logo-Isabella/logo-isabella.png">
+        <img src="LOGO/logoIsabella.png" alt="Isabella Atacadista">
     </div>
 
     <!-- Barra de navegação -->

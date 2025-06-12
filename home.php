@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,16 +19,27 @@
 <body>
     <div class="container-video-fundo">
         <video autoplay muted loop class="video-fundo">
-            <source src="video-de-Fundo/home-video-fundo.mp4" type="video/mp4">
+            <source src="video-de-Fundo/videodefundohome.mp4" type="video/mp4">
         </video>
         <div class="video-content">
-            <img src="logo/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
+            <img src="Logo-Isabella/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
             <div class="video-text">
                 <h2>Moda Evangélica Atacado</h2>
                 <p>Elegância e modéstia para mulheres de valor</p>
             </div>
         </div>
     </div>
+
+    <?php include "header2.php"; ?>
+
+    <div class="container">
+          <section class="apresentacao-home">
+            <div class="novo-home-titulo">
+                <h1>Destaque</h1>
+                <p>Se surpreenda com os vestidos e conjuntos  únicos </p>
+            </div>
+        </section>
+        </div>
 
     <!-- Carrossel do Bootstrap -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
@@ -62,19 +73,10 @@
             <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="5"></button>
         </div>
     </div>
-
+    
+    
+    <!-- Seção de apresentação da home -->
     <main>
-        <!-- Seção de apresentação da home -->
-        <div class="container">
-          <section class="apresentacao-home">
-            <div class="novo-home-titulo">
-                <h1>Isabella Atacadista</h1>
-                <p>Descubra a elegância em cada peça.<br>
-                Encontre vestidos únicos, conjuntos deslumbrantes e uma seleção exclusiva para realçar sua beleza.</p>
-            </div>
-        </section>
-        </div>
-
         <!-- Seção de banners de destaque -->
         <div class="container-section">
           <section class="banners-destaque">

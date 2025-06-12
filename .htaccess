@@ -1,12 +1,19 @@
 RewriteEngine On
 RewriteBase /IsabellaAtacadista/
 
-# Remover extensão .php
+# Redirecionar o acesso direto à pasta para home
+RewriteRule ^$ home [L]
+
+# Redirecionar URLs com .php para sem .php (SEO e visual limpo)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php[?\s] [NC]
+RewriteRule ^([^.]+)\.php$ /IsabellaAtacadista/$1 [R=301,L]
+
+# Remover extensão .php para acesso direto
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^/]+)/?$ $1.php [NC,L]
 
-# Redirecionar todas as requisições para o index.php
+# Redirecionar todas as requisições para o index.php (caso não exista arquivo)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]

@@ -35,6 +35,6 @@
 <body>
   <h1>Erro 404</h1>
   <p>A página que você está procurando não existe ou foi movida.</p>
-  <p>Verifique se o endereço está correto ou volte para a <a href="/Isabella-Atacadista/home">página inicial</a>.</p>
+  <p>Verifique se o endereço está correto ou volte para a <a href="home.php">página inicial</a>.</p>
 </body>
 </html>
