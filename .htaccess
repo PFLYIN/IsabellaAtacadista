@@ -1,6 +1,10 @@
 RewriteEngine On
 RewriteBase /IsabellaAtacadista/
 
+# Permitir acesso direto ao processamento do formulário
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^processa_contato\.php$ - [L]
+
 # Redirecionar o acesso direto à pasta para home
 RewriteRule ^$ home [L]
 

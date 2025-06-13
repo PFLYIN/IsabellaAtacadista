@@ -1,3 +1,4 @@
+<?php include  "header.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,3 +23,4 @@
     <!-- ...existing code... -->
 </body>
 </html>
+<?php include "footer.php";?>
