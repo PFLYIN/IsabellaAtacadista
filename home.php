@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -33,7 +32,7 @@
     <?php include "header2.php"; ?>
 
     <div class="container">
-          <section class="apresentacao-home">
+          <section class="apresentacao-home animado">
             <div class="novo-home-titulo">
                 <h1>Destaque</h1>
                 <p>Se surpreenda com os vestidos e conjuntos  únicos </p>
@@ -42,7 +41,7 @@
         </div>
 
     <!-- Carrossel do Bootstrap -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div id="carouselExampleAutoplaying" class="carousel slide animado" data-bs-ride="carousel" data-bs-interval="2000">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="Carrossel/Banner para loja.png" class="d-block w-100" alt="Vestido Miss">
@@ -77,42 +76,41 @@
     
     <!-- Seção de apresentação da home -->
     <main>
-        <!-- Seção de banners de destaque -->
         <div class="container-section">
           <section class="banners-destaque">
-            <a href="catalago1.php">
+            <a href="catalago1.php" class="animado">
                 <div class="banner-img-container">
                     <img src="Home-Destaque/Banner Estilo.png" alt="Vestidos">
                     <div class="banner-legenda">Vestidos</div>
                 </div>
             </a>
-            <a href="catalagoconjunto.php">
+            <a href="catalagoconjunto.php" class="animado">
                 <div class="banner-img-container">
                     <img src="Home-Destaque/Conjunto Plush.png" alt="Conjuntos">
                     <div class="banner-legenda">Conjuntos</div>
                 </div>
             </a>
-            <a href="blusinhas.php">
+            <a href="blusinhas.php" class="animado">
                 <div class="banner-img-container">
                     <img src="Home-Destaque/Blusinhas Gospel.png" alt="Blusinhas">
                     <div class="banner-legenda">Blusinhas</div>
                 </div>
             </a>
-            <a href="catalago2.php">
+            <a href="catalago2.php" class="animado">
                 <div class="banner-img-container">
                     <img src="Home-Destaque/Beige Cream Aesthetic.jpg" alt="Os Melhores Vestidos">
                     <div class="banner-legenda">Nova Coleção</div>
                 </div>
         
             
-             <a href="catalagoconjunto.php">
+             <a href="catalagoconjunto.php" class="animado">
                 <div class="banner-img-container">
                     <img src="Home-Destaque/Conjunto Alice e Luana.png" alt="Tri Conjunto">
                     <div class="banner-legenda">Tri Conjunto</div>
                 </div>
             </a>
            
-            <a href="catalago1.php">
+            <a href="catalago1.php" class="animado">
                 <div class="banner-img-container">
                     <img src="Home-Destaque/Vestido mãe e fillha.png" alt="Mãe e Filha">
                     <div class="banner-legenda">Mãe e Filha</div>
@@ -122,39 +120,41 @@
         </div>
     </main>
 
-   <section class="carousel-container">
-  <div class="carousel-track" id="carousel-track">
-    <div class="testimonial">
+
+  
+    <section class="carousel-container animado">
+      <div class="carousel-track" id="carousel-track">
+        <div class="testimonial animado">
       <img src="Fotos das pessoas dos comentários/Aelem.png" alt="Sabrina" />
       <p>"Os vestidos são simplesmente lindos! Me senti valorizada como mulher cristã."</p>
       <div class="stars">★★★★★</div>
       <h4>Sabrina</h4>
     </div>
-    <div class="testimonial">
+    <div class="testimonial animado">
       <img src="Fotos das pessoas dos comentários/Naty.png" alt="Letícia" />
       <p>"Comprei para um culto especial e fiquei encantada com o caimento."</p>
       <div class="stars">★★★★★</div>
       <h4>Letícia</h4>
     </div>
-    <div class="testimonial">
+    <div class="testimonial animado">
       <img src="images/emilly.jpg" alt="Emilly" />
       <p>"Amei cada detalhe! O tecido é maravilhoso e a entrega foi super rápida."</p>
       <div class="stars">★★★★★</div>
       <h4>Emilly</h4>
     </div>
-    <div class="testimonial">
+    <div class="testimonial animado">
       <img src="images/fabiane.jpg" alt="Fabiane" />
       <p>"É difícil encontrar vestidos com essa delicadeza. Me senti elegante."</p>
       <div class="stars">★★★★★</div>
       <h4>Fabiane</h4>
     </div>
-    <div class="testimonial">
+    <div class="testimonial animado">
       <img src="images/marcia.jpg" alt="Márcia" />
       <p>"Foi minha primeira compra e fiquei emocionada com o cuidado no envio."</p>
       <div class="stars">★★★★★</div>
       <h4>Márcia</h4>
     </div>
-    <div class="testimonial">
+    <div class="testimonial animado">
       <img src="images/bruna.jpg" alt="Bruna" />
       <p>"Além da beleza, os vestidos têm um toque espiritual. É mais do que moda."</p>
       <div class="stars">★★★★★</div>
@@ -173,7 +173,7 @@
 </section>
 
 
-
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.6003438374777!2d-52.84292973046339!3d-24.415449777465792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f271bb321b1e23%3A0xe17df151f4820582!2sR.%20Ararigiboia%2C%20924%20-%20Juranda%2C%20PR%2C%2087355-000!5e1!3m2!1spt-BR!2sbr!4v1749965386331!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <!-- Scripts Bootstrap e carrinho -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
@@ -181,7 +181,7 @@
     <script src="carrinho.js"></script>
    
     <script src="carrcomentario.js"></script>
-   
+    <script src="js/home-animations.js"></script>
     <?php include "footer.php"; ?>
 </body>
 </html>
