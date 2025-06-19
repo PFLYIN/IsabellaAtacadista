@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
   <title>Catálogo de Vestidos</title>
   <link rel="stylesheet" href="CSS/catalago1.css">
+ 
 </head>
 <body>
 <div class="container">
@@ -758,6 +759,7 @@
 </div>
 
 <script src="carrinho.js"></script>
+
 
 </body>
 </html>

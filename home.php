@@ -18,13 +18,13 @@
 <body>
     <div class="container-video-fundo">
         <video autoplay muted loop class="video-fundo">
-            <source src="video-de-Fundo/videodefundohome.mp4" type="video/mp4">
+            <source src="Home-Destaque/fundo-home.mp4" type="video/mp4">
         </video>
         <div class="video-content">
             <img src="Logo-Isabella/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
             <div class="video-text">
-                <h2>Moda Evangélica Atacado</h2>
-                <p>Elegância e modéstia para mulheres de valor</p>
+                <h2>O Mwlhor Da Moda Evangélica</h2>
+                <p>Elegância para mulheres de valor</p>
             </div>
         </div>
     </div>
@@ -125,40 +125,40 @@
     <section class="carousel-container animado">
       <div class="carousel-track" id="carousel-track">
         <div class="testimonial animado">
-      <img src="Fotos das pessoas dos comentários/Aelem.png" alt="Sabrina" />
+      <img src="Fotos das pessoas dos comentários/Aelem.png" alt="Aelem" />
       <p>"Os vestidos são simplesmente lindos! Me senti valorizada como mulher cristã."</p>
       <div class="stars">★★★★★</div>
-      <h4>Sabrina</h4>
+      <h4>Aelem</h4>
     </div>
     <div class="testimonial animado">
-      <img src="Fotos das pessoas dos comentários/Naty.png" alt="Letícia" />
+      <img src="Fotos das pessoas dos comentários/Naty.png" alt="Naty" />
       <p>"Comprei para um culto especial e fiquei encantada com o caimento."</p>
+      <div class="stars">★★★★★</div>
+      <h4>Naty</h4>
+    </div>
+    <div class="testimonial animado">
+      <img src="Fotos das pessoas dos comentários/Letícia.jpg" alt="Letícia" />
+      <p>"Amei cada detalhe! O tecido é maravilhoso e a entrega foi super rápida."</p>
       <div class="stars">★★★★★</div>
       <h4>Letícia</h4>
     </div>
     <div class="testimonial animado">
-      <img src="images/emilly.jpg" alt="Emilly" />
-      <p>"Amei cada detalhe! O tecido é maravilhoso e a entrega foi super rápida."</p>
-      <div class="stars">★★★★★</div>
-      <h4>Emilly</h4>
-    </div>
-    <div class="testimonial animado">
-      <img src="images/fabiane.jpg" alt="Fabiane" />
+      <img src="Fotos das pessoas dos comentários/Jô.jpg" alt="Jô" />
       <p>"É difícil encontrar vestidos com essa delicadeza. Me senti elegante."</p>
       <div class="stars">★★★★★</div>
-      <h4>Fabiane</h4>
+      <h4>Jô</h4>
     </div>
     <div class="testimonial animado">
-      <img src="images/marcia.jpg" alt="Márcia" />
+      <img src="Fotos das pessoas dos comentários/Marta.jpg" alt="Marta" />
       <p>"Foi minha primeira compra e fiquei emocionada com o cuidado no envio."</p>
       <div class="stars">★★★★★</div>
-      <h4>Márcia</h4>
+      <h4>Marta</h4>
     </div>
     <div class="testimonial animado">
-      <img src="images/bruna.jpg" alt="Bruna" />
+      <img src="Fotos das pessoas dos comentários/Rosa.jpg" alt="Rosa" />
       <p>"Além da beleza, os vestidos têm um toque espiritual. É mais do que moda."</p>
       <div class="stars">★★★★★</div>
-      <h4>Bruna</h4>
+      <h4>Rosa</h4>
     </div>
   </div>
 
@@ -173,7 +173,7 @@
 </section>
 
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.6003438374777!2d-52.84292973046339!3d-24.415449777465792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f271bb321b1e23%3A0xe17df151f4820582!2sR.%20Ararigiboia%2C%20924%20-%20Juranda%2C%20PR%2C%2087355-000!5e1!3m2!1spt-BR!2sbr!4v1749965386331!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
 
     <!-- Scripts Bootstrap e carrinho -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>

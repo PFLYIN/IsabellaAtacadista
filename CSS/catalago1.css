@@ -17,6 +17,7 @@ body {
   max-width: 1000px;
   padding-bottom: 20px;
   font-weight: 600;
+  animation: fadeIn 1s ease-out;
 }
 
 .titulo::after {
@@ -42,6 +43,7 @@ body {
   padding: 0 20px;
   letter-spacing: 0.5px;
   position: relative;
+  animation: fadeIn 1s ease-out 0.3s backwards;
 }
 
 .descricao-catalogo::after {
@@ -69,22 +71,59 @@ body {
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
   }
   /* Ajusta a grade para telas médias */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
-  /* Ajusta a grade para telas pequenas */
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .grid {
-    grid-template-columns: 2fr;
-    
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
   }
+
+  .produto {
+    border-radius: 8px;
+  }
+
+  .produto img {
+    height: 200px;
+  }
+
+  .info {
+    padding: 10px;
+    min-height: 140px;
+  }
+
+  .info h2 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .precos {
+    font-size: 0.85rem;
+  }
+
+  .quantidade button {
+    padding: 2px 6px;
+    font-size: 1.2rem;
+  }
+
+  .add-carrinho {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  
   /* Ajusta a grade para telas muito pequenas */
 }
 
@@ -96,6 +135,10 @@ body {
   position: relative;
   transition: transform 0.4s;
   font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: fadeIn 0.6s ease-out;
   /* Estiliza os cartões de produtos */
 }
 
@@ -109,21 +152,40 @@ body {
   height: 370px;
   object-fit: cover;
   cursor: pointer;
-  /* Ajusta as imagens dos produtos */
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.produto img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
 }
 
 .info {
-  padding: 5%;
+  padding: 15px;
   text-align: center;
   font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  min-height: 180px;
+  animation: slideIn 0.5s ease-out;
   /* Estiliza a seção de informações dos produtos */
+}
+
+.info h2 {
+  margin: 0 0 10px 0;
+}
+
+.precos {
+  margin: 10px 0;
 }
 
 .quantidade {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8px 0;
+  margin: auto 0 10px 0;
   /* Configura o layout para os botões de quantidade */
 }
 
@@ -135,23 +197,33 @@ body {
   border: none;
   color: #333;
   font-size: 1.4rem;
-  
+  transition: all 0.2s ease;
+}
+
+.quantidade button:hover {
+  transform: scale(1.2);
+  color: rgb(122, 0, 67);
 }
 
 .add-carrinho {
   background: rgb(122, 0, 67);
   color: white;
   border: none;
-  padding: 8px 14px;
+  padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
-  /* Estiliza o botão de adicionar ao carrinho */
+  margin-top: auto;
+  width: 80%;
+  align-self: center;
+  transition: all 0.3s ease;
 }
 
 .add-carrinho:hover {
- background: rgba(168, 0, 90, 0.315);
-  color: #ff00bf;
-
+  transform: scale(1.05);
+  animation: pulseButton 1s infinite;
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(160,0,90,0.3);
   /* Adiciona efeito de hover no botão de adicionar ao carrinho */
 }
 
@@ -269,5 +341,65 @@ body {
 
 .anterior-pagina:hover, .proximo-pagina:hover {
   border-color: #ff00bf;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-conteudo {
+    width: 85%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .modal .anterior { left: 10px; }
+  .modal .proximo { right: 10px; }
+  
+  .modal .fechar {
+    top: 10px;
+    right: 15px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-conteudo {
+    width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+
+  .modal .anterior,
+  .modal .proximo {
+    font-size: 2.5rem;
+    padding: 10px;
+  }
 }
 

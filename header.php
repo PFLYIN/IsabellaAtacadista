@@ -30,22 +30,25 @@
 
 <style>
     .header-desktop {
-    width: 90%;
+    width: 100%;
     max-width: 1200px; /* Ajuste conforme o design desejado */
     margin: 0 auto; /* Centraliza o header */
     display: flex;
     justify-content: space-between; /* Espaça o logo e a conta */
     align-items: center;
     padding: 10px 20px;
-  
+    flex-wrap: wrap; /* Permite quebra de linha */
 }
 
 .div-logo {
-     margin-left: 470px;
+     margin: 0 auto; /* Centraliza em telas menores */
+    padding: 10px;
+    margin-left: 430px;
 }
 
 .div-logo img {
     max-width: 250px; /* Ajuste o tamanho do logo */
+    width: 100%; /* Torna responsivo */
     height: auto;
 }
 
@@ -157,27 +160,26 @@
     <div class="mobile-logo">
         <img src="Logo-Isabella/logo-isabella.png">
     </div>
+</div>
 
-    <!-- Barra de navegação -->
-    <div class="mobile-nav">
+<div class="mobile-nav">
         <button class="menu-btn" aria-label="Menu">
             <span></span>
         </button>
-        
-        <a href="carrinho.php" class="cart-btn">🛒 Carrinho</a>
-    </div>
 </div>
 
 <!-- Menu Mobile -->
 <nav class="menu-overlay" data-visible="false">
     <button class="close-btn" aria-label="Fechar">×</button>
     <ul>
+        <li><a href="carrinho.php">🛒 Carrinho</a></li>
         <li><a href="home.php">Home</a></li>
         <li><a href="catalago1.php">Vestidos</a></li>
         <li><a href="catalagoconjunto.php">Conjuntos</a></li>
         <li><a href="blusinhas.php">Blusinhas</a></li>
         <li><a href="sobrenos.php">Sobre Nós</a></li>
         <li><a href="contato.php">Contato</a></li>
+        
     </ul>
 </nav>
 
@@ -193,12 +195,19 @@
 .mobile-container {
     display: none;
     padding: 15px;
-    background: white;
+  
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+    z-index: 1000;
+   
 }
 
 .mobile-logo {
     text-align: center;
     margin-bottom: 15px;
+    display: block;
 }
 
 .mobile-logo img {
@@ -208,10 +217,15 @@
 
 /* Barra de Navegação */
 .mobile-nav {
+    position: fixed;
+    top: 1px; /* Aumentado de 16px para 25px */
+    left: 1px; /* Aumentado de 3px para 15px */
+    z-index: 1001;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 5px; /* Aumentado de 10px para 15px */
+    background: transparent;
 }
 
 /* Botão Menu */
@@ -226,8 +240,8 @@
 .menu-btn span::before,
 .menu-btn span::after {
     display: block;
-    width: 24px;
-    height: 2px;
+    width: 37px; /* Aumentado de 24px para 32px */
+    height: 3px; /* Aumentado de 2px para 3px */
     background: var(--primary-color);
     transition: var(--transition);
     position: relative;
@@ -239,8 +253,8 @@
     position: absolute;
 }
 
-.menu-btn span::before { top: -8px; }
-.menu-btn span::after { bottom: -8px; }
+.menu-btn span::before { top: -10px; } /* Aumentado de -8px para -10px */
+.menu-btn span::after { bottom: -10px; } /* Aumentado de -8px para -10px */
 
 /* Botão Carrinho */
 .cart-btn {
@@ -261,6 +275,7 @@
 
 /* Menu Overlay */
 .menu-overlay {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -274,6 +289,7 @@
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+    padding-top: 90px; /* Mesma altura do padding-top do body */
 }
 
 .menu-overlay[data-visible="true"] {
@@ -332,6 +348,42 @@
 }
 
 /* Media Queries */
+@media (max-width: 1024px) {
+  .nav-desktop .list-desktop li a {
+    font-size: 22px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-desktop .list-desktop {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-desktop .list-desktop li a {
+    font-size: 20px;
+  }
+
+  .header-desktop {
+    width: 95%;
+    padding: 5px;
+  }
+}
+
+/* Ajuste do breakpoint para mobile */
+@media (max-width: 700px) {
+  .mobile-container { 
+    display: block; 
+  }
+  
+  .header-desktop,
+  .header-baixo-desktop { 
+    display: none; 
+  }
+}
+
 @media (max-width:450px) {
     .mobile-container { display: block; }
     .header-desktop,
