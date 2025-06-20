@@ -1,60 +1,44 @@
 <body>
 <!-- ESTILOS DESKTOP -->
-<header class="header-desktop">    
-    <div id="div-conta"> 
-        <ul id="conta-simples">
-            <li><a href="carrinho.php">🛒 Carrinho</a></li>
-        </ul>
+<div id="div-conta"> 
+                <ul id="conta-simples">
+                    <li><a href="carrinho.php">🛒 Carrinho</a></li>
+                </ul>
     </div>
-</header>
-
-<!--Esse é o header que vai ficar na parte de baixo do outro header, como no site -->
-<header class="header-baixo-desktop">    
-    <nav class="nav-desktop">
-        <ul class="list-desktop">
-            <li><a href="home.php">Home</a></li>
-            <li><a href="catalago1.php">Vestidos</a></li>
-            <li><a href="catalagoconjunto.php">Conjuntos</a></li>
-            <li><a href="blusinhas.php">Blusinhas</a></li>
-            <li><a href="sobrenos.php">Sobre Nós</a></li>
-            <li><a href="contato.php">Contato</a></li>
-        </ul>
-    </nav>  
-</header>
+ <!--Esse é o header que vai ficar na parte de baixo do outro header, como no site -->
+    <header class="header-baixo-desktop">    
+        <nav class="nav-desktop">
+            <ul class="list-desktop">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="catalago1.php">Vestidos</a></li>
+                <li><a href="catalagoconjunto.php">Conjuntos</a></li>
+                <li><a href="blusinhas.php">Blusinhas</a></li>
+                <li><a href="sobrenos.php">Sobre Nós</a></li>
+                <li><a href="contato.php">Contato</a></li>
+            </ul>
+        </nav>  
+    </header>
 
 <style>
-    .header-desktop {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 5px;
-}
-
+   
 #div-conta {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 10px 0;
-}
+        
+        position: sticky;
+        float: right;
+        right: 0;
+        z-index: 1200;
+        top: 0px;
+        padding: 20px 20px;
+        border-bottom-left-radius: 16px;
+        
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        /* Garante que fique no canto direito do container */
+        width: fit-content;
+    }
 
-.header-baixo-desktop {
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
-    overflow-x: auto; /* Permite rolagem horizontal se necessário */
-}
-
-.nav-desktop .list-desktop {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px;
-    gap: 15px;
-}
-
-    #conta-simples {
+#conta-simples {
     font-family: 'Oswald', sans-serif; /* Usando a fonte Oswald carregada */
     list-style: none;
     padding: 0; /* Remova padding se não for necessário */
@@ -64,11 +48,12 @@
 }
 
 #conta-simples li a {
+  background:rgba(252, 218, 234, 0.76);
   color: rgb(122, 0, 67);
   padding: 8px 16px;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 1.,9rem;
+  font-size: 2.,0rem;
   border: 2px solid rgb(122, 0, 67);
   transition: all 0.3s ease;
 }
@@ -80,6 +65,23 @@
   box-shadow: 0 4px 12px rgba(160,0,90,0.2);
 }
 
+.header-baixo-desktop {
+    position: sticky;
+    display: block;
+    top: 0;
+    z-index: 1000;
+    background:rgba(255, 230, 242, 0.84);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 70%;
+    margin: auto;
+    font-family: Oswald;
+    margin-left: 200px; /* Adicionado para jogar para a esquerda */
+}
+
 .nav-desktop .list-desktop {
     display: flex;
     /* Alinha os itens horizontalmente */
@@ -87,7 +89,7 @@
     /* Remove os marcadores padrão */
     gap: 20px;
     /* Espaçamento entre os itens */
-    padding: 0;
+   
     /* Remove o padding padrão */
     margin: 0;
 
@@ -121,7 +123,7 @@
     background: linear-gradient(180deg, #fcdaea 0%, #fff 100%);
     transition: all 0.3s ease;
     transform: translateX(-50%);
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .nav-desktop .list-desktop li a:hover::after {
@@ -366,6 +368,25 @@
     .mobile-container { display: block; }
     .header-desktop,
     .header-baixo-desktop { display: none; }
+}
+
+/* Esconde nav mobile e overlay no desktop */
+.mobile-nav,
+.menu-overlay {
+    display: none;
+}
+
+/* Mostra nav mobile e overlay só no mobile */
+@media (max-width: 700px) {
+    .mobile-container { display: block; }
+    .mobile-nav { display: flex !important; }
+    .menu-overlay { display: flex !important; }
+}
+
+@media (max-width:450px) {
+    .mobile-container { display: block; }
+    .mobile-nav { display: flex !important; }
+    .menu-overlay { display: flex !important; }
 }
     </style>
 

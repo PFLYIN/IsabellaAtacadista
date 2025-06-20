@@ -3,17 +3,13 @@
 <header class="header-desktop">
         <div class="div-logo">
             <a><img src="Logo-Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
-        </div>
-        <!--tentar deixar a barra de pesquisa entre a logo e a div-conta-->
-            
-           
-         <!-- teentar deixar do lado do logo, -->
-            <div id="div-conta"> 
+</header>
+
+<div id="div-conta"> 
                 <ul id="conta-simples">
                     <li><a href="carrinho.php">🛒 Carrinho</a></li>
                 </ul>
-            </div>
-    </header>
+    </div>
  <!--Esse é o header que vai ficar na parte de baixo do outro header, como no site -->
     <header class="header-baixo-desktop">    
         <nav class="nav-desktop">
@@ -52,6 +48,22 @@
     height: auto;
 }
 
+#div-conta {
+        
+        position: sticky;
+        float: right;
+        right: 0;
+        z-index: 1200;
+        top: 0px;
+        padding: 2px 20px;
+        border-bottom-left-radius: 16px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        /* Garante que fique no canto direito do container */
+        width: fit-content;
+    }
+
 #conta-simples {
     font-family: 'Oswald', sans-serif; /* Usando a fonte Oswald carregada */
     list-style: none;
@@ -62,11 +74,12 @@
 }
 
 #conta-simples li a {
+  background:rgba(252, 218, 234, 0.76);
   color: rgb(122, 0, 67);
   padding: 8px 16px;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 1.,9rem;
+  font-size: 2.,0rem;
   border: 2px solid rgb(122, 0, 67);
   transition: all 0.3s ease;
 }
@@ -80,26 +93,16 @@
 
 .header-baixo-desktop {
     position: sticky;
-    display: block;
-    
-    
+    display: flex;
     top: 0;
     z-index: 1000;
-    /* Garante que o header fique acima de outros elementos */
     background:rgba(255, 230, 242, 0.84);
-    /* Branco com 80% de opacidade */
-    display: flex;
-    /* Ativa o Flexbox */
+    border-radius: 15px;
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Alinha verticalmente */
     padding: 10px 0;
-    /* Espaçamento interno */
-    width: 80%;
-    /* Reduz a largura para 80% */
-    margin: auto;
-    /* Centraliza horizontalmente */
+    width: 100%;
+    margin: 0 auto;
     font-family: Oswald;
 }
 
@@ -110,7 +113,7 @@
     /* Remove os marcadores padrão */
     gap: 20px;
     /* Espaçamento entre os itens */
-    padding: 0;
+   
     /* Remove o padding padrão */
     margin: 0;
 
@@ -144,7 +147,7 @@
     background: linear-gradient(180deg, #fcdaea 0%, #fff 100%);
     transition: all 0.3s ease;
     transform: translateX(-50%);
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .nav-desktop .list-desktop li a:hover::after {
@@ -374,6 +377,7 @@
 
 /* Ajuste do breakpoint para mobile */
 @media (max-width: 700px) {
+  #div-conta { display: none; }
   .mobile-container { 
     display: block; 
   }
@@ -385,9 +389,39 @@
 }
 
 @media (max-width:450px) {
+    #div-conta { display: none; }
     .mobile-container { display: block; }
     .header-desktop,
     .header-baixo-desktop { display: none; }
+}
+
+/* Esconde nav mobile e overlay no desktop */
+.mobile-nav,
+.menu-overlay {
+    display: none;
+}
+
+/* Mostra nav mobile e overlay só no mobile */
+@media (max-width: 700px) {
+    .mobile-container { display: block; }
+    .mobile-nav { display: flex !important; }
+    .menu-overlay { display: flex !important; }
+}
+
+@media (max-width:450px) {
+    .mobile-container { display: block; }
+    .mobile-nav { display: flex !important; }
+    .menu-overlay { display: flex !important; }
+}
+
+@media (max-width: 900px) {
+  .header-baixo-desktop {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    padding: 8px 0;
+  }
 }
     </style>
 

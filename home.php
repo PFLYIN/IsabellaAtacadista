@@ -23,7 +23,7 @@
         <div class="video-content">
             <img src="Logo-Isabella/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
             <div class="video-text">
-                <h2>O Mwlhor Da Moda Evangélica</h2>
+                <h2>O Melhor Da Moda Evangélica</h2>
                 <p>Elegância para mulheres de valor</p>
             </div>
         </div>
@@ -34,8 +34,7 @@
     <div class="container">
           <section class="apresentacao-home animado">
             <div class="novo-home-titulo">
-                <h1>Destaque</h1>
-                <p>Se surpreenda com os vestidos e conjuntos  únicos </p>
+                <h1>Conheça um pouco dos nossos produtos</h1>
             </div>
         </section>
         </div>
@@ -76,7 +75,7 @@
     
     <!-- Seção de apresentação da home -->
     <main>
-        <div class="container-section">
+        <div class="container">
           <section class="banners-destaque">
             <a href="catalago1.php" class="animado">
                 <div class="banner-img-container">
@@ -101,15 +100,13 @@
                     <img src="Home-Destaque/Beige Cream Aesthetic.jpg" alt="Os Melhores Vestidos">
                     <div class="banner-legenda">Nova Coleção</div>
                 </div>
-        
-            
-             <a href="catalagoconjunto.php" class="animado">
+            </a>
+            <a href="catalagoconjunto.php" class="animado">
                 <div class="banner-img-container">
                     <img src="Home-Destaque/Conjunto Alice e Luana.png" alt="Tri Conjunto">
                     <div class="banner-legenda">Tri Conjunto</div>
                 </div>
             </a>
-           
             <a href="catalago1.php" class="animado">
                 <div class="banner-img-container">
                     <img src="Home-Destaque/Vestido mãe e fillha.png" alt="Mãe e Filha">
@@ -121,6 +118,13 @@
     </main>
 
 
+    <div class="container">
+          <section class="comentario-home">
+            <div class="feedhback">
+                <h1>Feedback dos nossos clientes</h1>
+            </div>
+        </section>
+        </div>
   
     <section class="carousel-container animado">
       <div class="carousel-track" id="carousel-track">

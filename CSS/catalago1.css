@@ -86,45 +86,56 @@ body {
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
+    gap: 8px;
+    padding: 4px;
   }
 
   .produto {
-    border-radius: 8px;
+    border-radius: 6px;
+    min-width: 0;
+    max-width: 100%;
+    height: 100%;
   }
 
   .produto img {
-    height: 200px;
+    height: 140px;
+    min-width: 0;
+    max-width: 100%;
+    object-fit: cover;
   }
 
   .info {
-    padding: 10px;
-    min-height: 140px;
+    padding: 6px;
+    min-height: 90px;
   }
 
   .info h2 {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+    line-height: 1.1;
   }
 
   .precos {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
+    margin: 4px 0;
   }
 
   .quantidade button {
-    padding: 2px 6px;
-    font-size: 1.2rem;
+    padding: 1px 4px;
+    font-size: 1rem;
+    margin: 0 2px;
+  }
+
+  .quantidade {
+    margin-bottom: 4px;
   }
 
   .add-carrinho {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    width: 90%;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    width: 95%;
+    margin-top: 2px;
   }
-
-  
-  /* Ajusta a grade para telas muito pequenas */
 }
 
 .produto {
