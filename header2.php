@@ -1,23 +1,22 @@
 <body>
 <!-- ESTILOS DESKTOP -->
 <div id="div-conta"> 
-                <ul id="conta-simples">
-                    <li><a href="carrinho.php">🛒 Carrinho</a></li>
-                </ul>
-    </div>
- <!--Esse é o header que vai ficar na parte de baixo do outro header, como no site -->
-    <header class="header-baixo-desktop">    
-        <nav class="nav-desktop">
-            <ul class="list-desktop">
-                <li><a href="home.php">Home</a></li>
-                <li><a href="catalago1.php">Vestidos</a></li>
-                <li><a href="catalagoconjunto.php">Conjuntos</a></li>
-                <li><a href="blusinhas.php">Blusinhas</a></li>
-                <li><a href="sobrenos.php">Sobre Nós</a></li>
-                <li><a href="contato.php">Contato</a></li>
-            </ul>
-        </nav>  
-    </header>
+    <ul id="conta-simples">
+        <li><a href="carrinho.php">🛒 Carrinho</a></li>
+    </ul>
+</div>
+<header class="header-baixo-desktop">    
+    <nav class="nav-desktop">
+        <ul class="list-desktop">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="catalago1.php">Vestidos</a></li>
+            <li><a href="catalagoconjunto.php">Conjuntos</a></li>
+            <li><a href="blusinhas.php">Blusinhas</a></li>
+            <li><a href="sobrenos.php">Sobre Nós</a></li>
+            <li><a href="contato.php">Contato</a></li>
+        </ul>
+    </nav>  
+</header>
 
 <style>
    
@@ -131,200 +130,157 @@
     background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
 
 }
-</style>
 
-<!-- Novo Header Mobile -->
-<!-- Novo Header Mobile -->
-<div class="mobile-container">
-    <!-- Logo -->
-    <div class="mobile-logo">
-        <img src="Logo-Isabella/logo-isabella.png">
-    </div>
-</div>
+/* Hamburguer para animação mobile */
+.hamburguer {
+  width: 36px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 2100;
+  background: rgba(255, 137, 204, 0.53);
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 0;
+  border: none;
+  transition: box-shadow 0.3s;
+}
+.hamburguer span {
+  height: 4px;
+  width: 100%;
+  background-color: #a0005a;
+  border-radius: 5px;
+  transition: 0.4s;
+  display: block;
+}
+.hamburguer.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburguer.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburguer.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
 
-<div class="mobile-nav">
-        <button class="menu-btn" aria-label="Menu">
-            <span></span>
-        </button>
-</div>
-
-<!-- Menu Mobile -->
-<nav class="menu-overlay" data-visible="false">
-    <button class="close-btn" aria-label="Fechar">×</button>
-    <ul>
-        <li><a href="carrinho.php">🛒 Carrinho</a></li>
-        <li><a href="home.php">Home</a></li>
-        <li><a href="catalago1.php">Vestidos</a></li>
-        <li><a href="catalagoconjunto.php">Conjuntos</a></li>
-        <li><a href="blusinhas.php">Blusinhas</a></li>
-        <li><a href="sobrenos.php">Sobre Nós</a></li>
-        <li><a href="contato.php">Contato</a></li>
-        
-    </ul>
-</nav>
-
-<style>
-/* Variáveis */
-:root {
-    --primary-color: rgb(122, 0, 67);
-    --gradient: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
-    --transition: 0.3s ease;
+/* Nav Menu animado (usado para mobile) */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -50vw;
+  width: 50vw;
+  min-width: 220px;
+  max-width: 400px;
+  height: 100vh;
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  box-shadow: -8px 0 32px rgba(160,0,90,0.13);
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.5s cubic-bezier(.77,0,.18,1);
+  z-index: 2000;
+  opacity: 1;
+  pointer-events: auto;
+}
+.nav-menu.active {
+  right: 0;
+}
+.nav-menu ul {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  padding: 0 10px;
+}
+.nav-menu ul li {
+  margin: 28px 0;
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.nav-menu.active ul li {
+  opacity: 1;
+  transform: translateX(0);
+}
+.nav-menu.active ul li:nth-child(1) { transition-delay: 0.08s; }
+.nav-menu.active ul li:nth-child(2) { transition-delay: 0.16s; }
+.nav-menu.active ul li:nth-child(3) { transition-delay: 0.24s; }
+.nav-menu.active ul li:nth-child(4) { transition-delay: 0.32s; }
+.nav-menu.active ul li:nth-child(5) { transition-delay: 0.40s; }
+.nav-menu.active ul li:nth-child(6) { transition-delay: 0.48s; }
+.nav-menu.active ul li:nth-child(7) { transition-delay: 0.56s; }
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.35rem;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  display: inline-block;
+  background: rgba(255,255,255,0.07);
+  border: 2px solid rgba(255,255,255,0.18);
+  box-shadow: 0 2px 8px rgba(160,0,90,0.06);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.nav-menu ul li a:hover {
+  background: #fff;
+  color: #a0005a;
+  transform: scale(1.08);
+  border-color: #fff;
 }
 
 /* Container Mobile */
 .mobile-container {
-    display: none;
-    padding: 15px;
-  
-    top: 0;
-    left: 0;
-    width: 100%;
-   
-    z-index: 1000;
-   
+  display: none;
+  padding: 15px;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
 }
-
 .mobile-logo {
-    text-align: center;
-    margin-bottom: 15px;
-    display: block;
+  text-align: center;
+  margin-bottom: 15px;
+  display: block;
 }
-
 .mobile-logo img {
-    max-width: 180px;
-    height: auto;
+  max-width: 180px;
+  height: auto;
 }
 
-/* Barra de Navegação */
-.mobile-nav {
-    position: fixed;
-    top: 1px; /* Aumentado de 16px para 25px */
-    left: 1px; /* Aumentado de 3px para 15px */
-    z-index: 1001;
+/* Novo container só para o hamburguer */
+.mobile-hamburguer-container {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .mobile-container { display: block; }
+  .mobile-hamburguer-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px; /* Aumentado de 10px para 15px */
-    background: transparent;
-}
-
-/* Botão Menu */
-.menu-btn {
-    background: none;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.menu-btn span,
-.menu-btn span::before,
-.menu-btn span::after {
-    display: block;
-    width: 37px; /* Aumentado de 24px para 32px */
-    height: 3px; /* Aumentado de 2px para 3px */
-    background: var(--primary-color);
-    transition: var(--transition);
-    position: relative;
-}
-
-.menu-btn span::before,
-.menu-btn span::after {
-    content: '';
-    position: absolute;
-}
-
-.menu-btn span::before { top: -10px; } /* Aumentado de -8px para -10px */
-.menu-btn span::after { bottom: -10px; } /* Aumentado de -8px para -10px */
-
-/* Botão Carrinho */
-.cart-btn {
-    color: var(--primary-color);
-    text-decoration: none;
-    padding: 8px 16px;
-    border: 2px solid var(--primary-color);
-    border-radius: 12px;
-    transition: var(--transition);
-}
-
-.cart-btn:hover {
-    background: var(--gradient);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(160,0,90,0.2);
-}
-
-/* Menu Overlay */
-.menu-overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-    padding-top: 90px; /* Mesma altura do padding-top do body */
-}
-
-.menu-overlay[data-visible="true"] {
-    opacity: 1;
-    visibility: visible;
-}
-
-.menu-overlay ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.menu-overlay li {
-    margin: 20px 0;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.menu-overlay[data-visible="true"] li {
-    transform: translateY(0);
-    opacity: 1;
-    transition-delay: calc(0.1s * var(--i));
-}
-
-.menu-overlay a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    transition: var(--transition);
-}
-
-.menu-overlay a:hover {
-    color: #ffe6f2;
-    transform: scale(1.1);
-    display: inline-block;
-}
-
-.close-btn {
-    position: absolute;
+    position: sticky;
     top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-    transition: var(--transition);
+    left: 0;
+    z-index: 2100;
+    width: 100%;
+    justify-content: flex-start;
+    background: transparent;
+  }
+  .hamburguer {
+    margin-left: 20px;
+    margin-top: 0;
+    align-self: flex-start;
+    position: static;
+  }
+  #div-conta { display: none; }
+  .header-baixo-desktop { display: none; }
+  .nav-menu { display: flex; }
 }
-
-.close-btn:hover {
-    transform: rotate(90deg);
+@media (min-width: 701px) {
+  .hamburguer, .nav-menu, .mobile-container, .mobile-hamburguer-container { display: none !important; }
 }
 
 /* Media Queries */
@@ -390,5 +346,40 @@
 }
     </style>
 
-<script src="navbar.js"></script>
+<!-- Novo Header Mobile -->
+<div class="mobile-container">
+    <div class="mobile-logo">
+        <img src="Logo-Isabella/logo-isabella.png">
+    </div>
+</div>
+
+<div class="mobile-hamburguer-container">
+    <div id="hamburguer" class="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<nav id="nav-menu" class="nav-menu">
+    <ul>
+        <li><a href="carrinho.php">🛒 Carrinho</a></li>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="catalago1.php">Vestidos</a></li>
+        <li><a href="catalagoconjunto.php">Conjuntos</a></li>
+        <li><a href="blusinhas.php">Blusinhas</a></li>
+        <li><a href="sobrenos.php">Sobre Nós</a></li>
+        <li><a href="contato.php">Contato</a></li>
+    </ul>
+</nav>
+
+<script>
+  const hamburguer = document.getElementById('hamburguer');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburguer.addEventListener('click', () => {
+    hamburguer.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+</script>
 </body>
