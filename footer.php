@@ -16,11 +16,20 @@
           <a href="sobre.php">Sobre Nós</a>
           <a href="">Persona</a>
         </div>
-        <div class="footer-col">
-          <h4>Produtos</h4>
-          <a href="carrinho.php">Carrinho</a>
-          <a href="catalago1.php">Vestidos</a>
-          <a href="catalagoconjunto.php">Conjuntos</a>
+        <div class="contato-footer">
+          <div class="contato-titulo">Isabella Atacadista</div>
+          <div class="item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5 14.5 7.6 14.5 9 13.4 11.5 12 11.5z"/></svg>
+            <span>Juranda, PR</span>
+          </div>
+          <div class="item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.5 2.53.77 3.9.77a1 1 0 011 1v3.5a1 1 0 01-1 1C10.4 22.25 1.75 13.6 1.75 3.5a1 1 0 011-1H6.25a1 1 0 011 1c0 1.37.27 2.7.77 3.9a1 1 0 01-.21 1.11l-2.19 2.18z"/></svg>
+            <span>(44) 99841-4219</span>
+          </div>
+          <div class="item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24"><path d="M12 1.75A10.25 10.25 0 112.75 12 10.26 10.26 0 0112 1.75m0-1.75a12 12 0 1012 12A12 12 0 0012 0zm.75 6a.75.75 0 00-1.5 0v6.25a.75.75 0 00.75.75h5a.75.75 0 000-1.5H12.75z"/></svg>
+            <span>Seg-Sab: 8:30h - 19:30h</span>
+          </div>
         </div>
       </div>
       <div class="footer-col footer-ajuda">
@@ -161,6 +170,68 @@
     .social-item a:hover {
       color: #a6004f;
     }
+    .contato-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+  color: black;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.contato-footer .contato-titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color:rgb(0, 0, 0);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-align: left;
+  width: 100%;
+}
+
+.contato-footer .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.contato-footer .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contato-footer {
+    align-items: center;
+    margin-top: 12px;
+  }
+  .contato-footer .contato-titulo {
+    font-size: 1.15rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .contato-footer .item {
+    font-size: 1rem;
+    justify-content: center;
+  }
+}
+
+/* Desktop */
+@media (min-width: 601px) {
+  .contato-footer {
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  .contato-footer .contato-titulo {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
 
     @media (max-width: 600px) {
       .footer-logo {

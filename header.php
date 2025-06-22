@@ -65,7 +65,7 @@ body {
         position: sticky;
         float: right;
         right: 0;
-        z-index: 1200;
+        z-index: 1000;
         top: 0px;
         padding: 2px 20px;
         border-bottom-left-radius: 16px;
@@ -107,7 +107,7 @@ body {
     position: sticky;
     display: flex;
     top: 0;
-    z-index: 1000;
+    z-index: 900;
     background:rgba(255, 230, 242, 0.84);
     border-radius: 15px;
     justify-content: center;

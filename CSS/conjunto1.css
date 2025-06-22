@@ -71,21 +71,56 @@ body {
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
   }
   /* Ajusta a grade para telas médias */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
-  /* Ajusta a grade para telas pequenas */
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .grid {
-    grid-template-columns: 2fr;
-    
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .produto {
+    border-radius: 8px;
+  }
+
+  .produto img {
+    height: 200px;
+  }
+
+  .info {
+    padding: 10px;
+    min-height: 140px;
+  }
+
+  .info h2 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .precos {
+    font-size: 0.85rem;
+  }
+
+  .quantidade button {
+    padding: 2px 6px;
+    font-size: 1.2rem;
+  }
+
+  .add-carrinho {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    width: 90%;
   }
   /* Ajusta a grade para telas muito pequenas */
 }
@@ -180,7 +215,6 @@ body {
   width: 80%;
   align-self: center;
   transition: all 0.3s ease;
-  /* Estiliza o botão de adicionar ao carrinho */
 }
 
 .add-carrinho:hover {
@@ -202,6 +236,7 @@ body {
   height: 100%;
   overflow: auto; /* Permite rolagem se a imagem for grande */
   background-color: rgba(0,0,0,0.7); /* Fundo escuro semi-transparente */
+  padding-bottom: 60px;
   /* Configura o modal para exibição de imagens */
 }
 
@@ -214,37 +249,176 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Estiliza o conteúdo do modal */
+  /* Mantém a imagem centralizada */
+}
+
+.modal .fechar,
+.modal .imagem-completa,
+.modal .anterior,
+.modal .proximo {
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  color: #fff;
+  opacity: 0.7;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal .fechar {
+  top: 20px;
+  right: 30px;
+  width: 38px;
+  height: 38px;
+  font-size: 2.1rem;
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  color: #fff;
+  z-index: 1003;
+  margin-right: 0;
+}
+
+
+.modal .imagem-completa {
+  top: 18px;
+  right: 80px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  z-index: 1004;
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  color: #fff;
+  margin-right: 0;
+  /* Não sobrepor a fechar */
+}
+
+.modal .imagem-completa:hover,
+.modal .fechar:hover,
+.modal .anterior:hover,
+.modal .proximo:hover {
+  opacity: 1;
+  box-shadow: 0 0 8px #ff00bf55;
 }
 
 .modal .anterior,
 .modal .proximo {
-  position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  border: 2px solid #ffffff00;
-  background: transparent;
-  color: #ffffff;
-  font-size: 3rem;
-  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  font-size: 1.5rem;
   z-index: 1002;
-  border-radius: 50%;
-  text-decoration: none;
-  /* Sem fundo, apenas borda branca e cor branca */
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  color: #fff;
+  transform: translateY(-50%);
 }
 
+.modal .anterior { left: 30px; }
+.modal .proximo { right: 30px; }
 
-.modal .anterior { left: 20px; }
-.modal .proximo { right: 20px; }
-.modal .fechar {
+@media (max-width: 700px) {
+  .modal-conteudo {
+    width: 95vw;
+    max-width: 98vw;
+    height: auto;
+    max-height: 65vh;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal .fechar {
+    top: 10px;
+    right: 15px;
+    width: 48px;
+    height: 48px;
+    font-size: 2.2rem;
+    z-index: 1005;
+  }
+  .modal .imagem-completa {
+    display: none !important;
+  }
+  .modal .anterior,
+  .modal .proximo {
+    display: none !important;
+  }
+}
+
+/* Indicadores de navegação (bolinhas) para o modal */
+.modal-indicadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 50px;
-  cursor: pointer;
-  z-index: 1003;
-  /* Estiliza o botão de fechar o modal */
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  z-index: 1006;
+  pointer-events: none;
+}
+
+.modal-indicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  transition: opacity 0.2s, background 0.2s;
+  pointer-events: auto;
+}
+
+.modal-indicador.ativo {
+  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
+  opacity: 1;
+  box-shadow: 0 0 6px #ff00bf88;
+}
+
+/* Aumenta botões no desktop também para acessibilidade */
+@media (min-width: 701px) {
+  .modal .fechar,
+  .modal .imagem-completa,
+  .modal .anterior,
+  .modal .proximo {
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-conteudo {
+    width: 98vw;
+    max-width: 98vw;
+    max-height: 55vh;
+    height: auto;
+    object-fit: contain;
+  }
+  .modal .fechar {
+    top: 6px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.7rem;
+  }
+  .modal .imagem-completa {
+    display: none !important;
+  }
+  .modal .anterior,
+  .modal .proximo {
+    display: none !important;
+  }
+  .modal-indicadores {
+    bottom: 10px;
+    gap: 6px;
+  }
+  .modal-indicador {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .produto,
@@ -336,3 +510,5 @@ body {
   }
 }
 
+
+  

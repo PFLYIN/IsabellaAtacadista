@@ -752,13 +752,17 @@
 
 <!-- Modal para galeria -->
 <div id="modal" class="modal">
-  <span class="fechar">&times;</span>
-  <button class="anterior">&#8592;</button>
+  <span class="fechar" title="Fechar">&times;</span>
+  <button class="imagem-completa" id="btnCompleta" title="Ver imagem completa" aria-label="Ver imagem completa">⛶</button>
+  <button class="imagem-completa" id="btnVoltar" title="Voltar para o modal normal" aria-label="Voltar para o modal normal" style="display:none;">↩</button>
+  <button class="anterior" aria-label="Imagem anterior">&#8592;</button>
   <img class="modal-conteudo" id="imgZoom">
-  <button class="proximo">&#8594;</button>
+  <button class="proximo" aria-label="Próxima imagem">&#8594;</button>
 </div>
 
 <script src="carrinho.js"></script>
+
+<script src="modal.js"></script>
 
 
 </body>

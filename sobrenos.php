@@ -1,3 +1,4 @@
+<?php include "header.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre Nós | Isabella Atacadista</title>
   <link rel="stylesheet" href="CSS/sobrenos.css"/>
+  <style>
+    /* Diagnóstico: cor de fundo para garantir que o CSS está carregando */
+    .bloco, .galeria .foto, .mapa-container { opacity: 1 !important; transform: none !important; }
+  </style>
 </head>
 <body>
 
@@ -14,7 +19,7 @@
   <!-- Bloco 1 -->
   <div class="bloco">
     <div class="imagem">
-      <img src="foto1.jpg" alt="Nossa loja" />
+      <img src="Logo-Isabella/isabel-fundadora.jpg" alt="Nossa loja" onerror="this.style.border='2px solid red';this.alt='Imagem não encontrada';"/>
     </div>
     <div class="texto">
       <h2>Uma História Feita de Conquistas</h2>
@@ -29,7 +34,7 @@
   <!-- Bloco 2 -->
   <div class="bloco invertido">
     <div class="imagem">
-      <img src="foto2.jpg" alt="Missão" />
+      <img src="Logo-Isabella/isabel-fundadora.jpg" alt="Missão" onerror="this.style.border='2px solid red';this.alt='Imagem não encontrada';"/>
     </div>
     <div class="texto">
       <h2>Nossa Missão</h2>
@@ -42,7 +47,7 @@
   <!-- Bloco 3 -->
   <div class="bloco">
     <div class="imagem">
-      <img src="foto3.jpg" alt="Visão" />
+      <img src="Logo-Isabella/isabel-fundadora.jpg" alt="Visão" onerror="this.style.border='2px solid red';this.alt='Imagem não encontrada';"/>
     </div>
     <div class="texto">
       <h2>Visão</h2>
@@ -55,7 +60,7 @@
   <!-- Bloco 4 -->
   <div class="bloco invertido">
     <div class="imagem">
-      <img src="foto4.jpg" alt="Valores" />
+      <img src="Logo-Isabella/isabel-fundadora.jpg" alt="Valores" onerror="this.style.border='2px solid red';this.alt='Imagem não encontrada';"/>
     </div>
     <div class="texto">
       <h2>Valores</h2>
@@ -67,10 +72,22 @@
 
   <!-- Galeria de Fotos -->
   <div class="galeria">
-    <div class="foto"><img src="foto5.jpg" alt="Bastidores"/><div class="legenda">Bastidores</div></div>
-    <div class="foto"><img src="foto6.jpg" alt="Nossa Equipe"/><div class="legenda">Nossa Equipe</div></div>
-    <div class="foto"><img src="foto7.jpg" alt="Coleções"/><div class="legenda">Coleções Exclusivas</div></div>
-    <div class="foto"><img src="foto8.jpg" alt="Atendimento"/><div class="legenda">Atendimento com Amor</div></div>
+    <div class="foto">
+      <img src="Logo-Isabella/isabel-fundadora.jpg" alt="Bastidores" onerror="this.style.border='2px solid red';this.alt='Imagem não encontrada';"/>
+      <div class="legenda">Bastidores</div>
+    </div>
+    <div class="foto">
+      <img src="Logo-Isabella/isabel-fundadora.jpg" alt="Nossa Equipe" onerror="this.style.border='2px solid red';this.alt='Imagem não encontrada';"/>
+      <div class="legenda">Nossa Equipe</div>
+    </div>
+    <div class="foto">
+      <img src="Logo-Isabella/isabel-fundadora.jpg" alt="Coleções" onerror="this.style.border='2px solid red';this.alt='Imagem não encontrada';"/>
+      <div class="legenda">Coleções Exclusivas</div>
+    </div>
+    <div class="foto">
+      <img src="Logo-Isabella/isabel-fundadora.jpg" alt="Atendimento" onerror="this.style.border='2px solid red';this.alt='Imagem não encontrada';"/>
+      <div class="legenda">Atendimento com Amor</div>
+    </div>
   </div>
 
 </section>
@@ -90,6 +107,8 @@
 </section>
 
 <script src="sobrenos.js"></script>
+
+<?php include "footer.php"; ?>
 
 </body>
 </html>
