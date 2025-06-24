@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("valor-total").textContent = total.toFixed(2);
       const mensagem = `Essas são as peças escolhidas:%0A` +
         carrinho.map(p => 
-          `• ${p.nome}${p.tipo === "atacado" ? " (Atacado)" : ""} (x${p.qtd}) - R$ ${p.preco.toFixed(2)}%0AImagem: ${p.imagem || ''}`
+          `• ${p.nome}${p.tipo === "atacado" ? " (Atacado)" : ""} (x${p.qtd}) - R$ ${p.preco.toFixed(2)}%0AImagem: ${p.imagem || ''}%0ALink: https://isabella-atacadista.infinityfreeapp.com/produto.php?id=${p.id}`
         ).join("%0A") +
         `%0ATotal: R$ ${total.toFixed(2)}`;
 
