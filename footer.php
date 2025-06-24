@@ -12,9 +12,8 @@
       <div class="footer-row">
         <div class="footer-col">
           <h4>Informação</h4>
-          <a href="">Como Usar</a>
-          <a href="sobre.php">Sobre Nós</a>
-          <a href="">Persona</a>
+          <a href="sobrenos.php">Sobre Nós</a>
+          <a href="erro404.php">Persona</a>
         </div>
         <div class="contato-footer">
           <div class="contato-titulo">Isabella Atacadista</div>

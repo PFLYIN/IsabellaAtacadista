@@ -166,7 +166,7 @@
 <body>
 
 <div class="container-logo">
-    <img src="Logo-Isabella/logo-isabella.png" alt="Logo Isabella">
+    <img src="Isabella/logo-isabella.png" alt="Logo Isabella">
 </div>
 
 <div class="erro-container">

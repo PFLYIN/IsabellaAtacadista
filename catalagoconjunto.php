@@ -25,8 +25,8 @@
       <div class="info">
         <h2>Conjunto Elizabeth Preto</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 149,00</span><br>
-          <span class="preco-atacado">Atacado R$ 80,00</span>
+          <span class="preco-varejo">Varejo R$ 159,99</span><br>
+          <span class="preco-atacado">Atacado R$ 100,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -44,8 +44,8 @@
       <div class="info">
         <h2>Conjunto Elizabeth Caramelo</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 149,00</span><br>
-          <span class="preco-atacado">Atacado R$ 80,00</span>
+          <span class="preco-varejo">Varejo R$ 159,99</span><br>
+          <span class="preco-atacado">Atacado R$ 100,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -69,8 +69,8 @@
       <div class="info">
         <h2>Tri Conjunto Verônica Azul Marinho</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -93,8 +93,8 @@
       <div class="info">
         <h2>Tri Conjunto Verônica Azul Petróleo</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -116,8 +116,8 @@
       <div class="info">
         <h2>Tri Conjunto Verônica Azul Royal</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -141,8 +141,8 @@
       <div class="info">
         <h2>Tri Conjunto Verônica Bordô</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -167,8 +167,8 @@
       <div class="info">
         <h2>Tri Conjunto Verônica Preto</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -192,8 +192,8 @@
       <div class="info">
         <h2>Tri Conjunto Verônica Verde Esmeralda</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -217,8 +217,8 @@
       <div class="info">
         <h2>Tri Conjunto Verônica Verde Militar</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -242,8 +242,8 @@
       <div class="info">
         <h2>Tri Conjunto Verônica Vermelho</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -265,8 +265,8 @@
       <div class="info">
         <h2>Tri Conjunto Eliza Azul Marinho</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -288,8 +288,8 @@
       <div class="info">
         <h2>Tri Conjunto Eliza Azul Petróleo</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -311,8 +311,8 @@
       <div class="info">
         <h2>Tri Conjunto Eliza Preto</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -334,8 +334,8 @@
       <div class="info">
         <h2>Tri Conjunto Eliza Terracota</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -357,8 +357,8 @@
       <div class="info">
         <h2>Tri Conjunto Eliza Verde Oliva</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -380,8 +380,8 @@
       <div class="info">
         <h2>Tri Conjunto Eliza Vermelho</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -404,8 +404,8 @@
       <div class="info">
         <h2>Tri Conjunto Luana Branco</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 169,99</span><br>
+          <span class="preco-atacado">Atacado R$ 111,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -416,8 +416,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Luana Ciano -->
     <div class="produto" data-id="95" data-nome="Tri Conjunto Luana Ciano" data-preco="159.00"
       data-imagens='[
         "CJNTS/Tri Conjunto Luana/1Ciano.jpg",
@@ -427,8 +425,8 @@
       <div class="info">
         <h2>Tri Conjunto Luana Ciano</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 169,99</span><br>
+          <span class="preco-atacado">Atacado R$ 111,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -439,8 +437,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Luana Laranja -->
     <div class="produto" data-id="96" data-nome="Tri Conjunto Luana Laranja" data-preco="159.00"
       data-imagens='[
         "CJNTS/Tri Conjunto Luana/1Laranja.jpg",
@@ -451,8 +447,8 @@
       <div class="info">
         <h2>Tri Conjunto Luana Laranja</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 169,99</span><br>
+          <span class="preco-atacado">Atacado R$ 111,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -463,8 +459,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Luana Pink -->
     <div class="produto" data-id="97" data-nome="Tri Conjunto Luana Pink" data-preco="159.00"
       data-imagens='[
         "CJNTS/Tri Conjunto Luana/1Pink.jpg",
@@ -474,8 +468,8 @@
       <div class="info">
         <h2>Tri Conjunto Luana Pink</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 169,99</span><br>
+          <span class="preco-atacado">Atacado R$ 111,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -500,8 +494,8 @@
       <div class="info">
         <h2>Conjunto Alice Azul Marinho</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -526,8 +520,8 @@
       <div class="info">
         <h2>Conjunto Alice Bordô</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -551,8 +545,8 @@
       <div class="info">
         <h2>Conjunto Alice Preto</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -563,8 +557,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Alice Rosa -->
     <div class="produto" data-id="101" data-nome="Conjunto Alice Rosa" data-preco="159.00"
       data-imagens='[
         "CJNTS/Conjuntos Alice/1rosa.jpg",
@@ -576,8 +568,8 @@
       <div class="info">
         <h2>Conjunto Alice Rosa</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -588,8 +580,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Alice Verde Água -->
     <div class="produto" data-id="102" data-nome="Conjunto Alice Verde Água" data-preco="159.00"
       data-imagens='[
         "CJNTS/Conjuntos Alice/1Verde-água.jpg",
@@ -601,8 +591,8 @@
       <div class="info">
         <h2>Conjunto Alice Verde Água</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -613,8 +603,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Alice Verde Petróleo -->
     <div class="produto" data-id="103" data-nome="Conjunto Alice Verde Petróleo" data-preco="159.00"
       data-imagens='[
         "CJNTS/Conjuntos Alice/1verde-petróleo.jpg",
@@ -626,8 +614,8 @@
       <div class="info">
         <h2>Conjunto Alice Verde Petróleo</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -648,8 +636,8 @@
       <div class="info">
         <h2>Conjunto Plush Pink</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 169,99</span><br>
+          <span class="preco-atacado">Atacado R$ 111,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -660,8 +648,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Plush Preto -->
     <div class="produto" data-id="105" data-nome="Conjunto Plush Preto" data-preco="159.00"
       data-imagens='[
         "CJNTS/Conjunto Plush/1PretoPlush.jpg"
@@ -670,8 +656,8 @@
       <div class="info">
         <h2>Conjunto Plush Preto</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 169,99</span><br>
+          <span class="preco-atacado">Atacado R$ 111,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -682,8 +668,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Plush Vinho -->
     <div class="produto" data-id="106" data-nome="Conjunto Plush Vinho" data-preco="159.00"
       data-imagens='[
         "CJNTS/Conjunto Plush/1VinhoPlush.jpg"
@@ -692,8 +676,8 @@
       <div class="info">
         <h2>Conjunto Plush Vinho</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 169,99</span><br>
+          <span class="preco-atacado">Atacado R$ 111,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -714,8 +698,8 @@
       <div class="info">
         <h2>Conjunto Tweed Marrom Caramelo e Branco</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -726,8 +710,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Tweed Preto e Branco -->
     <div class="produto" data-id="108" data-nome="Conjunto Tweed Preto e Branco" data-preco="159.00"
       data-imagens='[
         "CJNTS/Conjunto Tweed/pretoebranco.jpg"
@@ -736,8 +718,8 @@
       <div class="info">
         <h2>Conjunto Tweed Preto e Branco</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -748,8 +730,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Tweed Verde Musgo e Branco -->
     <div class="produto" data-id="109" data-nome="Conjunto Tweed Verde Musgo e Branco" data-preco="159.00"
       data-imagens='[
         "CJNTS/Conjunto Tweed/verde-musgoebranco.jpg"
@@ -758,8 +738,8 @@
       <div class="info">
         <h2>Conjunto Tweed Verde Musgo e Branco</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -770,8 +750,6 @@
       </div>
     </div>
     <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Tweed Pink e Branco -->
     <div class="produto" data-id="110" data-nome="Conjunto Tweed Pink e Branco" data-preco="159.00"
       data-imagens='[
         "CJNTS/Conjunto Tweed/pinkebranco.jpg"
@@ -780,8 +758,8 @@
       <div class="info">
         <h2>Conjunto Tweed Pink e Branco</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,00</span><br>
-          <span class="preco-atacado">Atacado R$ 85,00</span>
+          <span class="preco-varejo">Varejo R$ 189,99</span><br>
+          <span class="preco-atacado">Atacado R$ 128,99</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>

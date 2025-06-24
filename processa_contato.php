@@ -69,7 +69,7 @@ try {
 
     $mail->Body = "
         <div style='font-family:Arial,sans-serif; max-width:600px; padding:20px; background:#fff0f7;'>
-            <img src='https://seusite.com/logo.png' alt='Isabella Atacadista' style='max-height:80px;'><br><br>
+           style='max-height:80px;'><br><br>
             <h2 style='color:#a0005a;'>Nova mensagem de contato</h2>
             <hr>
             <p><strong>Nome:</strong> {$nome}</p>

@@ -24,8 +24,8 @@
     <div class="info">
       <h2>Vestido Kate Roxo</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 159,99</span><br>
+        <span class="preco-atacado">Atacado R$ 119,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -41,8 +41,8 @@
     <div class="info">
       <h2>Vestido Kate Bege</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 159,99</span><br>
+        <span class="preco-atacado">Atacado R$ 119,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -58,8 +58,8 @@
     <div class="info">
       <h2>Vestido Bonequita Azul</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 159,99</span><br>
+        <span class="preco-atacado">Atacado R$ 119,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -75,8 +75,8 @@
     <div class="info">
       <h2>Vestido Longo Laxtex Branco</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 149,99</span><br>
+        <span class="preco-atacado">Atacado R$ 100,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -92,8 +92,8 @@
     <div class="info">
       <h2>Vestido Longo Laxtex Marron</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 149,99</span><br>
+        <span class="preco-atacado">Atacado R$ 100,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -109,8 +109,8 @@
     <div class="info">
       <h2>Vestido Longo Laxtex Azul Escuro</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 149,99</span><br>
+        <span class="preco-atacado">Atacado R$ 100,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -126,8 +126,8 @@
     <div class="info">
       <h2>Vestido Longo Laxtex Verde</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 149,99</span><br>
+        <span class="preco-atacado">Atacado R$ 100,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -143,8 +143,8 @@
     <div class="info">
       <h2>Vestido Longo Laxtex Azul</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 149,99</span><br>
+        <span class="preco-atacado">Atacado R$ 100,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -160,8 +160,8 @@
     <div class="info">
       <h2>Vestido Longo Laxtex Branco</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 149,99</span><br>
+        <span class="preco-atacado">Atacado R$ 100,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -177,8 +177,8 @@
     <div class="info">
       <h2>Vestido 3 Maria Vermelho</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 85,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -188,15 +188,14 @@
       <button class="add-carrinho">🛒 + Adicionar</button>
     </div>
   </div>
-  
   <div class="produto" data-id="53" data-nome="Vestido 3 Maria Preto" data-preco="149.00"
     data-imagens='["VTDS-TMRS/Vestido 3 Maria/1Preto3Maria.jpg","VTDS-TMRS/Vestido 3 Maria/2Preto3Maria.jpg","VTDS-TMRS/Vestido 3 Maria/3Preto3Maria.jpg"]'>
     <img src="VTDS-TMRS/Vestido 3 Maria/1Preto3Maria.jpg" alt="Vestido 3 Maria Preto" class="zoom-img">
     <div class="info">
       <h2>Vestido 3 Maria Preto</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 85,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -206,16 +205,14 @@
       <button class="add-carrinho">🛒 + Adicionar</button>
     </div>
   </div>
-  
-
   <div class="produto" data-id="54" data-nome="Vestido Longo Gola V Preto" data-preco="149.00"
     data-imagens='["VTDS-TMRS/Vestido Longo V/1VSPreto.jpg"]'>
     <img src="VTDS-TMRS/Vestido Longo V/1VSPreto.jpg" alt="Vestido Longo Gola V Preto" class="zoom-img">
     <div class="info">
       <h2>Vestido Longo Gola V Preto</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 85,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -225,15 +222,14 @@
       <button class="add-carrinho">🛒 + Adicionar</button>
     </div>
   </div>
-
   <div class="produto" data-id="55" data-nome="Vestido Gola V Azul" data-preco="149.00"
     data-imagens='["VTDS-TMRS/Vestido Gola V/1AzulGolaV.jpg","VTDS-TMRS/Vestido Gola V/2AzulGolaV.jpg","VTDS-TMRS/Vestido Gola V/3AzulGolaV.jpg"]'>
     <img src="VTDS-TMRS/Vestido Gola V/1AzulGolaV.jpg" alt="Vestido Gola V Azul" class="zoom-img">
     <div class="info">
       <h2>Vestido Gola V Azul</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 85,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -249,8 +245,8 @@
     <div class="info">
       <h2>Vestido Gola V Bege</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 139,00</span><br>
+        <span class="preco-atacado">Atacado R$ 85,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -267,8 +263,8 @@
     <div class="info">
       <h2>Vestido Rebeca Vinho</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 159,99</span><br>
+        <span class="preco-atacado">Atacado R$ 119,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -284,8 +280,8 @@
     <div class="info">
       <h2>Vestido Rebeca Azul</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 159,99</span><br>
+        <span class="preco-atacado">Atacado R$ 119,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -301,8 +297,8 @@
     <div class="info">
       <h2>Vestido Rebeca Vinho e Preto</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 159,99</span><br>
+        <span class="preco-atacado">Atacado R$ 119,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -318,8 +314,8 @@
     <div class="info">
       <h2>Vestido Samara Pink</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 159,99</span><br>
+        <span class="preco-atacado">Atacado R$ 119,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -335,8 +331,8 @@
     <div class="info">
       <h2>Vestido Samara Preto</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 159,99</span><br>
+        <span class="preco-atacado">Atacado R$ 119,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -352,8 +348,8 @@
     <div class="info">
       <h2>Vestido Carmen Ciano</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 185,00</span><br>
+        <span class="preco-atacado">Atacado R$ 125,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -369,8 +365,8 @@
     <div class="info">
       <h2>Vestido Carmen Coral</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 185,00</span><br>
+        <span class="preco-atacado">Atacado R$ 125,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -386,8 +382,8 @@
     <div class="info">
       <h2>Vestido Elizamma Branco</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 178,00</span><br>
+        <span class="preco-atacado">Atacado R$ 122,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -403,8 +399,8 @@
     <div class="info">
       <h2>Vestido Elizamma Marsala</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 178,00</span><br>
+        <span class="preco-atacado">Atacado R$ 122,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -420,8 +416,8 @@
     <div class="info">
       <h2>Vestido Elizamma Off-White</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 178,00</span><br>
+        <span class="preco-atacado">Atacado R$ 122,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -437,8 +433,8 @@
     <div class="info">
       <h2>Vestido Clide Verde-Àgua</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 178,00</span><br>
+        <span class="preco-atacado">Atacado R$ 122,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -454,8 +450,8 @@
     <div class="info">
       <h2>Vestido Clide Vinho</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 178,00</span><br>
+        <span class="preco-atacado">Atacado R$ 122,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -471,8 +467,8 @@
     <div class="info">
       <h2>Vestido Clide Pastel</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 178,00</span><br>
+        <span class="preco-atacado">Atacado R$ 122,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -488,8 +484,8 @@
     <div class="info">
       <h2>Vestido Camila Verde</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 185,00</span><br>
+        <span class="preco-atacado">Atacado R$ 125,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -505,8 +501,8 @@
     <div class="info">
       <h2>Vestido Camila Preto</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 185,00</span><br>
+        <span class="preco-atacado">Atacado R$ 125,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -522,8 +518,8 @@
     <div class="info">
       <h2>Vestido Camila Roxo</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 185,00</span><br>
+        <span class="preco-atacado">Atacado R$ 125,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -539,8 +535,8 @@
     <div class="info">
       <h2>Vestido Camila Verde Menta-Brilhante</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 185,00</span><br>
+        <span class="preco-atacado">Atacado R$ 125,00</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -556,8 +552,8 @@
     <div class="info">
       <h2>Vestido Gabriela Bordô</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 189,99</span><br>
+        <span class="preco-atacado">Atacado R$ 129,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -573,8 +569,8 @@
     <div class="info">
       <h2>Vestido Gabriela Preto</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 189,99</span><br>
+        <span class="preco-atacado">Atacado R$ 129,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -590,8 +586,8 @@
     <div class="info">
       <h2>Vestido Gabriela Terracota</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 189,99</span><br>
+        <span class="preco-atacado">Atacado R$ 129,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>
@@ -607,8 +603,8 @@
     <div class="info">
       <h2>Vestido Gabriela Verde-Petróleo</h2>
       <div class="precos">
-        <span class="preco-varejo">Varejo R$ 149,00</span><br>
-        <span class="preco-atacado">Atacado R$ 80,00</span>
+        <span class="preco-varejo">Varejo R$ 189,99</span><br>
+        <span class="preco-atacado">Atacado R$ 129,99</span>
       </div>
       <div class="quantidade">
         <button class="menos">-</button>

@@ -12,9 +12,9 @@
 </head>
 <body>
 <div class="container">
-  <h1 class="titulo">Coleção Exclusiva de Vestidos</h1>
+  <h1 class="titulo">Coleção Exclusiva de Blusinhas</h1>
   <p class="descricao-catalogo">
-    Descubra a perfeita harmonia entre elegância e estilo em nossa seleção premium de vestidos. 
+    Descubra elegância das nossas blusinhas. 
   </p>
 </div>
 
@@ -27,8 +27,8 @@
       <div class="info">
         <h2>Blusinha Azul Manga Rendada</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -47,8 +47,8 @@
       <div class="info">
         <h2>Blusinha Azul Claro</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -67,8 +67,8 @@
       <div class="info">
         <h2>Blusinha Azul Claro com Renda e Pérolas</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -87,8 +87,8 @@
       <div class="info">
         <h2>Blusinha Azul Claro Florido com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -107,8 +107,8 @@
       <div class="info">
         <h2>Blusinha Azul Royal Manga Longa</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -127,8 +127,8 @@
       <div class="info">
         <h2>Blusinha Bege Listrada com Botões</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -147,8 +147,8 @@
       <div class="info">
         <h2>Blusinha Branca com Corações Pretos</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -167,8 +167,8 @@
       <div class="info">
         <h2>Blusinha Branca com Preto e Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -187,8 +187,8 @@
       <div class="info">
         <h2>Blusinha Branca Floral com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -207,8 +207,8 @@
       <div class="info">
         <h2>Blusinha Branca Floral com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -227,8 +227,8 @@
       <div class="info">
         <h2>Blusinha Branca Laço e Renda</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -247,8 +247,8 @@
       <div class="info">
         <h2>Blusinha Branca Manga Bufante com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -267,8 +267,8 @@
       <div class="info">
         <h2>Blusinha Branca Manga Rendada com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -287,8 +287,8 @@
       <div class="info">
         <h2>Blusinha Branca com Flores Bordadas</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -307,8 +307,8 @@
       <div class="info">
         <h2>Blusinha Laranja Avermelhado Manga Bufante com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -327,8 +327,8 @@
       <div class="info">
         <h2>Blusinha Rosa Manga Bufante com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -347,8 +347,8 @@
       <div class="info">
         <h2>Blusinha Azul Claro Manga Bufante</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -367,8 +367,8 @@
       <div class="info">
         <h2>Blusinha Rosa Com Pérola </h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -387,8 +387,8 @@
       <div class="info">
         <h2>Blusinha Rosa Manga Longa com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -407,8 +407,8 @@
       <div class="info">
         <h2>Blusinha Rosa Claro com Renda Bordada</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -427,8 +427,8 @@
       <div class="info">
         <h2>Blusinha Rosa Queimado com Poá e Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -447,8 +447,8 @@
       <div class="info">
         <h2>Blusinha Telha Clara com Renda e Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -467,8 +467,8 @@
       <div class="info">
         <h2>Blusinha Terracota Poá Manga Bufante</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -487,8 +487,8 @@
       <div class="info">
         <h2>Blusinha Verde Manga Bufante com Laço e Pérolas</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -507,8 +507,8 @@
       <div class="info">
         <h2>Blusinha Verde Manga Bufante com Laço</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -527,8 +527,8 @@
       <div class="info">
         <h2>Blusinha Verde Claro Manga Bufante com Laço e Renda</h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 89,00</span><br>
-          <span class="preco-atacado">Atacado R$ 49,00</span>
+          <span class="preco-varejo">Varejo R$ 70,00</span><br>
+          <span class="preco-atacado">Atacado R$ 53,00</span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
