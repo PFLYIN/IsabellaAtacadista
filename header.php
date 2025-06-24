@@ -2,7 +2,7 @@
 <!-- ESTILOS DESKTOP -->
 <header class="header-desktop">
     <div class="div-logo">
-        <a><img src="Logo-Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
+        <a><img src="Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
     </div>
 </header>
 
@@ -330,7 +330,7 @@ body {
 <!-- Novo Header Mobile -->
 <div class="mobile-container">
     <div class="mobile-logo">
-        <img src="Logo-Isabella/logo-isabella.png">
+        <img src="Isabella/logo-isabella.png">
     </div>
 </div>
 

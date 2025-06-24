@@ -42,6 +42,22 @@
         <div id="mensagemStatus" class="oculto"></div>
     </div>
 
+     <div class="outros-contatos">
+  <h2>Outros Contatos</h2>
+  <div class="icones-contato">
+    <a href="https://wa.me/SEUNUMERO" target="_blank" class="whatsapp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      WhatsApp
+    </a>
+    <a href="https://www.instagram.com/SEUUSUARIO/" target="_blank" class="instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      Instagram
+    </a>
+  </div>
+</div>
+
+
+
     <script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formContato");

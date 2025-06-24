@@ -349,7 +349,7 @@
 <!-- Novo Header Mobile -->
 <div class="mobile-container">
     <div class="mobile-logo">
-        <img src="Logo-Isabella/logo-isabella.png">
+        <img src="Isabella/logo-isabella.png">
     </div>
 </div>
 

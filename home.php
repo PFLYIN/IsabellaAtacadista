@@ -21,8 +21,8 @@
             <source src="Home-Destaque/fundo-home.mp4" type="video/mp4">
         </video>
         <div class="video-content">
-            <img src="Logo-Isabella/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
-            <div class="video-text">
+            <img src="Isabella/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
+            <div style="margin-top: 60px;" class="video-text">
                 <h2>O Melhor Da Moda Evangélica</h2>
                 <p>Elegância para mulheres de valor</p>
             </div>
@@ -130,37 +130,37 @@
       <div class="carousel-track" id="carousel-track">
         <div class="testimonial animado">
       <img src="Fotos das pessoas dos comentários/Aelem.png" alt="Aelem" />
-      <p>"Os vestidos são simplesmente lindos! Me senti valorizada como mulher cristã."</p>
+      <p>"Os vestidos são simplesmente lindos!"</p>
       <div class="stars">★★★★★</div>
       <h4>Aelem</h4>
     </div>
     <div class="testimonial animado">
       <img src="Fotos das pessoas dos comentários/Naty.png" alt="Naty" />
-      <p>"Comprei para um culto especial e fiquei encantada com o caimento."</p>
+      <p>"Comprei para experimentar e acabei gostando muito da qualidade dos vestidos."</p>
       <div class="stars">★★★★★</div>
       <h4>Naty</h4>
     </div>
     <div class="testimonial animado">
       <img src="Fotos das pessoas dos comentários/Letícia.jpg" alt="Letícia" />
-      <p>"Amei cada detalhe! O tecido é maravilhoso e a entrega foi super rápida."</p>
+      <p>"Amei os vestidos o tecido é maravilhoso e o atendimento foi excelente."</p>
       <div class="stars">★★★★★</div>
       <h4>Letícia</h4>
     </div>
     <div class="testimonial animado">
       <img src="Fotos das pessoas dos comentários/Jô.jpg" alt="Jô" />
-      <p>"É difícil encontrar vestidos com essa delicadeza. Me senti elegante."</p>
+      <p>"Achei os vestidos de ótima qualidade e o preço super acessível. Recomendo muito!"</p>
       <div class="stars">★★★★★</div>
       <h4>Jô</h4>
     </div>
     <div class="testimonial animado">
       <img src="Fotos das pessoas dos comentários/Marta.jpg" alt="Marta" />
-      <p>"Foi minha primeira compra e fiquei emocionada com o cuidado no envio."</p>
+      <p>"Foi minha primeira compra e fiquei encantada com a qualidade."</p>
       <div class="stars">★★★★★</div>
       <h4>Marta</h4>
     </div>
     <div class="testimonial animado">
       <img src="Fotos das pessoas dos comentários/Rosa.jpg" alt="Rosa" />
-      <p>"Além da beleza, os vestidos têm um toque espiritual. É mais do que moda."</p>
+      <p>"Os vestidos são lindos e confortáveis, adorei minha compra."</p>
       <div class="stars">★★★★★</div>
       <h4>Rosa</h4>
     </div>

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Observar todos os blocos animados
-    document.querySelectorAll('.info-bloco.animado').forEach(bloco => {
+    document.querySelectorAll('.bloco.animado').forEach(bloco => {
         observer.observe(bloco);
     });
 
@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                observerMapa.unobserve(entry.target);
             }
         });
     });
 
-    document.querySelectorAll('.mapa-container').forEach((el) => observerMapa.observe(el));
+    document.querySelectorAll('.mapa-container.animado').forEach((el) => observerMapa.observe(el));
 });

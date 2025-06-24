@@ -5,17 +5,28 @@
   box-sizing: border-box;
 }
 
+html, body {
+  /* width: 100%; */
+  /* max-width: 100%; */
+  /* overflow-x: hidden; */
+}
+
 body {
- font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
   background: linear-gradient(180deg, #ffe6f2 0%, #fff 100%) !important;
   padding: 20px;
   min-height: 100vh;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
 }
 
 .sobre-nos {
   padding: 60px 20px;
   max-width: 1200px;
   margin: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .titulo-principal {
@@ -33,7 +44,9 @@ body {
   align-items: center;
   gap: 40px;
   margin-bottom: 60px;
-  /* Removido: opacity e transform para garantir visibilidade */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .bloco.invertido {
@@ -42,16 +55,27 @@ body {
 
 .bloco .imagem {
   flex: 1 1 400px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .bloco .imagem img {
   width: 100%;
+  max-width: 100%;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  display: block;
+  height: auto;
 }
 
 .bloco .texto {
   flex: 1 1 500px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .bloco .texto h2 {
@@ -72,18 +96,22 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 40px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .galeria .foto {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  /* Removido: opacity e transform para garantir visibilidade */
 }
 
 .galeria img {
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -103,86 +131,197 @@ body {
   padding: 10px;
   font-weight: bold;
   font-size: 1rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Estilo do Mapa */
 .mapa-section {
-    margin: 60px auto;
-    padding: 0 20px;
+  margin: 60px auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .mapa-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(200, 75, 132, 0.15);
-    position: relative;
-    /* Removido: opacity e transform para garantir visibilidade */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(200, 75, 132, 0.15);
+  position: relative;
+  box-sizing: border-box;
 }
 
 .mapa-titulo {
-    text-align: center;
-    color: #b4296a;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 1px;
+  text-align: center;
+  color: #b4296a;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
 }
 
 .mapa-wrapper {
-    position: relative;
-    height: 450px;
-    background: rgba(255, 230, 242, 0.3);
+  position: relative;
+  height: 450px;
+  background: rgba(255, 230, 242, 0.3);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .mapa-wrapper iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animação de fade-in para blocos e mapa */
+.animado {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(.4,0,.2,1), transform 1s cubic-bezier(.4,0,.2,1);
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .sobre-nos {
+    padding: 30px 8px;
+  }
+  .bloco {
+    gap: 20px;
+  }
+  .mapa-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-nos {
+    padding: 12px 0;
     width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .bloco {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    min-width: 0;
+  }
+  .bloco .imagem {
+    margin-bottom: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+  .bloco .imagem img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    object-fit: contain;
+  }
+  .bloco .texto {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 4px;
+  }
+  .bloco .texto h2 {
+    font-size: 1.1rem;
+  }
+  .bloco .texto p {
+    font-size: 0.95rem;
+  }
+  .titulo-principal {
+    font-size: 1.2rem;
+  }
+  .mapa-section {
+    margin: 12px 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .mapa-titulo {
+    font-size: 1rem;
+  }
+  .mapa-container {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  .mapa-wrapper {
+    height: 48vw;
+    max-height: 180px;
+    min-height: 90px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .mapa-wrapper iframe {
+    width: 100%;
+    max-width: 100%;
     height: 100%;
-    border: none;
-    border-radius: 20px;
+    border-radius: 8px;
+    display: block;
+  }
+  .galeria {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .galeria .foto {
+    border-radius: 5px;
+  }
+  .galeria img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+  }
+  .legenda {
+    font-size: 0.8rem;
+    padding: 3px;
+  }
 }
 
-/* Animações */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .bloco {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .bloco .texto h2 {
-    font-size: 1.8rem;
-  }
-
-  .titulo-principal {
-    font-size: 2.5rem;
-  }
-}
-/* Animações */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .bloco {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .bloco .texto h2 {
-    font-size: 1.8rem;
-  }
-
-  .titulo-principal {
-    font-size: 2.5rem;
-  }
+/* Garante quebra de palavras em todo o conteúdo */
+body, .sobre-nos, .bloco, .bloco .texto, .mapa-section, .mapa-container, .galeria, .legenda {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
