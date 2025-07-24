@@ -240,8 +240,8 @@
     </div>
   </div>
   <div class="produto" data-id="56" data-nome="Vestido Gola V Bege" data-preco="149.00"
-    data-imagens='["VTDS-TMRS/Vestido Gola V/1BegeGovalV.jpg","VTDS-TMRS/Vestido Gola V/2BegeGolaV.jpg","VTDS-TMRS/Vestido Gola V/3BegeGolaV.jpg"]'>
-    <img src="VTDS-TMRS/Vestido Gola V/1BegeGovalV.jpg" alt="Vestido Gola V Bege" class="zoom-img">
+    data-imagens='["VTDS-TMRS/Vestido Gola V/1BegeGolaV.jpg","VTDS-TMRS/Vestido Gola V/2BegeGolaV.jpg","VTDS-TMRS/Vestido Gola V/3BegeGolaV.jpg"]'>
+    <img src="VTDS-TMRS/Vestido Gola V/1BegeGolaV.jpg" alt="Vestido Gola V Bege" class="zoom-img">
     <div class="info">
       <h2>Vestido Gola V Bege</h2>
       <div class="precos">
@@ -642,9 +642,48 @@
 </div>
 
 <script src="carrinho.js"></script>
-
 <script src="modal.js"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Event listeners para botões de adicionar ao carrinho
+  document.querySelectorAll('.add-carrinho').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const produto = this.closest('.produto');
+      const nome = produto.dataset.nome;
+      const preco = produto.dataset.preco;
+      const precoAtacado = produto.dataset.precoAtacado;
+      const quantidade = parseInt(produto.querySelector('.qtd').textContent);
+      const imagem = produto.querySelector('img').src;
+      
+      carrinho.adicionarItem(nome, preco, precoAtacado, imagem, quantidade);
+      
+      // Reset quantidade para 1
+      produto.querySelector('.qtd').textContent = '1';
+      
+    });
+  });
+  
+  // Event listeners para botões de quantidade
+  document.querySelectorAll('.mais').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const span = this.parentElement.querySelector('.qtd');
+      const valorAtual = parseInt(span.textContent);
+      span.textContent = valorAtual + 1;
+    });
+  });
+  
+  document.querySelectorAll('.menos').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const span = this.parentElement.querySelector('.qtd');
+      const valorAtual = parseInt(span.textContent);
+      if (valorAtual > 1) {
+        span.textContent = valorAtual - 1;
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>

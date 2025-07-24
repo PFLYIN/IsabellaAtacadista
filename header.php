@@ -115,7 +115,7 @@ body {
     padding: 10px 0;
     width: 100%;
     margin: 0 auto;
-    font-family: Oswald;
+    font-family: 'Oswald', sans-serif;
 }
 
 .nav-desktop .list-desktop {

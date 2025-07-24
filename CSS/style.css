@@ -345,7 +345,7 @@ main {
     opacity: 0;
     transform: translateY(20px); /* Reduzido de 30px para 20px */
     transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1); /* Transição mais suave com cubic-bezier */
-    visibility: hidden;
+    visibility: hidden; /* Adicionado para evitar que o elemento ocupe espaço antes de aparecer */
 }
 
 .animado.visible {

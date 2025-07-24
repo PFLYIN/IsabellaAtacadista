@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre Nós | Isabella Atacadista</title>
   <link rel="stylesheet" href="CSS/sobrenos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
   <section class="sobre-nos">

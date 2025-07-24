@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
-  <title>Catálogo de Vestidos</title>
+  <title>Catálogo das Blusinhas</title>
   <link rel="stylesheet" href="CSS/blusinhas.css">
  
 </head>
@@ -569,6 +569,46 @@
 
 <script src="modal.js"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Event listeners para botões de adicionar ao carrinho
+  document.querySelectorAll('.add-carrinho').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const produto = this.closest('.produto');
+      const nome = produto.dataset.nome;
+      const preco = produto.dataset.preco;
+      const precoAtacado = produto.dataset.precoAtacado;
+      const quantidade = parseInt(produto.querySelector('.qtd').textContent);
+      const imagem = produto.querySelector('img').src;
+      
+      carrinho.adicionarItem(nome, preco, precoAtacado, imagem, quantidade);
+      
+      // Reset quantidade para 1
+      produto.querySelector('.qtd').textContent = '1';
+      
+    });
+  });
+  
+  // Event listeners para botões de quantidade
+  document.querySelectorAll('.mais').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const span = this.parentElement.querySelector('.qtd');
+      const valorAtual = parseInt(span.textContent);
+      span.textContent = valorAtual + 1;
+    });
+  });
+  
+  document.querySelectorAll('.menos').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const span = this.parentElement.querySelector('.qtd');
+      const valorAtual = parseInt(span.textContent);
+      if (valorAtual > 1) {
+        span.textContent = valorAtual - 1;
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
