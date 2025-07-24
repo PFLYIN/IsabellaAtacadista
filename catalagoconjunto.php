@@ -1,4 +1,362 @@
-<?php include "header.php"; ?>
+<?php include "header.php";
+
+$conjuntos = [
+    [
+        'id' => 78,
+        'nome' => 'Conjunto Elizabeth Preto',
+        'preco_varejo' => 159.99,
+        'preco_atacado' => 100.00,
+        'imagens' => [
+            'CJNTS/Conjunto Elizabeth/1Preto.jpg',
+            'CJNTS/Conjunto Elizabeth/2ConjuntoPreto.jpg',
+            'CJNTS/Conjunto Elizabeth/3ConjuntoPreto.jpg'
+        ]
+    ],
+    [
+        'id' => 79,
+        'nome' => 'Conjunto Elizabeth Caramelo',
+        'preco_varejo' => 159.99,
+        'preco_atacado' => 100.00,
+        'imagens' => [
+            'CJNTS/Conjunto Elizabeth/1CarameloEliza.jpg',
+            'CJNTS/Conjunto Elizabeth/2CarameloEliz.jpg'
+        ]
+    ],
+    [
+        'id' => 80,
+        'nome' => 'Tri Conjunto Verônica Azul Marinho',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri conjunto Verônica/1azulmarinho.jpg',
+            'CJNTS/Tri conjunto Verônica/2azulmarinho.jpg',
+            'CJNTS/Tri conjunto Verônica/3azulmarinho.jpg',
+            'CJNTS/Tri conjunto Verônica/4azulmarinho.jpg'
+        ]
+    ],
+    [
+        'id' => 81,
+        'nome' => 'Tri Conjunto Verônica Azul Petróleo',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri conjunto Verônica/1azulpetróleo.jpg',
+            'CJNTS/Tri conjunto Verônica/2azulpetróleo.jpg',
+            'CJNTS/Tri conjunto Verônica/3azulpetróleo.jpg'
+        ]
+    ],
+    [
+        'id' => 82,
+        'nome' => 'Tri Conjunto Verônica Azul Royal',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri conjunto Verônica/1azulroyal.jpg',
+            'CJNTS/Tri conjunto Verônica/2azulroyal.jpg'
+        ]
+    ],
+    [
+        'id' => 83,
+        'nome' => 'Tri Conjunto Verônica Bordô',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri conjunto Verônica/1bordô.jpg',
+            'CJNTS/Tri conjunto Verônica/2bordô.jpg',
+            'CJNTS/Tri conjunto Verônica/3bordô.jpg',
+            'CJNTS/Tri conjunto Verônica/4bordô.jpg'
+        ]
+    ],
+    [
+        'id' => 84,
+        'nome' => 'Tri Conjunto Verônica Preto',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri conjunto Verônica/1Preto.jpg',
+            'CJNTS/Tri conjunto Verônica/2Preto.jpg',
+            'CJNTS/Tri conjunto Verônica/3Preto.jpg',
+            'CJNTS/Tri conjunto Verônica/4Preto.jpg',
+            'CJNTS/Tri conjunto Verônica/5Preto.jpg'
+        ]
+    ],
+    [
+        'id' => 85,
+        'nome' => 'Tri Conjunto Verônica Verde Esmeralda',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri conjunto Verônica/1verdeesmeralda.jpg',
+            'CJNTS/Tri conjunto Verônica/2verdeesmeralda.jpg',
+            'CJNTS/Tri conjunto Verônica/3verdeesmeralda.jpg',
+            'CJNTS/Tri conjunto Verônica/4verdeesmeralda.jpg'
+        ]
+    ],
+    [
+        'id' => 86,
+        'nome' => 'Tri Conjunto Verônica Verde Militar',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri conjunto Verônica/1verdemilitar.jpg',
+            'CJNTS/Tri conjunto Verônica/2verdemilitar.jpg',
+            'CJNTS/Tri conjunto Verônica/3verdemilitar.jpg',
+            'CJNTS/Tri conjunto Verônica/4verdemilitar.jpg'
+        ]
+    ],
+    [
+        'id' => 87,
+        'nome' => 'Tri Conjunto Verônica Vermelho',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri conjunto Verônica/1Vermelho.jpg',
+            'CJNTS/Tri conjunto Verônica/2Vermelho.jpg',
+            'CJNTS/Tri conjunto Verônica/3Vermelho.jpg',
+            'CJNTS/Tri conjunto Verônica/4Vermelho.jpg'
+        ]
+    ],
+    [
+        'id' => 88,
+        'nome' => 'Tri Conjunto Eliza Azul Marinho',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Eliza/1Azul-marinho.jpg',
+            'CJNTS/Tri Conjunto Eliza/2Azul-marinho.jpg'
+        ]
+    ],
+    [
+        'id' => 89,
+        'nome' => 'Tri Conjunto Eliza Azul Petróleo',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Eliza/1Azul-petróleo.jpg',
+            'CJNTS/Tri Conjunto Eliza/2Azul-petróleo.jpg'
+        ]
+    ],
+    [
+        'id' => 90,
+        'nome' => 'Tri Conjunto Eliza Preto',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Eliza/1Preto.jpg',
+            'CJNTS/Tri Conjunto Eliza/2Preto.jpg'
+        ]
+    ],
+    [
+        'id' => 91,
+        'nome' => 'Tri Conjunto Eliza Terracota',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Eliza/1Terracota.jpg',
+            'CJNTS/Tri Conjunto Eliza/2Terracota.jpg'
+        ]
+    ],
+    [
+        'id' => 92,
+        'nome' => 'Tri Conjunto Eliza Verde Oliva',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Eliza/1Verde-oliva.jpg',
+            'CJNTS/Tri Conjunto Eliza/2Verde-oliva.jpg'
+        ]
+    ],
+    [
+        'id' => 93,
+        'nome' => 'Tri Conjunto Eliza Vermelho',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Eliza/1Vermelho.jpg',
+            'CJNTS/Tri Conjunto Eliza/2Vermelho.jpg'
+        ]
+    ],
+    [
+        'id' => 94,
+        'nome' => 'Tri Conjunto Luana Branco',
+        'preco_varejo' => 169.99,
+        'preco_atacado' => 111.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Luana/1Branco.jpg',
+            'CJNTS/Tri Conjunto Luana/2Branco.jpg',
+            'CJNTS/Tri Conjunto Luana/3Branco.jpg'
+        ]
+    ],
+    [
+        'id' => 95,
+        'nome' => 'Tri Conjunto Luana Ciano',
+        'preco_varejo' => 169.99,
+        'preco_atacado' => 111.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Luana/1Ciano.jpg',
+            'CJNTS/Tri Conjunto Luana/2Ciano.jpg'
+        ]
+    ],
+    [
+        'id' => 96,
+        'nome' => 'Tri Conjunto Luana Laranja',
+        'preco_varejo' => 169.99,
+        'preco_atacado' => 111.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Luana/1Laranja.jpg',
+            'CJNTS/Tri Conjunto Luana/2Laranja.jpg',
+            'CJNTS/Tri Conjunto Luana/3Laranja.jpg'
+        ]
+    ],
+    [
+        'id' => 97,
+        'nome' => 'Tri Conjunto Luana Pink',
+        'preco_varejo' => 169.99,
+        'preco_atacado' => 111.99,
+        'imagens' => [
+            'CJNTS/Tri Conjunto Luana/1Pink.jpg',
+            'CJNTS/Tri Conjunto Luana/2Pink.jpg'
+        ]
+    ],
+    [
+        'id' => 98,
+        'nome' => 'Conjunto Alice Azul Marinho',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjuntos Alice/1azulmarinho.jpg',
+            'CJNTS/Conjuntos Alice/2azulmarinho.jpg',
+            'CJNTS/Conjuntos Alice/3azulmarinho.jpg',
+            'CJNTS/Conjuntos Alice/4azulmarinho.jpg',
+            'CJNTS/Conjuntos Alice/5azulmarinho.jpg'
+        ]
+    ],
+    [
+        'id' => 99,
+        'nome' => 'Conjunto Alice Bordô',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjuntos Alice/1bordô.jpg',
+            'CJNTS/Conjuntos Alice/2bordô.jpg',
+            'CJNTS/Conjuntos Alice/3bordô.jpg',
+            'CJNTS/Conjuntos Alice/4bordô.jpg',
+            'CJNTS/Conjuntos Alice/5bordô.jpg'
+        ]
+    ],
+    [
+        'id' => 100,
+        'nome' => 'Conjunto Alice Preto',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjuntos Alice/1preto.jpg',
+            'CJNTS/Conjuntos Alice/2preto.jpg',
+            'CJNTS/Conjuntos Alice/3preto.jpg',
+            'CJNTS/Conjuntos Alice/4preto.jpg'
+        ]
+    ],
+    [
+        'id' => 101,
+        'nome' => 'Conjunto Alice Rosa',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjuntos Alice/1rosa.jpg',
+            'CJNTS/Conjuntos Alice/2rosa.jpg',
+            'CJNTS/Conjuntos Alice/3rosa.jpg',
+            'CJNTS/Conjuntos Alice/4rosa.jpg'
+        ]
+    ],
+    [
+        'id' => 102,
+        'nome' => 'Conjunto Alice Verde Água',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjuntos Alice/1Verde-água.jpg',
+            'CJNTS/Conjuntos Alice/2Verde-água.jpg',
+            'CJNTS/Conjuntos Alice/3Verde-água.jpg',
+            'CJNTS/Conjuntos Alice/4Verde-água.jpg'
+        ]
+    ],
+    [
+        'id' => 103,
+        'nome' => 'Conjunto Alice Verde Petróleo',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjuntos Alice/1verde-petróleo.jpg',
+            'CJNTS/Conjuntos Alice/2verde-petróleo..jpg',
+            'CJNTS/Conjuntos Alice/3verde-petróleo.jpg',
+            'CJNTS/Conjuntos Alice/4verde-petróleo.jpg'
+        ]
+    ],
+    [
+        'id' => 104,
+        'nome' => 'Conjunto Plush Pink',
+        'preco_varejo' => 169.99,
+        'preco_atacado' => 111.99,
+        'imagens' => [
+            'CJNTS/Conjunto Plush/1PinkPlush.jpg'
+        ]
+    ],
+    [
+        'id' => 105,
+        'nome' => 'Conjunto Plush Preto',
+        'preco_varejo' => 169.99,
+        'preco_atacado' => 111.99,
+        'imagens' => [
+            'CJNTS/Conjunto Plush/1PretoPlush.jpg'
+        ]
+    ],
+    [
+        'id' => 106,
+        'nome' => 'Conjunto Plush Vinho',
+        'preco_varejo' => 169.99,
+        'preco_atacado' => 111.99,
+        'imagens' => [
+            'CJNTS/Conjunto Plush/1VinhoPlush.jpg'
+        ]
+    ],
+    [
+        'id' => 107,
+        'nome' => 'Conjunto Tweed Marrom Caramelo e Branco',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjunto Tweed/marrom-carameloebranco (2).jpg'
+        ]
+    ],
+    [
+        'id' => 108,
+        'nome' => 'Conjunto Tweed Preto e Branco',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjunto Tweed/pretoebranco.jpg'
+        ]
+    ],
+    [
+        'id' => 109,
+        'nome' => 'Conjunto Tweed Verde Musgo e Branco',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjunto Tweed/verde-musgoebranco.jpg'
+        ]
+    ],
+    [
+        'id' => 110,
+        'nome' => 'Conjunto Tweed Pink e Branco',
+        'preco_varejo' => 189.99,
+        'preco_atacado' => 128.99,
+        'imagens' => [
+            'CJNTS/Conjunto Tweed/pinkebranco.jpg'
+        ]
+    ]
+];
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,14 +377,18 @@
 
 <div class="container-section">
   <div class="grid">
-    <div class="produto" data-id="78" data-nome="Conjunto Elizabeth Preto" data-preco="149.00"
-      data-imagens='["CJNTS/Conjunto Elizabeth/1Preto.jpg","CJNTS/Conjunto Elizabeth/2ConjuntoPreto.jpg","CJNTS/Conjunto Elizabeth/3ConjuntoPreto.jpg"]'>
-      <img src="CJNTS/Conjunto Elizabeth/1Preto.jpg" alt="Conjunto Elizabeth Preto" class="zoom-img">
+    <?php foreach($conjuntos as $conjunto): ?>
+    <div class="produto" 
+         data-id="<?php echo $conjunto['id']; ?>" 
+         data-nome="<?php echo $conjunto['nome']; ?>" 
+         data-preco="<?php echo $conjunto['preco_varejo']; ?>"
+         data-imagens='<?php echo json_encode($conjunto['imagens']); ?>'>
+      <img src="<?php echo $conjunto['imagens'][0]; ?>" alt="<?php echo $conjunto['nome']; ?>" class="zoom-img">
       <div class="info">
-        <h2>Conjunto Elizabeth Preto</h2>
+        <h2><?php echo $conjunto['nome']; ?></h2>
         <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,99</span><br>
-          <span class="preco-atacado">Atacado R$ 100,00</span>
+          <span class="preco-varejo">Varejo R$ <?php echo number_format($conjunto['preco_varejo'], 2, ',', '.'); ?></span><br>
+          <span class="preco-atacado">Atacado R$ <?php echo number_format($conjunto['preco_atacado'], 2, ',', '.'); ?></span>
         </div>
         <div class="quantidade">
           <button class="menos">-</button>
@@ -36,741 +398,7 @@
         <button class="add-carrinho">🛒 + Adicionar</button>
       </div>
     </div>
-
-    <!-- Novo conjunto Elizabeth Caramelo -->
-    <div class="produto" data-id="79" data-nome="Conjunto Elizabeth Caramelo" data-preco="149.00"
-      data-imagens='["CJNTS/Conjunto Elizabeth/1CarameloEliza.jpg","CJNTS/Conjunto Elizabeth/2CarameloEliz.jpg"]'>
-      <img src="CJNTS/Conjunto Elizabeth/1CarameloEliza.jpg" alt="Conjunto Elizabeth Caramelo" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Elizabeth Caramelo</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 159,99</span><br>
-          <span class="preco-atacado">Atacado R$ 100,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Verônica Azul Marinho -->
-    <div class="produto" data-id="80" data-nome="Tri Conjunto Verônica Azul Marinho" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri conjunto Verônica/1azulmarinho.jpg",
-        "CJNTS/Tri conjunto Verônica/2azulmarinho.jpg",
-        "CJNTS/Tri conjunto Verônica/3azulmarinho.jpg",
-        "CJNTS/Tri conjunto Verônica/4azulmarinho.jpg"
-      ]'>
-      <img src="CJNTS/Tri conjunto Verônica/1azulmarinho.jpg" alt="Tri Conjunto Verônica Azul Marinho" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Verônica Azul Marinho</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Verônica Azul Petróleo -->
-    <div class="produto" data-id="81" data-nome="Tri Conjunto Verônica Azul Petróleo" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri conjunto Verônica/1azulpetróleo.jpg",
-        "CJNTS/Tri conjunto Verônica/2azulpetróleo.jpg",
-        "CJNTS/Tri conjunto Verônica/3azulpetróleo.jpg"
-      ]'>
-      <img src="CJNTS/Tri conjunto Verônica/1azulpetróleo.jpg" alt="Tri Conjunto Verônica Azul Petróleo" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Verônica Azul Petróleo</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Verônica Azul Royal -->
-    <div class="produto" data-id="82" data-nome="Tri Conjunto Verônica Azul Royal" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri conjunto Verônica/1azulroyal.jpg",
-        "CJNTS/Tri conjunto Verônica/2azulroyal.jpg"
-      ]'>
-      <img src="CJNTS/Tri conjunto Verônica/1azulroyal.jpg" alt="Tri Conjunto Verônica Azul Royal" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Verônica Azul Royal</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Verônica Bordô -->
-    <div class="produto" data-id="83" data-nome="Tri Conjunto Verônica Bordô" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri conjunto Verônica/1bordô.jpg",
-        "CJNTS/Tri conjunto Verônica/2bordô.jpg",
-        "CJNTS/Tri conjunto Verônica/3bordô.jpg",
-        "CJNTS/Tri conjunto Verônica/4bordô.jpg"
-      ]'>
-      <img src="CJNTS/Tri conjunto Verônica/1bordô.jpg" alt="Tri Conjunto Verônica Bordô" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Verônica Bordô</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Verônica Preto -->
-    <div class="produto" data-id="84" data-nome="Tri Conjunto Verônica Preto" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri conjunto Verônica/1Preto.jpg",
-        "CJNTS/Tri conjunto Verônica/2Preto.jpg",
-        "CJNTS/Tri conjunto Verônica/3Preto.jpg",
-        "CJNTS/Tri conjunto Verônica/4Preto.jpg",
-        "CJNTS/Tri conjunto Verônica/5Preto.jpg"
-      ]'>
-      <img src="CJNTS/Tri conjunto Verônica/1Preto.jpg" alt="Tri Conjunto Verônica Preto" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Verônica Preto</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Verônica Verde Esmeralda -->
-    <div class="produto" data-id="85" data-nome="Tri Conjunto Verônica Verde Esmeralda" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri conjunto Verônica/1verdeesmeralda.jpg",
-        "CJNTS/Tri conjunto Verônica/2verdeesmeralda.jpg",
-        "CJNTS/Tri conjunto Verônica/3verdeesmeralda.jpg",
-        "CJNTS/Tri conjunto Verônica/4verdeesmeralda.jpg"
-      ]'>
-      <img src="CJNTS/Tri conjunto Verônica/1verdeesmeralda.jpg" alt="Tri Conjunto Verônica Verde Esmeralda" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Verônica Verde Esmeralda</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Verônica Verde Militar -->
-    <div class="produto" data-id="86" data-nome="Tri Conjunto Verônica Verde Militar" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri conjunto Verônica/1verdemilitar.jpg",
-        "CJNTS/Tri conjunto Verônica/2verdemilitar.jpg",
-        "CJNTS/Tri conjunto Verônica/3verdemilitar.jpg",
-        "CJNTS/Tri conjunto Verônica/4verdemilitar.jpg"
-      ]'>
-      <img src="CJNTS/Tri conjunto Verônica/1verdemilitar.jpg" alt="Tri Conjunto Verônica Verde Militar" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Verônica Verde Militar</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Verônica Vermelho -->
-    <div class="produto" data-id="87" data-nome="Tri Conjunto Verônica Vermelho" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri conjunto Verônica/1Vermelho.jpg",
-        "CJNTS/Tri conjunto Verônica/2Vermelho.jpg",
-        "CJNTS/Tri conjunto Verônica/3Vermelho.jpg",
-        "CJNTS/Tri conjunto Verônica/4Vermelho.jpg"
-      ]'>
-      <img src="CJNTS/Tri conjunto Verônica/1Vermelho.jpg" alt="Tri Conjunto Verônica Vermelho" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Verônica Vermelho</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Eliza Azul Marinho -->
-    <div class="produto" data-id="88" data-nome="Tri Conjunto Eliza Azul Marinho" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Eliza/1Azul-marinho.jpg",
-        "CJNTS/Tri Conjunto Eliza/2Azul-marinho.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Eliza/1Azul-marinho.jpg" alt="Tri Conjunto Eliza Azul Marinho" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Eliza Azul Marinho</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Eliza Azul Petróleo -->
-    <div class="produto" data-id="89" data-nome="Tri Conjunto Eliza Azul Petróleo" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Eliza/1Azul-petróleo.jpg",
-        "CJNTS/Tri Conjunto Eliza/2Azul-petróleo.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Eliza/1Azul-petróleo.jpg" alt="Tri Conjunto Eliza Azul Petróleo" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Eliza Azul Petróleo</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Eliza Preto -->
-    <div class="produto" data-id="90" data-nome="Tri Conjunto Eliza Preto" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Eliza/1Preto.jpg",
-        "CJNTS/Tri Conjunto Eliza/2Preto.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Eliza/1Preto.jpg" alt="Tri Conjunto Eliza Preto" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Eliza Preto</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Eliza Terracota -->
-    <div class="produto" data-id="91" data-nome="Tri Conjunto Eliza Terracota" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Eliza/1Terracota.jpg",
-        "CJNTS/Tri Conjunto Eliza/2Terracota.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Eliza/1Terracota.jpg" alt="Tri Conjunto Eliza Terracota" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Eliza Terracota</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Eliza Verde Oliva -->
-    <div class="produto" data-id="92" data-nome="Tri Conjunto Eliza Verde Oliva" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Eliza/1Verde-oliva.jpg",
-        "CJNTS/Tri Conjunto Eliza/2Verde-oliva.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Eliza/1Verde-oliva.jpg" alt="Tri Conjunto Eliza Verde Oliva" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Eliza Verde Oliva</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Eliza Vermelho -->
-    <div class="produto" data-id="93" data-nome="Tri Conjunto Eliza Vermelho" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Eliza/1Vermelho.jpg",
-        "CJNTS/Tri Conjunto Eliza/2Vermelho.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Eliza/1Vermelho.jpg" alt="Tri Conjunto Eliza Vermelho" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Eliza Vermelho</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Luana Branco -->
-    <div class="produto" data-id="94" data-nome="Tri Conjunto Luana Branco" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Luana/1Branco.jpg",
-        "CJNTS/Tri Conjunto Luana/2Branco.jpg",
-        "CJNTS/Tri Conjunto Luana/3Branco.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Luana/1Branco.jpg" alt="Tri Conjunto Luana Branco" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Luana Branco</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 169,99</span><br>
-          <span class="preco-atacado">Atacado R$ 111,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="95" data-nome="Tri Conjunto Luana Ciano" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Luana/1Ciano.jpg",
-        "CJNTS/Tri Conjunto Luana/2Ciano.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Luana/1Ciano.jpg" alt="Tri Conjunto Luana Ciano" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Luana Ciano</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 169,99</span><br>
-          <span class="preco-atacado">Atacado R$ 111,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="96" data-nome="Tri Conjunto Luana Laranja" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Luana/1Laranja.jpg",
-        "CJNTS/Tri Conjunto Luana/2Laranja.jpg",
-        "CJNTS/Tri Conjunto Luana/3Laranja.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Luana/1Laranja.jpg" alt="Tri Conjunto Luana Laranja" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Luana Laranja</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 169,99</span><br>
-          <span class="preco-atacado">Atacado R$ 111,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="97" data-nome="Tri Conjunto Luana Pink" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Tri Conjunto Luana/1Pink.jpg",
-        "CJNTS/Tri Conjunto Luana/2Pink.jpg"
-      ]'>
-      <img src="CJNTS/Tri Conjunto Luana/1Pink.jpg" alt="Tri Conjunto Luana Pink" class="zoom-img">
-      <div class="info">
-        <h2>Tri Conjunto Luana Pink</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 169,99</span><br>
-          <span class="preco-atacado">Atacado R$ 111,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Alice Azul Marinho -->
-    <div class="produto" data-id="98" data-nome="Conjunto Alice Azul Marinho" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjuntos Alice/1azulmarinho.jpg",
-        "CJNTS/Conjuntos Alice/2azulmarinho.jpg",
-        "CJNTS/Conjuntos Alice/3azulmarinho.jpg",
-        "CJNTS/Conjuntos Alice/4azulmarinho.jpg",
-        "CJNTS/Conjuntos Alice/5azulmarinho.jpg"
-      ]'>
-      <img src="CJNTS/Conjuntos Alice/1azulmarinho.jpg" alt="Conjunto Alice Azul Marinho" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Alice Azul Marinho</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Alice Bordô -->
-    <div class="produto" data-id="99" data-nome="Conjunto Alice Bordô" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjuntos Alice/1bordô.jpg",
-        "CJNTS/Conjuntos Alice/2bordô.jpg",
-        "CJNTS/Conjuntos Alice/3bordô.jpg",
-        "CJNTS/Conjuntos Alice/4bordô.jpg",
-        "CJNTS/Conjuntos Alice/5bordô.jpg"
-      ]'>
-      <img src="CJNTS/Conjuntos Alice/1bordô.jpg" alt="Conjunto Alice Bordô" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Alice Bordô</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Alice Preto -->
-    <div class="produto" data-id="100" data-nome="Conjunto Alice Preto" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjuntos Alice/1preto.jpg",
-        "CJNTS/Conjuntos Alice/2preto.jpg",
-        "CJNTS/Conjuntos Alice/3preto.jpg",
-        "CJNTS/Conjuntos Alice/4preto.jpg"
-      ]'>
-      <img src="CJNTS/Conjuntos Alice/1preto.jpg" alt="Conjunto Alice Preto" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Alice Preto</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="101" data-nome="Conjunto Alice Rosa" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjuntos Alice/1rosa.jpg",
-        "CJNTS/Conjuntos Alice/2rosa.jpg",
-        "CJNTS/Conjuntos Alice/3rosa.jpg",
-        "CJNTS/Conjuntos Alice/4rosa.jpg"
-      ]'>
-      <img src="CJNTS/Conjuntos Alice/1rosa.jpg" alt="Conjunto Alice Rosa" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Alice Rosa</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="102" data-nome="Conjunto Alice Verde Água" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjuntos Alice/1Verde-água.jpg",
-        "CJNTS/Conjuntos Alice/2Verde-água.jpg",
-        "CJNTS/Conjuntos Alice/3Verde-água.jpg",
-        "CJNTS/Conjuntos Alice/4Verde-água.jpg"
-      ]'>
-      <img src="CJNTS/Conjuntos Alice/1Verde-água.jpg" alt="Conjunto Alice Verde Água" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Alice Verde Água</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="103" data-nome="Conjunto Alice Verde Petróleo" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjuntos Alice/1verde-petróleo.jpg",
-        "CJNTS/Conjuntos Alice/2verde-petróleo..jpg",
-        "CJNTS/Conjuntos Alice/3verde-petróleo.jpg",
-        "CJNTS/Conjuntos Alice/4verde-petróleo.jpg"
-      ]'>
-      <img src="CJNTS/Conjuntos Alice/1verde-petróleo.jpg" alt="Conjunto Alice Verde Petróleo" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Alice Verde Petróleo</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Plush Pink -->
-    <div class="produto" data-id="104" data-nome="Conjunto Plush Pink" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjunto Plush/1PinkPlush.jpg"
-      ]'>
-      <img src="CJNTS/Conjunto Plush/1PinkPlush.jpg" alt="Conjunto Plush Pink" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Plush Pink</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 169,99</span><br>
-          <span class="preco-atacado">Atacado R$ 111,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="105" data-nome="Conjunto Plush Preto" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjunto Plush/1PretoPlush.jpg"
-      ]'>
-      <img src="CJNTS/Conjunto Plush/1PretoPlush.jpg" alt="Conjunto Plush Preto" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Plush Preto</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 169,99</span><br>
-          <span class="preco-atacado">Atacado R$ 111,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="106" data-nome="Conjunto Plush Vinho" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjunto Plush/1VinhoPlush.jpg"
-      ]'>
-      <img src="CJNTS/Conjunto Plush/1VinhoPlush.jpg" alt="Conjunto Plush Vinho" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Plush Vinho</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 169,99</span><br>
-          <span class="preco-atacado">Atacado R$ 111,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
-    <!-- Novo conjunto Tweed Marrom Caramelo e Branco -->
-    <div class="produto" data-id="107" data-nome="Conjunto Tweed Marrom Caramelo e Branco" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjunto Tweed/marrom-carameloebranco (2).jpg"
-      ]'>
-      <img src="CJNTS/Conjunto Tweed/marrom-carameloebranco (2).jpg" alt="Conjunto Tweed Marrom Caramelo e Branco" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Tweed Marrom Caramelo e Branco</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="108" data-nome="Conjunto Tweed Preto e Branco" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjunto Tweed/pretoebranco.jpg"
-      ]'>
-      <img src="CJNTS/Conjunto Tweed/pretoebranco.jpg" alt="Conjunto Tweed Preto e Branco" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Tweed Preto e Branco</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="109" data-nome="Conjunto Tweed Verde Musgo e Branco" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjunto Tweed/verde-musgoebranco.jpg"
-      ]'>
-      <img src="CJNTS/Conjunto Tweed/verde-musgoebranco.jpg" alt="Conjunto Tweed Verde Musgo e Branco" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Tweed Verde Musgo e Branco</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-    <div class="produto" data-id="110" data-nome="Conjunto Tweed Pink e Branco" data-preco="159.00"
-      data-imagens='[
-        "CJNTS/Conjunto Tweed/pinkebranco.jpg"
-      ]'>
-      <img src="CJNTS/Conjunto Tweed/pinkebranco.jpg" alt="Conjunto Tweed Pink e Branco" class="zoom-img">
-      <div class="info">
-        <h2>Conjunto Tweed Pink e Branco</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 189,99</span><br>
-          <span class="preco-atacado">Atacado R$ 128,99</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo conjunto -->
-
+    <?php endforeach; ?>
     </div>
 
 <div class="paginacao-container">
