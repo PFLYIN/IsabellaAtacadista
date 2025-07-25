@@ -11,7 +11,9 @@ $routes = [
     'conjuntos' => 'catalogoconjunto.php',
     'blusinhas' => 'blusinhas.php',
     'sobre-nos' => 'sobrenos.php',
-    'contato' => 'contato.php'
+    'contato' => 'contato.php', 
+    'cadastro' => 'cadastro.php',
+    'login' => 'login.php',
 ];
 
 // Inclui o cabeçalho (opcional)

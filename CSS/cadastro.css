@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+.container-video-fundo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay escuro sobre o vídeo */
+.container-video-fundo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.container-cadastro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
+}
+
+.container-cadastro:hover {
+    transform: translate(-50%, -50%) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.container-cadastro h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+    position: relative;
+}
+
+.container-cadastro h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #a6004f 0%, #ff0066 100%);
+    border-radius: 1px;
+    animation: expandWidth 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes expandWidth {
+    0%, 100% {
+        width: 60px;
+    }
+    50% {
+        width: 80px;
+    }
+}
+
+.container-cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-cadastro label {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 5px;
+}
+
+.container-cadastro label:hover {
+    color: rgba(255, 255, 255, 0.9);
+    transform: translateX(3px);
+}
+
+.container-cadastro form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container-cadastro input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.container-cadastro input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+.container-cadastro input:focus {
+    outline: none;
+    border-color: #a6004f;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(166, 0, 79, 0.3);
+    transform: translateY(-2px);
+}
+
+.container-cadastro input:focus::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    transform: translateX(5px);
+}
+
+.container-cadastro input:hover {
+    border-color: rgba(166, 0, 79, 0.5);
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+}
+
+.container-cadastro button {
+    background: linear-gradient(135deg, #a6004f 0%, #ff0066 100%);
+    border: none;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(166, 0, 79, 0.3);
+}
+
+.container-cadastro button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.container-cadastro button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(166, 0, 79, 0.4);
+    background: linear-gradient(135deg, #ff0066 0%, #a6004f 100%);
+}
+
+.container-cadastro button:hover::before {
+    left: 100%;
+}
+
+.container-cadastro button:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(166, 0, 79, 0.3);
+}
+
+.container-cadastro p {
+    color: #ffffff;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.container-cadastro a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.container-cadastro a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+.login-link {
+    display: block;
+    background: linear-gradient(135deg, #a6004f 0%, #ff0066 100%);
+    border: none;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 15px auto 0;
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(166, 0, 79, 0.3);
+}
+
+.login-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.login-link:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(166, 0, 79, 0.4);
+    background: linear-gradient(135deg, #ff0066 0%, #a6004f 100%);
+    text-decoration: none;
+}
+
+.login-link:hover::before {
+    left: 100%;
+}
+
+.login-link:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(166, 0, 79, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-cadastro {
+        width: 95%;
+        padding: 30px 20px;
+    }
+    
+    .container-cadastro h1 {
+        font-size: 24px;
+    }
+    
+    .container-cadastro h1::after {
+        width: 40px;
+    }
+    
+    .container-cadastro input {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .container-cadastro button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .login-link {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-cadastro {
+        padding: 25px 15px;
+    }
+    
+    .container-cadastro h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
