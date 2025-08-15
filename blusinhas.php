@@ -19,534 +19,250 @@
 </div>
 
 <div class="container-section">
-   <div class="grid">
-    <!-- Novo produto: Blusinha Azul Manga Rendada -->
-    <div class="produto" data-id="111" data-nome="Blusinha Azul Manga Rendada" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/AzulClaro3.jpg"]'>
-      <img src="Blusinhas Gospel/AzulClaro3.jpg" alt="Blusinha Azul Manga Rendada" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Azul Manga Rendada</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
+  <div class="grid">
+    <?php
+    $blusinhas = [
+      [
+        "id" => 111,
+        "nome" => "Blusinha Azul Manga Rendada",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/AzulClaro3.jpg"],
+        "descricao" => "Blusinha azul com manga rendada, delicada e perfeita para looks românticos."
+      ],
+      [
+        "id" => 112,
+        "nome" => "Blusinha Azul Claro",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/AzulClaro.jpg"],
+        "descricao" => "Blusinha azul claro, básica e confortável para o dia a dia."
+      ],
+      [
+        "id" => 113,
+        "nome" => "Blusinha Azul Claro com Renda e Pérolas",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/AzulClaro4.jpg"],
+        "descricao" => "Blusinha azul claro com detalhes em renda e pérolas, sofisticada e charmosa."
+      ],
+      [
+        "id" => 114,
+        "nome" => "Blusinha Azul Claro Florido com Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/AzulClaroFlorido.jpg"],
+        "descricao" => "Blusinha azul claro com estampa florida e laço, alegre e feminina."
+      ],
+      [
+        "id" => 115,
+        "nome" => "Blusinha Azul Royal Manga Bufante",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/AzulRoyal.jpg"],
+        "descricao" => "Blusinha azul royal com manga bufante, moderna e estilosa."
+      ],
+      [
+        "id" => 116,
+        "nome" => "Blusinha Bege Listrada com Botões",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Bege.jpg"],
+        "descricao" => "Blusinha bege listrada com botões, versátil e elegante."
+      ],
+      [
+        "id" => 117,
+        "nome" => "Blusinha Branca com Corações Pretos e Manga Bufante",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Branco-e-Preto.jpg"],
+        "descricao" => "Blusinha branca com corações pretos e manga bufante, divertida e delicada."
+      ],
+      [
+        "id" => 118,
+        "nome" => "Blusinha Branca com Poá Preto e Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Branco-e-PretoIMG1.jpg", "Blusinhas Gospel/Branco-e-PretoIMG2.jpg"],
+        "descricao" => "Blusinha branca com poá preto e laço, clássica e charmosa."
+      ],
+      [
+        "id" => 119,
+        "nome" => "Blusinha Branca Floral com Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Branco-Florido.jpg"],
+        "descricao" => "Blusinha branca com estampa floral e laço, delicada e romântica."
+      ],
+      [
+        "id" => 120,
+        "nome" => "Blusinha Branca Floral Manga Bufante",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Branco-Florido1.jpg"],
+        "descricao" => "Blusinha branca floral com manga bufante, leve e feminina."
+      ],
+      [
+        "id" => 121,
+        "nome" => "Blusinha Branca Laço e Renda nas Mangas",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Branco.jpg"],
+        "descricao" => "Blusinha branca com laço e renda nas mangas, sofisticada e delicada."
+      ],
+      [
+        "id" => 122,
+        "nome" => "Blusinha Branca Manga Bufante com Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Branco1.jpg"],
+        "descricao" => "Blusinha branca manga bufante com laço, moderna e elegante."
+      ],
+      [
+        "id" => 123,
+        "nome" => "Blusinha Branca Manga Rendada com Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Branco3.jpg"],
+        "descricao" => "Blusinha branca com manga rendada e laço, perfeita para ocasiões especiais."
+      ],
+      [
+        "id" => 124,
+        "nome" => "Blusinha Branca com Flores Bordadas",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Branco4.jpg"],
+        "descricao" => "Blusinha branca com flores bordadas, delicada e exclusiva."
+      ],
+      [
+        "id" => 125,
+        "nome" => "Blusinha Laranja Avermelhado Manga Bufante com Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Laranja-Avermelhado.jpg"],
+        "descricao" => "Blusinha laranja avermelhado com manga bufante e laço, vibrante e estilosa."
+      ],
+      [
+        "id" => 126,
+        "nome" => "Blusinha Rosa Manga Bufante com Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Rosa.jpg"],
+        "descricao" => "Blusinha rosa com manga bufante e laço, feminina e delicada."
+      ],
+      [
+        "id" => 127,
+        "nome" => "Blusinha Azul Claro Manga Bufante (Costas e Frente)",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/P1AzulClaro.jpg", "Blusinhas Gospel/P2AzulClaro.jpg"],
+        "descricao" => "Blusinha azul claro manga bufante, vista frente e costas, moderna e confortável."
+      ],
+      [
+        "id" => 128,
+        "nome" => "Blusinha Rosa Detalhe Pérola Manga Bufante",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Rosa1.jpg"],
+        "descricao" => "Blusinha rosa com detalhe de pérola e manga bufante, sofisticada e charmosa."
+      ],
+      [
+        "id" => 129,
+        "nome" => "Blusinha Rosa Manga Longa com Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Rosa2.jpg"],
+        "descricao" => "Blusinha rosa manga longa com laço, perfeita para dias mais frescos."
+      ],
+      [
+        "id" => 130,
+        "nome" => "Blusinha Rosa Claro com Renda Bordada",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/RosaClaro.jpg"],
+        "descricao" => "Blusinha rosa claro com renda bordada, delicada e elegante."
+      ],
+      [
+        "id" => 131,
+        "nome" => "Blusinha Rosa Queimado com Poá e Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/RosaQueimado.jpg"],
+        "descricao" => "Blusinha rosa queimado com poá e laço, moderna e estilosa."
+      ],
+      [
+        "id" => 132,
+        "nome" => "Blusinha Telha Clara com Renda e Laço",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/TelhaClara.jpg"],
+        "descricao" => "Blusinha telha clara com renda e laço, para um visual sofisticado."
+      ],
+      [
+        "id" => 133,
+        "nome" => "Blusinha Terracota Poá Manga Bufante",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Terracota.jpg"],
+        "descricao" => "Blusinha terracota com poá e manga bufante, estilosa e confortável."
+      ],
+      [
+        "id" => 134,
+        "nome" => "Blusinha Verde Manga Bufante com Laço e Pérolas",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Verde.jpg"],
+        "descricao" => "Blusinha verde manga bufante com laço e pérolas, delicada e sofisticada."
+      ],
+      [
+        "id" => 135,
+        "nome" => "Blusinha Verde Manga Bufante com Laço e Detalhe",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/Verde1.jpg"],
+        "descricao" => "Blusinha verde manga bufante com laço e detalhe, moderna e charmosa."
+      ],
+      [
+        "id" => 136,
+        "nome" => "Blusinha Verde Claro Manga Bufante com Laço e Renda",
+        "preco" => 89.00,
+        "preco_atacado" => 53.00,
+        "imagens" => ["Blusinhas Gospel/VerdeClaro.jpg"],
+        "descricao" => "Blusinha verde claro manga bufante com laço e renda, perfeita para looks delicados."
+      ]
+    ];
+    foreach ($blusinhas as $produto): ?>
+      <a href="produto.php?id=<?php echo $produto['id']; ?>" class="produto-link" style="text-decoration:none;color:inherit;">
+        <div class="produto"
+          data-id="<?php echo $produto['id']; ?>"
+          data-nome="<?php echo htmlspecialchars($produto['nome']); ?>"
+          data-preco="<?php echo $produto['preco']; ?>"
+          data-preco-atacado="<?php echo $produto['preco_atacado']; ?>"
+          data-imagens='<?php echo json_encode($produto['imagens']); ?>'>
+          <img src="<?php echo $produto['imagens'][0]; ?>" alt="<?php echo htmlspecialchars($produto['nome']); ?>" class="zoom-img">
+          <div class="info">
+            <h2><?php echo $produto['nome']; ?></h2>
+            <div class="precos">
+              <span class="preco-varejo">Varejo R$ <?php echo number_format($produto['preco'],2,',','.'); ?></span><br>
+              <span class="preco-atacado">Atacado R$ <?php echo number_format($produto['preco_atacado'],2,',','.'); ?></span>
+            </div>
+            <div class="quantidade">
+              <button class="menos">-</button>
+              <span class="qtd">1</span>
+              <button class="mais">+</button>
+            </div>
+            <button class="add-carrinho" type="button">🛒 + Adicionar</button>
+          </div>
         </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Azul Claro -->
-    <div class="produto" data-id="112" data-nome="Blusinha Azul Claro" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/AzulClaro.jpg"]'>
-      <img src="Blusinhas Gospel/AzulClaro.jpg" alt="Blusinha Azul Claro" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Azul Claro</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Azul Claro com Renda e Pérolas -->
-    <div class="produto" data-id="113" data-nome="Blusinha Azul Claro com Renda e Pérolas" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/AzulClaro4.jpg"]'>
-      <img src="Blusinhas Gospel/AzulClaro4.jpg" alt="Blusinha Azul Claro com Renda e Pérolas" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Azul Claro com Renda e Pérolas</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Azul Claro Florido com Laço -->
-    <div class="produto" data-id="114" data-nome="Blusinha Azul Claro Florido com Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/AzulClaroFlorido.jpg"]'>
-      <img src="Blusinhas Gospel/AzulClaroFlorido.jpg" alt="Blusinha Azul Claro Florido com Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Azul Claro Florido com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Azul Royal Manga Bufante -->
-    <div class="produto" data-id="115" data-nome="Blusinha Azul Royal Manga Bufante" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/AzulRoyal.jpg"]'>
-      <img src="Blusinhas Gospel/AzulRoyal.jpg" alt="Blusinha Azul Royal Manga Bufante" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Azul Royal Manga Longa</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Bege Listrada com Botões -->
-    <div class="produto" data-id="116" data-nome="Blusinha Bege Listrada com Botões" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Bege.jpg"]'>
-      <img src="Blusinhas Gospel/Bege.jpg" alt="Blusinha Bege Listrada com Botões" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Bege Listrada com Botões</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Branca com Corações Pretos e Manga Bufante -->
-    <div class="produto" data-id="117" data-nome="Blusinha Branca com Corações Pretos e Manga Bufante" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Branco-e-Preto.jpg"]'>
-      <img src="Blusinhas Gospel/Branco-e-Preto.jpg" alt="Blusinha Branca com Corações Pretos e Manga Bufante" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Branca com Corações Pretos</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Branca com Poá Preto e Laço -->
-    <div class="produto" data-id="118" data-nome="Blusinha Branca com Poá Preto e Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Branco-e-PretoIMG1.jpg","Blusinhas Gospel/Branco-e-PretoIMG2.jpg"]'>
-      <img src="Blusinhas Gospel/Branco-e-PretoIMG1.jpg" alt="Blusinha Branca com Poá Preto e Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Branca com Preto e Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Branca Floral com Laço -->
-    <div class="produto" data-id="119" data-nome="Blusinha Branca Floral com Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Branco-Florido.jpg"]'>
-      <img src="Blusinhas Gospel/Branco-Florido.jpg" alt="Blusinha Branca Floral com Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Branca Floral com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Branca Floral Manga Bufante -->
-    <div class="produto" data-id="120" data-nome="Blusinha Branca Floral Manga Bufante" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Branco-Florido1.jpg"]'>
-      <img src="Blusinhas Gospel/Branco-Florido1.jpg" alt="Blusinha Branca Floral Manga Bufante" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Branca Floral com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Branca Laço e Renda nas Mangas -->
-    <div class="produto" data-id="121" data-nome="Blusinha Branca Laço e Renda nas Mangas" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Branco.jpg"]'>
-      <img src="Blusinhas Gospel/Branco.jpg" alt="Blusinha Branca Laço e Renda nas Mangas" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Branca Laço e Renda</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Branca Manga Bufante com Laço -->
-    <div class="produto" data-id="122" data-nome="Blusinha Branca Manga Bufante com Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Branco1.jpg"]'>
-      <img src="Blusinhas Gospel/Branco1.jpg" alt="Blusinha Branca Manga Bufante com Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Branca Manga Bufante com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Branca Manga Rendada com Laço -->
-    <div class="produto" data-id="123" data-nome="Blusinha Branca Manga Rendada com Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Branco3.jpg"]'>
-      <img src="Blusinhas Gospel/Branco3.jpg" alt="Blusinha Branca Manga Rendada com Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Branca Manga Rendada com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Branca com Flores Bordadas -->
-    <div class="produto" data-id="124" data-nome="Blusinha Branca com Flores Bordadas" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Branco4.jpg"]'>
-      <img src="Blusinhas Gospel/Branco4.jpg" alt="Blusinha Branca com Flores Bordadas" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Branca com Flores Bordadas</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Laranja Avermelhado Manga Bufante com Laço -->
-    <div class="produto" data-id="125" data-nome="Blusinha Laranja Avermelhado Manga Bufante com Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Laranja-Avermelhado.jpg"]'>
-      <img src="Blusinhas Gospel/Laranja-Avermelhado.jpg" alt="Blusinha Laranja Avermelhado Manga Bufante com Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Laranja Avermelhado Manga Bufante com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Rosa Manga Bufante com Laço -->
-    <div class="produto" data-id="126" data-nome="Blusinha Rosa Manga Bufante com Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Rosa.jpg"]'>
-      <img src="Blusinhas Gospel/Rosa.jpg" alt="Blusinha Rosa Manga Bufante com Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Rosa Manga Bufante com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Azul Claro Manga Bufante (Costas e Frente) -->
-    <div class="produto" data-id="127" data-nome="Blusinha Azul Claro Manga Bufante (Costas e Frente)" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/P1AzulClaro.jpg","Blusinhas Gospel/P2AzulClaro.jpg"]'>
-      <img src="Blusinhas Gospel/P1AzulClaro.jpg" alt="Blusinha Azul Claro Manga Bufante (Costas e Frente)" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Azul Claro Manga Bufante</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Rosa Detalhe Pérola Manga Bufante -->
-    <div class="produto" data-id="128" data-nome="Blusinha Rosa Detalhe Pérola Manga Bufante" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Rosa1.jpg"]'>
-      <img src="Blusinhas Gospel/Rosa1.jpg" alt="Blusinha Rosa Detalhe Pérola Manga Bufante" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Rosa Com Pérola </h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Rosa Manga Longa com Laço -->
-    <div class="produto" data-id="129" data-nome="Blusinha Rosa Manga Longa com Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Rosa2.jpg"]'>
-      <img src="Blusinhas Gospel/Rosa2.jpg" alt="Blusinha Rosa Manga Longa com Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Rosa Manga Longa com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Rosa Claro com Renda Bordada -->
-    <div class="produto" data-id="130" data-nome="Blusinha Rosa Claro com Renda Bordada" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/RosaClaro.jpg"]'>
-      <img src="Blusinhas Gospel/RosaClaro.jpg" alt="Blusinha Rosa Claro com Renda Bordada" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Rosa Claro com Renda Bordada</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Rosa Queimado com Poá e Laço -->
-    <div class="produto" data-id="131" data-nome="Blusinha Rosa Queimado com Poá e Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/RosaQueimado.jpg"]'>
-      <img src="Blusinhas Gospel/RosaQueimado.jpg" alt="Blusinha Rosa Queimado com Poá e Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Rosa Queimado com Poá e Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Telha Clara com Renda e Laço -->
-    <div class="produto" data-id="132" data-nome="Blusinha Telha Clara com Renda e Laço" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/TelhaClara.jpg"]'>
-      <img src="Blusinhas Gospel/TelhaClara.jpg" alt="Blusinha Telha Clara com Renda e Laço" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Telha Clara com Renda e Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Terracota Poá Manga Bufante -->
-    <div class="produto" data-id="133" data-nome="Blusinha Terracota Poá Manga Bufante" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Terracota.jpg"]'>
-      <img src="Blusinhas Gospel/Terracota.jpg" alt="Blusinha Terracota Poá Manga Bufante" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Terracota Poá Manga Bufante</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Verde Manga Bufante com Laço e Pérolas -->
-    <div class="produto" data-id="134" data-nome="Blusinha Verde Manga Bufante com Laço e Pérolas" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Verde.jpg"]'>
-      <img src="Blusinhas Gospel/Verde.jpg" alt="Blusinha Verde Manga Bufante com Laço e Pérolas" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Verde Manga Bufante com Laço e Pérolas</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Verde Manga Bufante com Laço e Detalhe -->
-    <div class="produto" data-id="135" data-nome="Blusinha Verde Manga Bufante com Laço e Detalhe" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/Verde1.jpg"]'>
-      <img src="Blusinhas Gospel/Verde1.jpg" alt="Blusinha Verde Manga Bufante com Laço e Detalhe" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Verde Manga Bufante com Laço</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
-    <!-- Fim do novo produto -->
-
-    <!-- Novo produto: Blusinha Verde Claro Manga Bufante com Laço e Renda -->
-    <div class="produto" data-id="136" data-nome="Blusinha Verde Claro Manga Bufante com Laço e Renda" data-preco="89.00"
-      data-imagens='["Blusinhas Gospel/VerdeClaro.jpg"]'>
-      <img src="Blusinhas Gospel/VerdeClaro.jpg" alt="Blusinha Verde Claro Manga Bufante com Laço e Renda" class="zoom-img">
-      <div class="info">
-        <h2>Blusinha Verde Claro Manga Bufante com Laço e Renda</h2>
-        <div class="precos">
-          <span class="preco-varejo">Varejo R$ 70,00</span><br>
-          <span class="preco-atacado">Atacado R$ 53,00</span>
-        </div>
-        <div class="quantidade">
-          <button class="menos">-</button>
-          <span class="qtd">1</span>
-          <button class="mais">+</button>
-        </div>
-        <button class="add-carrinho">🛒 + Adicionar</button>
-      </div>
-    </div>
+      </a>
+    <?php endforeach; ?>
   </div>
-</div>  <!-- Fim do novo produto -->
-
 </div>
+
 <div class="paginacao-container">
   <div class="botoes-paginas">
     <a href="blusinhas.php" class="botao-pagina anterior-pagina">❮ Anterior</a>
     <a href="blusinhas.php" class="botao-pagina pagina-atual">1</a>
-  
     <a href="blusinhas.php" class="botao-pagina proximo-pagina">Próximo ❯</a>
   </div>
 </div>
@@ -555,61 +271,11 @@
   <a href="carrinho.php" class="botao-paginacao">Ir para o Carrinho 🛒</a>
 </div>
 
-<!-- Modal para galeria -->
-<div id="modal" class="modal">
-  <span class="fechar" title="Fechar">&times;</span>
-  <button class="imagem-completa" id="btnCompleta" title="Ver imagem completa" aria-label="Ver imagem completa">⛶</button>
-  <button class="imagem-completa" id="btnVoltar" title="Voltar para o modal normal" aria-label="Voltar para o modal normal" style="display:none;">↩</button>
-  <button class="anterior" aria-label="Imagem anterior">&#8592;</button>
-  <img class="modal-conteudo" id="imgZoom">
-  <button class="proximo" aria-label="Próxima imagem">&#8594;</button>
-</div>
+
 
 <script src="carrinho.js"></script>
-
-<script src="modal.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Event listeners para botões de adicionar ao carrinho
-  document.querySelectorAll('.add-carrinho').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      const produto = this.closest('.produto');
-      const nome = produto.dataset.nome;
-      const preco = produto.dataset.preco;
-      const precoAtacado = produto.dataset.precoAtacado;
-      const quantidade = parseInt(produto.querySelector('.qtd').textContent);
-      const imagem = produto.querySelector('img').src;
-      
-      carrinho.adicionarItem(nome, preco, precoAtacado, imagem, quantidade);
-      
-      // Reset quantidade para 1
-      produto.querySelector('.qtd').textContent = '1';
-      
-    });
-  });
-  
-  // Event listeners para botões de quantidade
-  document.querySelectorAll('.mais').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const span = this.parentElement.querySelector('.qtd');
-      const valorAtual = parseInt(span.textContent);
-      span.textContent = valorAtual + 1;
-    });
-  });
-  
-  document.querySelectorAll('.menos').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const span = this.parentElement.querySelector('.qtd');
-      const valorAtual = parseInt(span.textContent);
-      if (valorAtual > 1) {
-        span.textContent = valorAtual - 1;
-      }
-    });
-  });
-});
-</script>
+<script src="carrinho-catalogo.js"></script>
 
 </body>
 </html>
-<?php include "footer.php";?>
+<?php include "footer.php"; ?>

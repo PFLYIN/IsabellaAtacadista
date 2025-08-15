@@ -131,7 +131,7 @@ class Carrinho {
             position: fixed;
             top: 30px;
             right: 30px;
-            background: linear-gradient(90deg, #a0005a, #ff0000);
+            background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
             color: #fff;
             padding: 15px 25px;
             border-radius: 25px;
