@@ -1439,6 +1439,7 @@ $produtos = [
       ],
       [
         "id" => 132,
+       
         "nome" => "Blusinha Telha Clara com Renda e Laço",
         "preco" => 89.00,
         "preco_atacado" => 53.00,
@@ -1504,6 +1505,10 @@ if (!$produto) {
 </head>
 <body>
 <?php include "header.php"; ?>
+
+<!-- Botão de voltar no topo -->
+<a href="catalago1.php" class="btn-voltar-topo" title="Voltar ao catálogo">&lt;</a>
+
 <div class="produto-detalhe-container">
   <div class="galeria-produto">
     <img src="<?php echo $produto['imagens'][0]; ?>" id="galeria-img" class="galeria-img" alt="<?php echo htmlspecialchars($produto['nome']); ?>">
@@ -1534,10 +1539,10 @@ if (!$produto) {
     </div>
   </div>
 </div>
-<div class="paginacao-container">
+<!-- Remover o botão de voltar do final -->
+<!-- <div class="paginacao-container">
   <a href="catalago1.php" class="botao-pagina anterior-pagina">❮ Voltar ao Catálogo</a>
-  <a href="carrinho.php" class="botao-pagina proximo-pagina">Ir para o Carrinho 🛒</a>
-</div>
+</div> -->
 <script>
   // Galeria automática e manual
   const imagens = <?php echo json_encode($produto['imagens']); ?>;
