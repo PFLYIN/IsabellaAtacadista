@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <title>Login</title>
-    <link rel="stylesheet" href="CSS/login.css">
+    <title>Login Administrativo</title>
+    <link rel="stylesheet" href="CSS/adminlogin.css">
 </head>
 <body>
     <div class="container-video-fundo">
@@ -20,11 +20,11 @@
                     <path d="M12 14c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z"/>
                 </svg>
             </div>
-            <h1>Acessar conta</h1>
-            <form action="login.php" method="post">
+            <h1>Área Administrativa</h1>
+            <form action="processar_login_admin.php" method="post">
                 <div class="form-group">
                     <input type="email" id="email" name="email" placeholder=" " required>
-                    <label for="email">E-mail</label>
+                    <label for="email">E-mail corporativo</label>
                 </div>
                 
                 <div class="form-group">
@@ -32,11 +32,14 @@
                     <label for="senha">Senha</label>
                 </div>
                 
-                <button type="submit">Entrar</button>
+                <button type="submit">Acessar Sistema</button>
             </form>
-            <p>Ainda não tem uma conta?</p>
-            <a href="cadastro.php" class="cadastro-link">Criar conta</a>
+            <p>Ainda não tem acesso?</p>
+            <a href="admincadastro.php" class="cadastro-link">Solicitar Acesso</a>
         </div>
+    </div>
+</body>
+</html>
     </div>
 </body>
 </html>

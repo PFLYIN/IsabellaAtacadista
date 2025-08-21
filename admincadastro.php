@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Área Administrativa</title>
-    <link rel="stylesheet" href="CSS/admin.css">
+    <link rel="stylesheet" href="CSS/admincadastro.css">
 </head>
 <body>
     <div class="container-video-fundo">
@@ -35,16 +35,6 @@
                 <label for="email">E-mail corporativo</label>
             </div>
 
-            <div class="form-group">
-                <input type="text" id="telefone" name="telefone" placeholder=" " required>
-                <label for="telefone">Telefone para contato</label>
-            </div>
-
-            <div class="form-group">
-                <input type="text" id="codigo_acesso" name="codigo_acesso" placeholder=" " required>
-                <label for="codigo_acesso">Código de autorização</label>
-            </div>
-            
             <div class="form-group">
                 <input type="password" id="senha" name="senha" placeholder=" " required>
                 <label for="senha">Senha</label>

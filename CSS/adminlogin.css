@@ -4,14 +4,12 @@
     box-sizing: border-box;
 }
 
-/* Estilos base iguais ao cadastro */
 body {
     font-family: 'Oswald', sans-serif;
     height: 100vh;
     overflow: hidden;
 }
 
-/* Container do vídeo */
 .container-video-fundo {
     position: fixed;
     top: 0;
@@ -30,45 +28,12 @@ body {
     z-index: 1;
 }
 
-.video-superior {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-}
-
-.video-inferior {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    transform: rotateX(180deg);
-}
-
-/* Overlay escuro */
-.container-video-fundo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1; /* Reduzido para garantir que o conteúdo fique acima */
-}
-
-/* Container do login (versão mais compacta que o cadastro) */
 .container-login {
     margin-top: 110px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    right: 39%;
     width: 90%;
-    max-width: 350px; /* Menor que o cadastro */
+    max-width: 350px;
     padding: 25px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
@@ -76,11 +41,43 @@ body {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    z-index: 10; /* Garante que fique acima do overlay */
-    animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    animation: fadeIn 0.8s ease;
 }
 
-/* Título com efeito de brilho */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Avatar */
+.profile-photo-placeholder {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e0e0e0 60%, #b0b0b0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px auto;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    position: relative;
+    z-index: 11;
+}
+
+.profile-photo-placeholder svg {
+    width: 48px;
+    height: 48px;
+    fill: #888;
+}
+
+/* Título */
 .container-login h1 {
     color: #e0e0e0;
     text-align: center;
@@ -91,31 +88,12 @@ body {
         0 2px 8px #fff,
         0 0px 24px #b0b0b0,
         0 1px 2px rgba(0,0,0,0.08);
-    background: none;
-    -webkit-background-clip: unset;
-    background-clip: unset;
-    -webkit-text-fill-color: unset;
-    background-size: unset;
-    animation: none;
 }
 
-/* Form groups com label flutuante */
+/* Form groups */
 .form-group {
     position: relative;
     margin: 20px 0;
-}
-
-.form-group label {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    transition: all 0.3s ease;
-    pointer-events: none;
-    color: rgba(255, 255, 255, 0.7);
-    padding: 0 5px;
-    font-size: 17px;
 }
 
 .form-group input {
@@ -130,13 +108,19 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
 }
 
-.form-group input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+.form-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
     transition: all 0.3s ease;
+    pointer-events: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 5px;
+    font-size: 16px;
 }
 
 .form-group input:focus {
@@ -147,33 +131,21 @@ body {
     transform: translateY(-2px);
 }
 
-.form-group input:focus::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-    transform: translateX(5px);
-}
-
-.form-group input:hover {
-    border-color: rgba(166, 0, 79, 0.5);
-    background: rgba(255, 255, 255, 0.12);
-    transform: translateY(-1px);
-}
-
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label {
     top: 0;
     transform: translateY(-25px) scale(0.9);
-    color: #b0b0b0;
-    box-shadow: none;
+    color: #ff0066;
     z-index: 1;
 }
 
-/* Botão principal */
+/* Botão */
 .container-login button {
     width: 100%;
     background: linear-gradient(135deg, #a6004f 0%, #ff0066 100%);
     border: none;
     color: #ffffff;
-    padding: 7px 10px; /* Ajustado para igual do cadastro */
+    padding: 7px 10px;
     border-radius: 25px;
     font-size: 16px;
     font-weight: 600;
@@ -182,7 +154,7 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 30px; /* Ajustado */
+    margin-top: 30px;
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(166, 0, 79, 0.3);
@@ -209,7 +181,15 @@ body {
     left: 100%;
 }
 
-/* Link para cadastro */
+/* Links e textos */
+.container-login p {
+    color: #ffffff;
+    text-align: center;
+    margin: 20px 0 10px 0;
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 .cadastro-link {
     display: block;
     background: linear-gradient(135deg, #a6004f 0%, #ff0066 100%);
@@ -227,8 +207,6 @@ body {
     width: fit-content;
     text-align: center;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
     box-shadow: 0 4px 15px rgba(166, 0, 79, 0.3);
 }
 
@@ -238,42 +216,8 @@ body {
     background: linear-gradient(135deg, #ff0066 0%, #a6004f 100%);
 }
 
-/* Ajuste do avatar */
-.profile-photo-placeholder {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #e0e0e0 60%, #b0b0b0 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 18px auto;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    position: relative;
-    z-index: 11;
-}
-
-.profile-photo-placeholder svg {
-    width: 48px;
-    height: 48px;
-    fill: #888;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .container-login {
-        width: 95%;
-        padding: 30px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container-login {
-        padding: 25px 15px;
-    }
-}
-@keyframes textShine {
-    to {
-        background-position: 200% center;
-    }
+.cadastro-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(166, 0, 79, 0.4);
+    background: linear-gradient(135deg, #ff0066 0%, #a6004f 100%);
 }
