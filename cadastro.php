@@ -10,6 +10,8 @@
 </head>
 <body>
     
+    <?php include "header.php"; ?>
+
     <div class="container-video-fundo">
         <video autoplay muted loop class="video-fundo">
             <source src="Home-Destaque/fundo-home.mp4" type="video/mp4">
@@ -18,7 +20,7 @@
  
         <div class="container-cadastro">
             <h1>Cadastrar novo usuário</h1>
-            <form action="cadastro.php" method="post">
+            <form action="cadastro.php" method="post" id="form-cadastro">
                 <div class="form-group">
                     <input type="text" id="nome" name="nome" placeholder=" " required>
                     <label for="nome">Digite um nome de usuário</label>
@@ -45,6 +47,11 @@
             <a href="login.php" class="login-link">Faça login</a>
         </div>
     </div>
+
+    <!-- Inclua o script de cadastro -->
+    <script src="js/script.js"></script>
+
+    <?php include "footer.php"; ?>
     
 </body>
 

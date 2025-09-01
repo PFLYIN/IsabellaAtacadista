@@ -1,154 +1,158 @@
 <?php
-// 1. Incluir os arquivos necessários
-require_once 'conexao.php'; // Sua conexão PDO
-require_once 'classes/Produto.php';
-require_once 'classes/ProdutoDAO.php';
-include "header.php";
+// RODE ESTE SCRIPT APENAS UMA VEZ!
 
-// 2. Pegar o ID da URL e buscar o produto no banco
-$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+require_once 'conexao.php';
 
-$produtoDAO = new ProdutoDAO($pdo);
-$produto = $produtoDAO->buscarPorId($id);
-
-// 3. Verificar se o produto foi encontrado
-if (!$produto) {
-    echo "<h2 style='text-align:center;margin-top:60px;'>Produto não encontrado.</h2>";
-    include "footer.php";
-    exit;
-}
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($produto->titulo); ?> | Detalhes</title>
-    <link rel="stylesheet" href="CSS/produto.css">
-</head>
-<body>
-
-<a href="catalago1.php" class="btn-voltar-topo" title="Voltar ao catálogo">&lt;</a>
-
-<div class="produto-detalhe-container">
-    <div class="galeria-produto">
-        <img src="<?php echo $produto->imagens[0]; ?>" id="galeria-img" class="galeria-img" alt="<?php echo htmlspecialchars($produto->titulo); ?>">
-        <div class="galeria-controles">
-            <button id="galeria-anterior" title="Anterior">&#8592;</button>
-            <button id="galeria-proximo" title="Próxima">&#8594;</button>
-        </div>
-        <div class="galeria-indicadores">
-            <?php foreach ($produto->imagens as $idx => $img): ?>
-                <span class="galeria-indicador<?php if($idx==0) echo ' ativo'; ?>" data-idx="<?php echo $idx; ?>"></span>
-            <?php endforeach; ?>
-        </div>
-    </div>
-    <div class="produto-info-detalhe">
-        <h1><?php echo $produto->titulo; ?></h1>
-        <div class="produto-precos">
-            <span class="preco-varejo">Varejo R$ <?php echo number_format($produto->preco_varejo, 2, ',', '.'); ?></span>
-            <span class="preco-atacado">Atacado R$ <?php echo number_format($produto->preco_atacado, 2, ',', '.'); ?></span>
-        </div>
-        <div class="produto-quantidade">
-            <button id="menos-qtd">-</button>
-            <span id="qtd">1</span>
-            <button id="mais-qtd">+</button>
-        </div>
-        <button class="btn-add-carrinho" id="btnAddCarrinho">🛒 Adicionar ao Carrinho</button>
-        <div class="produto-descricao">
-            <?php echo $produto->descricao; ?>
-        </div>
-    </div>
-</div>
-
-<script>
-    const imagens = <?php echo json_encode($produto->imagens); ?>;
-    let idx = 0;
-    let timer = null;
-    
-    const imgEl = document.getElementById('galeria-img');
-    const anteriorBtn = document.getElementById('galeria-anterior');
-    const proximoBtn = document.getElementById('galeria-proximo');
-    const indicadores = document.querySelectorAll('.galeria-indicador');
-    
-    function mostrarImg(i) {
-        idx = i;
-        imgEl.src = imagens[idx];
-        indicadores.forEach((el, j) => {
-            if(j === idx) el.classList.add('ativo');
-            else el.classList.remove('ativo');
-        });
-    }
-    
-    function proximaImg() {
-        idx = (idx + 1) % imagens.length;
-        mostrarImg(idx);
-    }
-    
-    function anteriorImg() {
-        idx = (idx - 1 + imagens.length) % imagens.length;
-        mostrarImg(idx);
-    }
-    
-    anteriorBtn.onclick = () => { anteriorImg(); reiniciarAuto(); };
-    proximoBtn.onclick = () => { proximaImg(); reiniciarAuto(); };
-    
-    indicadores.forEach((el, i) => {
-        el.onclick = () => { mostrarImg(i); reiniciarAuto(); };
-    });
-    
-    function autoGaleria() {
-        timer = setInterval(proximaImg, 3500);
-    }
-    
-    function reiniciarAuto() {
-        clearInterval(timer);
-        autoGaleria();
-    }
-    
-    mostrarImg(0);
-    autoGaleria();
-    
-    // Controles de quantidade
-    document.getElementById('menos-qtd').onclick = function() {
-        let qtd = parseInt(document.getElementById('qtd').textContent);
-        if (qtd > 1) document.getElementById('qtd').textContent = qtd - 1;
-    };
-    
-    document.getElementById('mais-qtd').onclick = function() {
-        let qtd = parseInt(document.getElementById('qtd').textContent);
-        document.getElementById('qtd').textContent = qtd + 1;
-    };
-    
-    // Adicionar ao carrinho
-    document.getElementById('btnAddCarrinho').onclick = function() {
-        let carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
-        let prod = {
-            id: <?php echo $produto->id; ?>,
-            nome: <?php echo json_encode($produto->titulo); ?>,
-            preco: <?php echo $produto->preco_varejo; ?>,
-            preco_atacado: <?php echo $produto->preco_atacado; ?>,
-            imagem: imagens[0],
-            quantidade: document.getElementById('qtd').textContent
-        };
-        
-        // Se já existe, soma quantidade
-        let existe = carrinho.find(p => p.id === prod.id);
-        if(existe) {
-            existe.quantidade = parseInt(existe.quantidade) + parseInt(prod.quantidade);
-        } else {
-            carrinho.push(prod);
-        }
-        
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
-        alert('Produto adicionado ao carrinho!');
-        document.getElementById('qtd').textContent = 1; // Reseta a quantidade para 1
-    };
-</script>
-
-<?php include "footer.php"; ?>
-</body>
-</html>
+// O array de produtos que você já tem
+$produtos = [
+    [
+    "id" => 1,
+    "nome" => "Vestido Rafaela Rosa",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestido RafaelaI/VestidoRosa-FT1.jpg",
+      "Vtds-MissIris/Vestido RafaelaI/VESTIDOROSA-FT2.jpg",
+      "Vtds-MissIris/Vestido RafaelaI/VestidoRosa-FT3.jpg"
+    ],
+    "descricao" => "Vestido elegante na cor rosa, perfeito para ocasiões especiais. Tecido leve e confortável."
+  ],
+  [
+    "id" => 2,
+    "nome" => "Vestido Rafaela Preto",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestido RafaelaI/PRETOVESTIDO-FT1.jpg",
+      "Vtds-MissIris/Vestido RafaelaI/PretoVestido-FT2.jpg"
+    ],
+    "descricao" => "Vestido preto clássico, ideal para eventos noturnos e festas. Modelagem moderna."
+  ],
+  [
+    "id" => 3,
+    "nome" => "Vestido Amarelo Iris",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestido Iris/VstdAmarelo-FT1.jpg",
+      "Vtds-MissIris/Vestido Iris/VstdAmarelo-FT2.jpg",
+      "Vtds-MissIris/Vestido Iris/VstdAmarelo-FT3.jpg"
+    ],
+    "descricao" => "Vestido amarelo florido, transmite alegria e leveza. Ótimo para dias ensolarados."
+  ],
+  [
+    "id" => 4,
+    "nome" => "Vestido Branco Iris",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestido Iris/VSTDBranco-FT1.jpg",
+      "Vtds-MissIris/Vestido Iris/VSTDBranco-FT2.jpg"
+    ],
+    "descricao" => "Vestido branco com estampa floral, delicado e sofisticado. Ideal para ocasiões especiais."
+  ],
+  [
+    "id" => 5,
+    "nome" => "Vestido Mirian Verde",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestidos Mirian/1VsVerdeMirian.jpg",
+      "Vtds-MissIris/Vestidos Mirian/2VsVerdeMirian.jpg",
+      "Vtds-MissIris/Vestidos Mirian/3VerdeMirian.jpg"
+    ],
+    "descricao" => "Vestido verde vibrante, com caimento perfeito e tecido confortável."
+  ],
+  [
+    "id" => 6,
+    "nome" => "Vestido Mirian Lilas",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestidos Mirian/1LilasMirian.jpg",
+      "Vtds-MissIris/Vestidos Mirian/2LilasMirian.jpg",
+      "Vtds-MissIris/Vestidos Mirian/3LilasMirian.jpg"
+    ],
+    "descricao" => "Vestido lilás delicado, perfeito para um visual romântico e suave."
+  ],
+  [
+    "id" => 7,
+    "nome" => "Vestido Mirian Bege",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestidos Mirian/1LilasMirian.jpg",
+      "Vtds-MissIris/Vestidos Mirian/2LilasMirian.jpg",
+      "Vtds-MissIris/Vestidos Mirian/3LilasMirian.jpg"
+    ],
+    "descricao" => "Vestido bege neutro, versátil para várias ocasiões."
+  ],
+  [
+    "id" => 8,
+    "nome" => "Vestido Laís Vinho",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestidos Laís/1VsVinhoLaís.jpg",
+      "Vtds-MissIris/Vestidos Laís/2VsVinhoLaís.jpg",
+      "Vtds-MissIris/Vestidos Laís/3VsVinhoLaís.jpg"
+    ],
+    "descricao" => "Vestido vinho sofisticado, ideal para eventos especiais."
+  ],
+  [
+    "id" => 9,
+    "nome" => "Vestido Laís Preto",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestidos Laís/1VSPRETOLAÍS.jpg",
+      "Vtds-MissIris/Vestidos Laís/2VSPRETOLAÍS.jpg",
+      "Vtds-MissIris/Vestidos Laís/3VSPRETOLAÍS.jpg"
+    ],
+    "descricao" => "Vestido preto elegante, básico e indispensável."
+  ],
+  [
+    "id" => 10,
+    "nome" => "Vestido Laís Terracota",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestidos Laís/1TerracotaLaís.jpg",
+      "Vtds-MissIris/Vestidos Laís/2TerracotaLaís.jpg",
+      "Vtds-MissIris/Vestidos Laís/3Terracota.jpg"
+    ],
+    "descricao" => "Vestido terracota, cor tendência para looks modernos."
+  ],
+  [
+    "id" => 11,
+    "nome" => "Vestido Karol Branco",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestidos Karol/1VsBrancoFloridoKarol.jpg",
+      "Vtds-MissIris/Vestidos Karol/2VsBrancoKarol.jpg",
+      "Vtds-MissIris/Vestidos Karol/3VsBrancoKarol.jpg"
+    ],
+    "descricao" => "Vestido branco com estampa floral, ideal para festas de verão."
+  ],
+  [
+    "id" => 12,
+    "nome" => "Vestido Karol Amarelo",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
+      "Vtds-MissIris/Vestidos Karol/1AMARELOKarol.jpg",
+      "Vtds-MissIris/Vestidos Karol/2AMARELOKarol.jpg",
+      "Vtds-MissIris/Vestidos Karol/3AMARELOKarol.jpg"
+    ],
+    "descricao" => "Vestido amarelo vibrante, perfeito para o verão."
+  ],
+  [
+    "id" => 13,
+    "nome" => "Vestido Taline Vermelho",
+    "preco" => 159.99,
+    "preco_atacado" => 119.99,
+    "imagens" => [
       "Vtds-MissIris/Vestido Taline/1Vermelho Taline.jpg",
       "Vtds-MissIris/Vestido Taline/2Vermelho Taline.jpg",
       "Vtds-MissIris/Vestido Taline/3Vermelho Taline.jpg"
@@ -490,8 +494,7 @@ if (!$produto) {
       "Vtds-MissIris/Vestidos Sara/3BrancoSara.jpg"
     ],
     "descricao" => "Vestido branco clássico, uma peça-chave para o guarda-roupa."
-  ],
-  [
+  ],[
         "id" => 43,
         "nome" => "Vestido Kate Roxo",
         "preco" => 149.00,
@@ -1439,7 +1442,6 @@ if (!$produto) {
       ],
       [
         "id" => 132,
-       
         "nome" => "Blusinha Telha Clara com Renda e Laço",
         "preco" => 89.00,
         "preco_atacado" => 53.00,
@@ -1480,144 +1482,77 @@ if (!$produto) {
       ]
 ];
 
-// Busca o produto pelo id
-$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-$produto = null;
-foreach ($produtos as $p) {
-  if ($p['id'] == $id) {
-    $produto = $p;
-    break;
-  }
-}
-if (!$produto) {
-  echo "<h2 style='text-align:center;margin-top:60px;'>Produto não encontrado.</h2>";
-  exit;
-}
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo htmlspecialchars($produto['nome']); ?> | Detalhes</title>
-  <link rel="stylesheet" href="CSS/produto.css">
-  
-</head>
-<body>
-<?php include "header.php"; ?>
+// Inicia a construção da página de relatório
+echo "<!DOCTYPE html><html><head><title>Migração de Dados</title><style>
+body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+h1 { color: #333; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+.success { color: green; font-weight: bold; }
+.error { color: red; font-weight: bold; }
+.progress { margin-bottom: 5px; padding: 8px; border-bottom: 1px dashed #eee; }
+.container { max-width: 800px; margin: 0 auto; }
+</style></head><body>";
+echo "<div class='container'>";
+echo "<h1>Iniciando migração de dados...</h1>";
 
-<!-- Botão de voltar no topo -->
-<a href="catalago1.php" class="btn-voltar-topo" title="Voltar ao catálogo">&lt;</a>
+try {
+    $pdo->beginTransaction();
+    $total = count($produtos);
+    $sucesso = 0;
+    $falhas = 0;
 
-<div class="produto-detalhe-container">
-  <div class="galeria-produto">
-    <img src="<?php echo $produto['imagens'][0]; ?>" id="galeria-img" class="galeria-img" alt="<?php echo htmlspecialchars($produto['nome']); ?>">
-    <div class="galeria-controles">
-      <button id="galeria-anterior" title="Anterior">&#8592;</button>
-      <button id="galeria-proximo" title="Próxima">&#8594;</button>
-    </div>
-    <div class="galeria-indicadores">
-      <?php foreach ($produto['imagens'] as $idx => $img): ?>
-        <span class="galeria-indicador<?php if($idx==0) echo ' ativo'; ?>" data-idx="<?php echo $idx; ?>"></span>
-      <?php endforeach; ?>
-    </div>
-  </div>
-  <div class="produto-info-detalhe">
-    <h1><?php echo $produto['nome']; ?></h1>
-    <div class="produto-precos">
-      <span class="preco-varejo">Varejo R$ <?php echo number_format($produto['preco'],2,',','.'); ?></span>
-      <span class="preco-atacado">Atacado R$ <?php echo number_format($produto['preco_atacado'],2,',','.'); ?></span>
-    </div>
-    <div class="produto-quantidade">
-      <button id="menos-qtd">-</button>
-      <span id="qtd">1</span>
-      <button id="mais-qtd">+</button>
-    </div>
-    <button class="btn-add-carrinho" id="btnAddCarrinho">🛒 Adicionar ao Carrinho</button>
-    <div class="produto-descricao">
-      <?php echo $produto['descricao']; ?>
-    </div>
-  </div>
-</div>
-<!-- Remover o botão de voltar do final -->
-<!-- <div class="paginacao-container">
-  <a href="catalago1.php" class="botao-pagina anterior-pagina">❮ Voltar ao Catálogo</a>
-</div> -->
-<script>
-  // Galeria automática e manual
-  const imagens = <?php echo json_encode($produto['imagens']); ?>;
-  let idx = 0;
-  let timer = null;
-  const imgEl = document.getElementById('galeria-img');
-  const anteriorBtn = document.getElementById('galeria-anterior');
-  const proximoBtn = document.getElementById('galeria-proximo');
-  const indicadores = document.querySelectorAll('.galeria-indicador');
+    // Percorre cada produto do array antigo
+    foreach ($produtos as $index => $produtoArray) {
+        echo "<div class='progress'>Processando " . ($index + 1) . "/$total: " . htmlspecialchars($produtoArray['nome']) . "... ";
 
-  function mostrarImg(i) {
-    idx = i;
-    imgEl.src = imagens[idx];
-    indicadores.forEach((el, j) => {
-      if(j === idx) el.classList.add('ativo');
-      else el.classList.remove('ativo');
-    });
-  }
-  function proximaImg() {
-    idx = (idx + 1) % imagens.length;
-    mostrarImg(idx);
-  }
-  function anteriorImg() {
-    idx = (idx - 1 + imagens.length) % imagens.length;
-    mostrarImg(idx);
-  }
-  anteriorBtn.onclick = () => { anteriorImg(); reiniciarAuto(); };
-  proximoBtn.onclick = () => { proximaImg(); reiniciarAuto(); };
-  indicadores.forEach((el, i) => {
-    el.onclick = () => { mostrarImg(i); reiniciarAuto(); };
-  });
-  function autoGaleria() {
-    timer = setInterval(proximaImg, 3500);
-  }
-  function reiniciarAuto() {
-    clearInterval(timer);
-    autoGaleria();
-  }
-  mostrarImg(0);
-  autoGaleria();
+        try {
+            // 1. Insere na tabela 'produtos'
+            $sqlProduto = "INSERT INTO produtos (titulo, descricao, preco_varejo, preco_atacado) VALUES (:titulo, :descricao, :preco_varejo, :preco_atacado)";
+            $stmtProduto = $pdo->prepare($sqlProduto);
+            
+            $stmtProduto->execute([
+                ':titulo' => $produtoArray['nome'],
+                ':descricao' => $produtoArray['descricao'] ?? '',
+                ':preco_varejo' => $produtoArray['preco'],
+                ':preco_atacado' => $produtoArray['preco_atacado']
+            ]);
 
-  // Quantidade
-  let qtd = 1;
-  document.getElementById('menos-qtd').onclick = function() {
-    if(qtd > 1) {
-      qtd--;
-      document.getElementById('qtd').textContent = qtd;
+            // Pega o ID do produto que acabamos de inserir
+            $ultimoIdProduto = $pdo->lastInsertId();
+
+            // 2. Insere as imagens na tabela 'produto_imagens'
+            $sqlImagem = "INSERT INTO produto_imagens (produto_id, url_imagem) VALUES (:produto_id, :url_imagem)";
+            $stmtImagem = $pdo->prepare($sqlImagem);
+
+            foreach ($produtoArray['imagens'] as $urlImagem) {
+                $stmtImagem->execute([
+                    ':produto_id' => $ultimoIdProduto,
+                    ':url_imagem' => $urlImagem
+                ]);
+            }
+            
+            $sucesso++;
+            echo "<span class='success'>OK! (ID: $ultimoIdProduto, " . count($produtoArray['imagens']) . " imagens)</span></div>";
+
+        } catch (PDOException $e) {
+            $falhas++;
+            echo "<span class='error'>FALHOU: " . $e->getMessage() . "</span></div>";
+        }
     }
-  };
-  document.getElementById('mais-qtd').onclick = function() {
-    qtd++;
-    document.getElementById('qtd').textContent = qtd;
-  };
 
-  // Adicionar ao carrinho (usando localStorage ou seu sistema)
-  document.getElementById('btnAddCarrinho').onclick = function() {
-    let carrinho = JSON.parse(localStorage.getItem('carrinho') || '[]');
-    let prod = {
-      id: <?php echo $produto['id']; ?>,
-      nome: <?php echo json_encode($produto['nome']); ?>,
-      preco: <?php echo $produto['preco']; ?>,
-      preco_atacado: <?php echo $produto['preco_atacado']; ?>,
-      imagem: imagens[0],
-      quantidade: qtd
-    };
-    // Se já existe, soma quantidade
-    let existe = carrinho.find(p => p.id === prod.id);
-    if(existe) existe.quantidade += qtd;
-    else carrinho.push(prod);
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    alert('Produto adicionado ao carrinho!');
-    qtd = 1;
-    document.getElementById('qtd').textContent = qtd;
-  };
-</script>
-<?php include "footer.php"; ?>
-</body>
-</html>
+    $pdo->commit();
+    echo "<h2>Migração finalizada!</h2>";
+    echo "<p>Total de produtos processados: $total</p>";
+    echo "<p class='success'>Produtos inseridos com sucesso: $sucesso</p>";
+    
+    if ($falhas > 0) {
+        echo "<p class='error'>Produtos com falha: $falhas</p>";
+    }
+
+} catch (PDOException $e) {
+    $pdo->rollBack();
+    echo "<h2 class='error'>Erro grave na migração! A transação foi revertida.</h2>";
+    echo "<p class='error'>Mensagem: " . $e->getMessage() . "</p>";
+}
+
+echo "<p><strong>IMPORTANTE:</strong> Após verificar que a migração foi concluída com sucesso, delete ou renomeie este arquivo para evitar executá-lo novamente por acidente.</p>";
+echo "</div></body></html>";

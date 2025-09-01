@@ -8,38 +8,53 @@
     <link rel="stylesheet" href="CSS/adminlogin.css">
 </head>
 <body>
-    <div class="container-video-fundo">
-        <video autoplay muted loop class="video-fundo">
-            <source src="Home-Destaque/fundo-home.mp4" type="video/mp4">
-        </video>
+    <?php include "header.php"; ?>
 
-        <div class="container-login">
-            <div class="profile-photo-placeholder">
-                <svg viewBox="0 0 24 24">
-                    <circle cx="12" cy="8" r="4"/>
-                    <path d="M12 14c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z"/>
-                </svg>
-            </div>
-            <h1>Área Administrativa</h1>
-            <form action="processar_login_admin.php" method="post">
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder=" " required>
-                    <label for="email">E-mail corporativo</label>
-                </div>
-                
-                <div class="form-group">
-                    <input type="password" id="senha" name="senha" placeholder=" " required>
-                    <label for="senha">Senha</label>
-                </div>
-                
-                <button type="submit">Acessar Sistema</button>
-            </form>
-            <p>Ainda não tem acesso?</p>
-            <a href="admincadastro.php" class="cadastro-link">Solicitar Acesso</a>
+    <link rel="stylesheet" href="CSS/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Container de vídeo de fundo -->
+    <div class="container-video-fundo">
+        <video autoplay muted loop class="video-superior">
+            <source src="videos/fundo-login.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="video-inferior">
+            <source src="videos/fundo-login.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Container de login -->
+    <div class="container-login">
+        <div class="profile-photo-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                <path d="M16 14v-3h-2v3h-3v2h3v3h2v-3h3v-2h-3z"/>
+            </svg>
         </div>
+        
+        <h1>Admin Login</h1>
+        
+        <!-- Adicionado o id="form-admin-login" conforme solicitado -->
+        <form id="form-admin-login" action="processar_login_admin.php" method="post">
+            <div class="form-group">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">E-mail</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" id="senha" placeholder=" " required>
+                <label for="senha">Senha</label>
+            </div>
+            
+            <button type="submit">Entrar como Admin</button>
+            
+            <a href="login.php" class="cadastro-link">Voltar para Login</a>
+        </form>
     </div>
-</body>
-</html>
-    </div>
+
+    <!-- Script para manipular o login -->
+    <script src="js/script.js"></script>
+
+    <?php include "footer.php"; ?>
 </body>
 </html>
