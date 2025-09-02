@@ -5,35 +5,111 @@
 }
 
 body {
+    display: flex;
+    align-items: center; 
     font-family: 'Oswald', sans-serif;
     height: 100vh;
     overflow: hidden;
+    background: linear-gradient(to bottom right, #4b4a4a 0%, #a6004f 100%);
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
 
-.container-video-fundo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* código pra tirar o header e footer na pagina de login - começando */
+
+header, .header, #header,
+div[class*="header"], 
+div[id*="header"] {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    overflow: hidden !important;
 }
 
-.video-fundo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+header, .header, #header,
+div[class*="header"], 
+div[id*="header"] {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    overflow: hidden !important;
 }
+
+header img, 
+.header img, 
+#header img,
+div[class*="header"] img, 
+div[id*="header"] img,
+.header-desktop img,
+.header-baixo-desktop img,
+.div-logo img,
+.mobile-logo img {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+}
+
+#div-conta, 
+.div-conta,
+#conta-simples, 
+.conta-simples,
+#nav-menu li a[href="carrinho.php"],
+#hamburguer,
+.hamburguer,
+.mobile-hamburguer-container,
+.nav-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    pointer-events: none !important;
+}
+
+
+
+li a[href="carrinho.php"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+
+
+footer, .footer, #footer,
+div[class*="footer"], 
+div[id*="footer"] {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    overflow: hidden !important;
+}
+
+/* código pra tirar o header e footer na pagina de login - terminado */ 
 
 .container-login {
-    margin-top: 110px;
-    position: absolute;
-    right: 39%;
-    width: 90%;
-    max-width: 350px;
+    margin-top: 70px;
+    position: relative;
+    height: 70%;
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 300px;
     padding: 25px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
@@ -41,8 +117,8 @@ body {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    animation: fadeIn 0.8s ease;
+    z-index: 10; 
+    animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes fadeIn {

@@ -10,18 +10,7 @@
 <body>
     <?php include "header.php"; ?>
 
-    <link rel="stylesheet" href="CSS/login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Container de vídeo de fundo -->
-    <div class="container-video-fundo">
-        <video autoplay muted loop class="video-superior">
-            <source src="videos/fundo-login.mp4" type="video/mp4">
-        </video>
-        <video autoplay muted loop class="video-inferior">
-            <source src="videos/fundo-login.mp4" type="video/mp4">
-        </video>
-    </div>
 
     <!-- Container de login -->
     <div class="container-login">

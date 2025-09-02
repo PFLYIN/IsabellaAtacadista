@@ -12,14 +12,11 @@
     
     <?php include "header.php"; ?>
 
-    <div class="container-video-fundo">
-        <video autoplay muted loop class="video-fundo">
-            <source src="Home-Destaque/fundo-home.mp4" type="video/mp4">
-        </video>
+    
 
  
         <div class="container-cadastro">
-            <h1>Cadastrar novo usuário</h1>
+            <h1>Cadastrar novo Usuário</h1>
             <form action="cadastro.php" method="post" id="form-cadastro">
                 <div class="form-group">
                     <input type="text" id="nome" name="nome" placeholder=" " required>
