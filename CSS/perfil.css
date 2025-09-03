@@ -8,16 +8,16 @@
 body {
     font-family: 'Oswald', sans-serif;
     min-height: 100vh;
-    background-color: #f8f9fa;
+    background: linear-gradient(180deg, #ffe6f2 0%, #fff 100%);
 }
 
-/* Container do perfil estilizado como o login */
+
 .perfil-card {
     position: relative;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 550px;
     margin: 100px auto;
-    padding: 30px;
+    padding: 100px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -34,9 +34,9 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-/* Container para foto com efeito hover */
+
 .perfil-foto-container {
-    position: relative;
+     position: relative;
     width: 120px;
     height: 120px;
     margin: -60px auto 20px;
@@ -44,6 +44,10 @@ body {
     overflow: hidden;
     border: 5px solid white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #e0e0e0; 
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/019/879/186/small/user-icon-on-transparent-background-free-png.png'); 
+    background-size: cover;
+    background-position: center;
 }
 
 .perfil-foto {
@@ -52,20 +56,21 @@ body {
     object-fit: cover;
 }
 
+
 .foto-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(102, 102, 102, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    color: white;
+    color: rgb(252, 251, 251);
     font-size: 14px;
     cursor: pointer;
 }
