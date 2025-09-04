@@ -11,7 +11,7 @@
     
     <div class="perfil-card" id="perfil-nao-logado">
         <div class="perfil-foto-container">
-            <img src="uploads/padrao.png" alt="Foto de Perfil" class="perfil-foto">
+            <img src="uploads/padrao.png" alt="" class="perfil-foto">
             <div class="foto-overlay">
                 <span>Faça login para adicionar sua foto</span>
             </div>

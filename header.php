@@ -2,7 +2,9 @@
 <!-- ESTILOS DESKTOP -->
 <header class="header-desktop">
     <div class="div-logo">
-        <a><img src="Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
+        <a href="home.php"><img src="Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
+        <a href="perfil.php"><img src="Flaticon-Icons/Perfil-Icons.gif" alt="btn-perfil"></img></a>
+        <a href="carrinho.php"><img src="Flaticon-Icons/carrinho-icon.gif" alt="btn-carrinho"></img></a>
     </div>
 </header>
 
@@ -47,6 +49,8 @@ body {
     padding: 10px 20px;
     flex-wrap: wrap; /* Permite quebra de linha */
 }
+
+
 
 .div-logo {
      margin: 0 auto; /* Centraliza em telas menores */
