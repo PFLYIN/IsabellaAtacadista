@@ -1,5 +1,5 @@
 <body>
-<!-- ESTILOS DESKTOP -->
+<!--DESKTOP-->
 <header class="header-desktop">
     <div class="div-logo">
         <a href="home.php"><img src="Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
@@ -13,7 +13,7 @@
         <li><a href="carrinho.php">🛒 Carrinho</a></li>
     </ul>
 </div>
-<!--Esse é o header que vai ficar na parte de baixo do outro header, como no site -->
+
 <header class="header-baixo-desktop">    
     <nav class="nav-desktop">
         <ul class="list-desktop">
@@ -28,7 +28,7 @@
 </header>
 
 <style>
-/* RESET BÁSICO */
+
 * {
   margin: 0;
   padding: 0;
@@ -38,29 +38,28 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* ESTILOS DESKTOP */
 .header-desktop {
     width: 100%;
-    max-width: 1200px; /* Ajuste conforme o design desejado */
-    margin: 0 auto; /* Centraliza o header */
+    max-width: 1200px; 
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Espaça o logo e a conta */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
-    flex-wrap: wrap; /* Permite quebra de linha */
+    flex-wrap: wrap; 
 }
 
 
 
 .div-logo {
-     margin: 0 auto; /* Centraliza em telas menores */
+     margin: 0 auto; 
     padding: 10px;
     margin-left: 430px;
 }
 
 .div-logo img {
-    max-width: 250px; /* Ajuste o tamanho do logo */
-    width: 100%; /* Torna responsivo */
+    max-width: 250px; 
+    width: 100%; 
     height: auto;
 }
 
@@ -76,15 +75,14 @@ body {
         display: flex;
         align-items: center;
         margin-left: auto;
-        /* Garante que fique no canto direito do container */
         width: fit-content;
     }
 
 #conta-simples {
-    font-family: 'Oswald', sans-serif; /* Usando a fonte Oswald carregada */
+    font-family: 'Oswald', sans-serif; 
     list-style: none;
-    padding: 0; /* Remova padding se não for necessário */
-    margin: 0; /* Remova margin se não for necessário */
+    padding: 0; 
+    margin: 0; 
     display: flex;
     align-items: center;
 }

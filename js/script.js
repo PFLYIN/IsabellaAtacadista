@@ -1,12 +1,4 @@
-// script.js - VERSÃO FINAL COM sessionStorage
 
-// ======================================================
-// FUNÇÕES DE COMUNICAÇÃO COM A API (A LÓGICA "PESADA")
-// ======================================================
-
-/**
- * Envia os dados de um novo usuário para a API de cadastro.
- */
 async function cadastrarPessoa(nome, email, senha) {
     const dadosParaEnviar = {
         nome: nome,
@@ -50,7 +42,6 @@ async function fazerLogin(email, senha) {
         if (resposta.ok) {
             const usuarioLogado = await resposta.json();
             
-            // Lógica de limpeza para evitar conflito de logins
             sessionStorage.removeItem('adminLogado');
             sessionStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
 
@@ -96,14 +87,9 @@ async function fazerLoginAdmin(email, senha) {
 }
 
 
-// ======================================================
-// "ESCUTADORES" DE EVENTOS DOS FORMULÁRIOS (A "COLA")
-// ======================================================
-
-// Este evento espera a página HTML carregar completamente antes de rodar o código.
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Procura pelo formulário de CADASTRO na página
+    
     const formCadastro = document.getElementById('form-cadastro');
     if (formCadastro) {
         formCadastro.addEventListener('submit', (event) => {
@@ -115,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Procura pelo formulário de LOGIN DE USUÁRIO na página
     const formLogin = document.getElementById('form-login');
     if (formLogin) {
         formLogin.addEventListener('submit', (event) => {

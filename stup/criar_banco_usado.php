@@ -13,7 +13,6 @@ try {
     // Seleciona o banco de dados recém-criado
     $pdo->exec("USE isabela_atacadista");
     
-    // Cria a tabela produtos se não existir
     $sqlProdutos = "CREATE TABLE IF NOT EXISTS produtos (
         id INT(11) NOT NULL AUTO_INCREMENT,
         titulo VARCHAR(255) NOT NULL,
@@ -27,7 +26,7 @@ try {
     $pdo->exec($sqlProdutos);
     echo "Tabela 'produtos' criada ou já existente.<br>";
     
-    // Cria a tabela de imagens de produtos se não existir
+ 
     $sqlImagens = "CREATE TABLE IF NOT EXISTS produto_imagens (
         id INT(11) NOT NULL AUTO_INCREMENT,
         produto_id INT(11) NOT NULL,

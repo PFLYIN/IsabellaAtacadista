@@ -22,8 +22,6 @@
         </div>
         
         <h1>Admin Login</h1>
-        
-        <!-- Adicionado o id="form-admin-login" conforme solicitado -->
         <form id="form-admin-login" action="processar_login_admin.php" method="post">
             <div class="form-group">
                 <input type="email" id="email" placeholder=" " required>
@@ -41,7 +39,6 @@
         </form>
     </div>
 
-    <!-- Script para manipular o login -->
     <script src="js/script.js"></script>
 
     <?php include "footer.php"; ?>

@@ -12,9 +12,7 @@
     
     <?php include "header.php"; ?>
 
-    
-
- 
+     
         <div class="container-cadastro">
             <h1>Cadastrar novo Usuário</h1>
             <form action="cadastro.php" method="post" id="form-cadastro">
@@ -45,7 +43,6 @@
         </div>
     </div>
 
-    <!-- Inclua o script de cadastro -->
     <script src="js/script.js"></script>
 
     <?php include "footer.php"; ?>
