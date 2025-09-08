@@ -15,7 +15,7 @@
      
         <div class="container-cadastro">
             <h1>Cadastrar novo Usuário</h1>
-            <form action="cadastro.php" method="post" id="form-cadastro">
+            <form action="processar_cadastro.php" method="post" id="form-cadastro">
                 <div class="form-group">
                     <input type="text" id="nome" name="nome" placeholder=" " required>
                     <label for="nome">Digite um nome de usuário</label>
