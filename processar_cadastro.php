@@ -4,9 +4,6 @@
 // Inicia a sessão para que possamos usar mensagens de feedback
 session_start();
 
-echo "<pre>";
-var_dump($_POST);
-die("</pre><p>Teste: Acima estão os dados recebidos pelo formulário.</p>");
 
 // 1. Inclui nosso arquivo de conexão com o banco de dados
 require_once 'conexao.php';

@@ -1,26 +1,56 @@
+# ===================================================================
+# ARQUIVO .HTACCESS MELHORADO E CORRIGIDO
+# ===================================================================
+
+# === MELHORIAS DE SEGURANÇA ===
+
+# 1. Impede que as pessoas possam listar o conteúdo das suas pastas
+Options -Indexes
+
+# === MELHORIAS DE PERFORMANCE (CACHE DO NAVEGADOR) ===
+# Diz ao navegador do visitante para guardar cópias de arquivos estáticos,
+# fazendo o site carregar muito mais rápido em visitas futuras.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/x-javascript "access plus 1 month"
+</IfModule>
+
+
+# === REGRAS DE REESCRITA (URLS AMIGÁVEIS) ===
+
 RewriteEngine On
 RewriteBase /IsabellaAtacadista/
 
-# Permitir acesso direto ao processamento do formulário
-RewriteCond %{REQUEST_METHOD} POST
-RewriteRule ^processa_contato\.php$ - [L]
+# Redireciona o acesso direto à pasta para a página "home"
+RewriteRule ^$ index.php?page=home [L]
 
-# Redirecionar o acesso direto à pasta para home
-RewriteRule ^$ home [L]
+# **A CORREÇÃO PRINCIPAL ESTÁ AQUI**
+# Redireciona URLs com .php para sem .php, mas IGNORA requisições de formulário (POST)
+# para não perder os dados enviados.
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /IsabellaAtacadista/%1 [R=301,L]
 
-# Redirecionar URLs com .php para sem .php (SEO e visual limpo)
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php[?\s] [NC]
-RewriteRule ^([^.]+)\.php$ /IsabellaAtacadista/$1 [R=301,L]
-
-# Remover extensão .php para acesso direto
+# Pega uma URL "bonita" (sem .php) e a reescreve internamente
+# para que o servidor entenda qual arquivo carregar.
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^([^/]+)/?$ $1.php [NC,L]
+RewriteRule ^(.+)$ $1.php [L,QSA]
 
-# Redirecionar todas as requisições para o index.php (caso não exista arquivo)
+# Regra final do Roteador (Front Controller):
+# Se o arquivo ou diretório não existir, manda para o index.php.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
 
-# Página de erro 404
+
+# === PÁGINA DE ERRO PERSONALIZADA ===
 ErrorDocument 404 /IsabellaAtacadista/erro404.php
