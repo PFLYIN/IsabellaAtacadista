@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-// Inclui o arquivo de conexão
-require_once '_setup/conexao.php';
+
+require_once 'conexao.php';
 
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -104,21 +104,22 @@ div[id*="footer"] {
 /* código pra tirar o header e footer na pagina de login - terminado */ 
 
 .container-cadastro {
-    margin-top: 20px;
-    position: absolute;
-    right: 35%;
-    width: 90%;
-    max-width: 400px;
-    padding: 25px;
+    margin-top: 70px;
+    position: relative;
+    height: auto; 
+    padding: 35px 30px; 
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 380px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    z-index: 99;
+    z-index: 10; 
     animation: slideInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: all 0.3s ease;
 }
 
 .container-cadastro:hover {

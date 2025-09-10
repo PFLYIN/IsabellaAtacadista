@@ -105,12 +105,12 @@ div[id*="footer"] {
 .container-login {
     margin-top: 70px;
     position: relative;
-    height: 70%;
+    height: auto;
+    padding: 35px 25px;
     left: 50% !important;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 300px;
-    padding: 25px;
+    max-width: 280px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);

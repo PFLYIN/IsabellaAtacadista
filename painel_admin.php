@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel do Administrador</title>
-    <link rel="stylesheet" href="CSS/painel_admin.css"> 
+    <link rel="stylesheet" href="CSS/painel_admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -31,17 +32,17 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody id="corpo-tabela-produtos"></tbody>
+                <tbody id="corpo-tabela-produtos">
+                    </tbody>
             </table>
         </main>
     </div>
-
+    
     <div id="modal-produto" class="modal-overlay" style="display: none;">
         <div class="modal-content">
             <h2 id="modal-titulo">Adicionar Novo Produto</h2>
             <form id="form-produto">
                 <input type="hidden" id="produto-id">
-                
                 <div class="form-group">
                     <label for="titulo">Título do Produto</label>
                     <input type="text" id="titulo" required>
@@ -52,79 +53,60 @@
                 </div>
                 <div class="form-group-inline">
                     <div class="form-group">
-                        <label for="preco-varejo">Preço Varejo</label>
-                        <input type="number" id="preco-varejo" step="0.01" required>
+                        <label for="preco-varejo">Preço Varejo (R$)</label>
+                        <input type="number" id="preco-varejo" step="0.01" min="0" required>
                     </div>
                     <div class="form-group">
-                        <label for="preco-atacado">Preço Atacado</label>
-                        <input type="number" id="preco-atacado" step="0.01" required>
+                        <label for="preco-atacado">Preço Atacado (R$)</label>
+                        <input type="number" id="preco-atacado" step="0.01" min="0" required>
                     </div>
                 </div>
-
-                <div id="secao-imagens" class="secao-imagens" style="display: none;">
-                    <hr>
-                    <h3>Gerenciar Imagens</h3>
-                    <div id="lista-imagens-existentes" class="lista-imagens">
-                        </div>
-                    <div class="form-group">
-                        <label for="input-nova-imagem">Adicionar Nova Imagem:</label>
-                        <input type="file" id="input-nova-imagem" accept="image/*">
-                    </div>
-                </div>
-
                 <div class="modal-actions">
                     <button type="button" id="btn-cancelar" class="btn-cancelar">Cancelar</button>
-                    <button type="submit" class="btn-salvar">Salvar Produto</button>
+                    <button type="submit" class="btn-salvar">Salvar</button>
                 </div>
             </form>
         </div>
     </div>
 
 <script>
-    const modal = document.getElementById('modal-produto');
-    const btnNovoProduto = document.querySelector('.btn-novo-produto');
-    const btnCancelar = document.getElementById('btn-cancelar');
-    const formProduto = document.getElementById('form-produto');
-    const inputNovaImagem = document.getElementById('input-nova-imagem');
-
     document.addEventListener('DOMContentLoaded', () => {
+        // CORREÇÃO: Variáveis do modal declaradas AQUI DENTRO
+        const modal = document.getElementById('modal-produto');
+        const btnNovoProduto = document.querySelector('.btn-novo-produto');
+        const btnCancelar = document.getElementById('btn-cancelar');
+        const formProduto = document.getElementById('form-produto');
+
+        // Segurança e info do admin
         const adminJSON = sessionStorage.getItem('adminLogado');
         if (!adminJSON) {
-            alert('Acesso negado.'); window.location.href = 'adminlogin.php'; return;
+            alert('Acesso negado. Você precisa ser um administrador.');
+            window.location.href = 'adminlogin.php';
+            return;
         }
         const admin = JSON.parse(adminJSON);
         document.getElementById('admin-nome').textContent = `Olá, ${admin.nome}`;
 
+        // Listeners dos botões
         document.getElementById('btn-logout').addEventListener('click', () => {
             sessionStorage.removeItem('adminLogado');
-            alert('Você saiu.'); window.location.href = 'adminlogin.php';
+            alert('Você saiu da sua conta de administrador.');
+            window.location.href = 'adminlogin.php';
         });
-
         btnNovoProduto.addEventListener('click', abrirModalParaCriar);
         btnCancelar.addEventListener('click', fecharModal);
         formProduto.addEventListener('submit', salvarProduto);
-        inputNovaImagem.addEventListener('change', enviarNovaImagem);
 
+        // Carrega a lista inicial de produtos
         carregarProdutos();
     });
 
     function abrirModalParaCriar() {
+        const formProduto = document.getElementById('form-produto');
         formProduto.reset();
         document.getElementById('modal-titulo').textContent = 'Adicionar Novo Produto';
         document.getElementById('produto-id').value = '';
-        
-        // Mostrar a seção de imagens, mas com mensagem informativa
-        const secaoImagens = document.getElementById('secao-imagens');
-        secaoImagens.style.display = 'block';
-        
-        // Atualizar a lista de imagens com uma mensagem explicativa
-        const listaImagens = document.getElementById('lista-imagens-existentes');
-        listaImagens.innerHTML = '<p>Você poderá adicionar imagens após criar o produto.</p>';
-        
-        // Desabilitar o campo de upload temporariamente
-        document.getElementById('input-nova-imagem').disabled = true;
-        
-        modal.style.display = 'flex';
+        document.getElementById('modal-produto').style.display = 'flex';
     }
 
     async function abrirModalParaEditar(id) {
@@ -133,6 +115,7 @@
             if (!resposta.ok) throw new Error('Produto não encontrado.');
             const produto = await resposta.json();
             
+            const formProduto = document.getElementById('form-produto');
             formProduto.reset();
             document.getElementById('produto-id').value = produto.id;
             document.getElementById('modal-titulo').textContent = `Editar Produto #${produto.id}`;
@@ -141,92 +124,14 @@
             document.getElementById('preco-varejo').value = produto.precoVarejo;
             document.getElementById('preco-atacado').value = produto.precoAtacado;
             
-            // Configurar a seção de imagens para produto existente
-            const secaoImagens = document.getElementById('secao-imagens');
-            secaoImagens.style.display = 'block';
-            
-            // Habilitar o campo de upload de imagens
-            document.getElementById('input-nova-imagem').disabled = false;
-            
-            // Mostrar as imagens do produto
-            atualizarListaDeImagens(produto.id, produto.imagens || []);
-
-            modal.style.display = 'flex';
+            document.getElementById('modal-produto').style.display = 'flex';
         } catch (error) {
             alert('Não foi possível carregar os dados do produto para edição.');
         }
     }
 
     function fecharModal() {
-        modal.style.display = 'none';
-    }
-
-    function atualizarListaDeImagens(produtoId, imagens) {
-        const listaImagensDiv = document.getElementById('lista-imagens-existentes');
-        listaImagensDiv.innerHTML = '';
-        
-        // Se temos um ID de produto e imagens para mostrar
-        if (produtoId && imagens.length > 0) {
-            imagens.forEach(img => {
-                const imgContainer = document.createElement('div');
-                imgContainer.className = 'imagem-container';
-                imgContainer.innerHTML = `<img src="${img.urlImagem}" alt="Imagem do produto" width="80">`;
-                const btnExcluirImg = document.createElement('button');
-                btnExcluirImg.type = 'button';
-                btnExcluirImg.className = 'btn-excluir-img';
-                btnExcluirImg.textContent = 'X';
-                btnExcluirImg.onclick = () => excluirImagemProduto(img.id, produtoId);
-                imgContainer.appendChild(btnExcluirImg);
-                listaImagensDiv.appendChild(imgContainer);
-            });
-        } 
-        // Se temos ID mas nenhuma imagem
-        else if (produtoId) {
-            const mensagem = document.createElement('p');
-            mensagem.className = 'info-message';
-            mensagem.textContent = 'Este produto ainda não tem imagens. Adicione a primeira!';
-            listaImagensDiv.appendChild(mensagem);
-        } 
-        // Se não temos ID de produto (novo produto)
-        else {
-            const mensagem = document.createElement('p');
-            mensagem.className = 'info-message';
-            mensagem.textContent = 'Você poderá adicionar imagens após criar o produto.';
-            listaImagensDiv.appendChild(mensagem);
-        }
-    }
-
-    async function enviarNovaImagem(event) {
-        const file = event.target.files[0];
-        const produtoId = document.getElementById('produto-id').value;
-        if (!file || !produtoId) return;
-
-        const formData = new FormData();
-        formData.append('file', file);
-        formData.append('produtoId', produtoId);
-
-        try {
-            const resposta = await fetch('http://localhost:8080/upload/produto', { method: 'POST', body: formData });
-            if (!resposta.ok) throw new Error('Falha no upload da imagem.');
-            
-            alert('Imagem enviada com sucesso!');
-            abrirModalParaEditar(produtoId);
-        } catch (error) {
-            alert('Erro ao enviar imagem.');
-        }
-    }
-    
-    async function excluirImagemProduto(imagemId, produtoId) {
-        if (!confirm(`Tem certeza que deseja excluir esta imagem?`)) return;
-        try {
-            const resposta = await fetch(`http://localhost:8080/upload/produto/imagem/${imagemId}`, { method: 'DELETE' });
-            if (!resposta.ok) throw new Error('Falha ao excluir a imagem.');
-            
-            alert('Imagem excluída com sucesso!');
-            abrirModalParaEditar(produtoId);
-        } catch (error) {
-            alert('Erro ao excluir imagem.');
-        }
+        document.getElementById('modal-produto').style.display = 'none';
     }
 
     async function salvarProduto(event) {
@@ -250,18 +155,9 @@
             });
             if (!resposta.ok) throw new Error('Falha ao salvar o produto.');
             
-            // Se for um novo produto (sem ID), recuperamos o produto criado
-            if (!id) {
-                const produtoCriado = await resposta.json();
-                alert('Produto criado com sucesso! Agora você pode adicionar imagens.');
-                // Abre o modal em modo de edição para o novo produto
-                abrirModalParaEditar(produtoCriado.id);
-            } else {
-                // Se estamos apenas atualizando um produto existente
-                alert('Produto atualizado com sucesso!');
-                fecharModal();
-                carregarProdutos();
-            }
+            alert('Produto salvo com sucesso!');
+            fecharModal();
+            carregarProdutos();
         } catch (error) {
             alert('Não foi possível salvar o produto.');
         }
@@ -310,7 +206,7 @@
     }
 
     async function excluirProduto(id) {
-        if (!confirm(`Tem certeza que deseja excluir o PRODUTO INTEIRO com ID ${id}?`)) return;
+        if (!confirm(`Tem certeza que deseja excluir o produto com ID ${id}?`)) return;
         try {
             const resposta = await fetch(`http://localhost:8080/api/produtos/${id}`, { method: 'DELETE' });
             if (resposta.ok) {

@@ -1,11 +1,4 @@
-<?php
-// Inicia a sessão no topo para poder exibir as mensagens de erro
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-// O header pode ser incluído aqui, se você tiver um para as páginas de admin
-// include "header_admin.php"; 
-?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,10 +9,6 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="CSS/adminlogin.css">
 </head>
 <body>
-    <div class="container-video-fundo">
-        <video autoplay muted loop class="video-fundo">
-            <source src="Home-Destaque/fundo-home.mp4" type="video/mp4">
-        </video>
 
         <div class="container-login">
             <div class="profile-photo-placeholder">
@@ -33,7 +22,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <?php 
                 if (isset($_SESSION['mensagem_erro'])) {
                     echo '<div class="alerta erro">' . htmlspecialchars($_SESSION['mensagem_erro']) . '</div>';
-                    unset($_SESSION['mensagem_erro']); // Limpa a mensagem para não aparecer de novo
+                    unset($_SESSION['mensagem_erro']); 
                 }
             ?>
             
@@ -56,3 +45,10 @@ if (session_status() === PHP_SESSION_NONE) {
     </div>
 </body>
 </html>
+<?php
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+?>
