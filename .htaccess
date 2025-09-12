@@ -23,34 +23,33 @@ Options -Indexes
 </IfModule>
 
 
-# === REGRAS DE REESCRITA (URLS AMIGÁVEIS) ===
-
+# Ativa o motor de reescrita de URL
 RewriteEngine On
+
+# Define a pasta base para todas as regras relativas
 RewriteBase /IsabellaAtacadista/
 
-# Redireciona o acesso direto à pasta para a página "home"
-RewriteRule ^$ index.php?page=home [L]
+# --- REGRAS DE REESCRITA (URLS AMIGÁVEIS) ---
 
-# **A CORREÇÃO PRINCIPAL ESTÁ AQUI**
-# Redireciona URLs com .php para sem .php, mas IGNORA requisições de formulário (POST)
-# para não perder os dados enviados.
+# 1. Redireciona o acesso direto à pasta para a página "home"
+RewriteRule ^$ home [L]
+
+# 2. Redireciona URLs com .php para sem .php (Ex: /login.php -> /login)
+#    Esta regra agora confia no RewriteBase e não duplica o caminho.
 RewriteCond %{REQUEST_METHOD} !POST
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
-RewriteRule ^ /IsabellaAtacadista/%1 [R=301,L]
+RewriteRule ^(.+?)\.php$ $1 [R=301,L]
 
-# Pega uma URL "bonita" (sem .php) e a reescreve internamente
-# para que o servidor entenda qual arquivo carregar.
-RewriteCond %{REQUEST_FILENAME} !-f
+# 3. Pega uma URL "bonita" (sem .php) e a carrega internamente
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.+)$ $1.php [L,QSA]
 
-# Regra final do Roteador (Front Controller):
-# Se o arquivo ou diretório não existir, manda para o index.php.
+# 4. Regra final do Roteador (Front Controller):
+#    Se o arquivo ou diretório não existir, manda para o index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
 
-
-# === PÁGINA DE ERRO PERSONALIZADA ===
+# --- PÁGINA DE ERRO PERSONALIZADA ---
 ErrorDocument 404 /IsabellaAtacadista/erro404.php

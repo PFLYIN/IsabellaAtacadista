@@ -3,16 +3,14 @@
 <header class="header-desktop">
     <div class="div-logo">
         <a href="home.php"><img src="Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
-        <a href="perfil.php"><img src="Flaticon-Icons/Perfil-Icons.gif" alt="btn-perfil"></img></a>
-        <a href="carrinho.php"><img src="Flaticon-Icons/carrinho-icon.gif" alt="btn-carrinho"></img></a>
+    </div>
+    <div class="header-buttons">
+        <a href="perfil.php" class="btn-icon"><img src="Flaticon-Icons/Perfil-Icons.gif" alt="btn-perfil"></a>
+        <a href="carrinho.php" class="btn-icon"><img src="Flaticon-Icons/carrinho-icon.gif" alt="btn-carrinho"></a>
     </div>
 </header>
 
-<div id="div-conta"> 
-    <ul id="conta-simples">
-        <li><a href="carrinho.php">🛒 Carrinho</a></li>
-    </ul>
-</div>
+
 
 <header class="header-baixo-desktop">    
     <nav class="nav-desktop">
@@ -47,14 +45,13 @@ body {
     align-items: center;
     padding: 10px 20px;
     flex-wrap: wrap; 
+    position: relative;
 }
 
-
-
 .div-logo {
-     margin: 0 auto; 
+    margin: 0 auto; 
     padding: 10px;
-    margin-left: 430px;
+    text-align: center;
 }
 
 .div-logo img {
@@ -63,8 +60,31 @@ body {
     height: auto;
 }
 
+.header-buttons {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+.btn-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(160,0,90,0.2);
+}
+
 #div-conta {
-        
         position: sticky;
         float: right;
         right: 0;
@@ -85,24 +105,6 @@ body {
     margin: 0; 
     display: flex;
     align-items: center;
-}
-
-#conta-simples li a {
-  background:rgba(252, 218, 234, 0.76);
-  color: rgb(122, 0, 67);
-  padding: 8px 16px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 2.,0rem;
-  border: 2px solid rgb(122, 0, 67);
-  transition: all 0.3s ease;
-}
-
-#conta-simples li a:hover {
-  background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(160,0,90,0.2);
 }
 
 .header-baixo-desktop {

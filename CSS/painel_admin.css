@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #f5f7fa;
+    background: linear-gradient(180deg, #ffacd4 0%, #fad4ec 100%);
     min-height: 100vh;
 }
 
@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(135deg, #4A148C 0%, #7B1FA2 100%);
+    background: linear-gradient(90deg, #a0005a 0%, #f102b6 100%);
     color: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -32,6 +32,11 @@ body {
 .admin-header h1 {
     font-size: 24px;
     font-weight: 600;
+}
+
+a.btn-logout {
+    text-decoration: none;
+    display: inline-block;
 }
 
 .admin-info {
@@ -69,9 +74,10 @@ body {
 }
 
 .btn-novo-produto {
-    background: linear-gradient(135deg, #4caf50, #388e3c);
+    background: linear-gradient(90deg, #a0005a 0%, #ff00bf 100%);
     color: white;
     border: none;
+    text-decoration: none;
     padding: 10px 20px;
     border-radius: 25px;
     font-family: 'Oswald', sans-serif;
@@ -97,12 +103,11 @@ body {
 }
 
 .tabela-produtos th {
-    background-color: #f2f2f2;
-    color: #333;
+    background:  #f102b6;   
+    color: white;
     text-align: left;
     padding: 15px;
     font-weight: 600;
-    border-bottom: 1px solid #ddd;
 }
 
 .tabela-produtos td {
@@ -268,8 +273,8 @@ body {
 }
 
 .btn-cancelar {
-    background: #f2f2f2;
-    color: #555;
+    background: linear-gradient(90deg, #a0005a 0%, #f102b6 100%);
+    color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -278,11 +283,11 @@ body {
 }
 
 .btn-cancelar:hover {
-    background: #e0e0e0;
+    background: #f102b6
 }
 
 .btn-salvar {
-    background: linear-gradient(135deg, #4A148C 0%, #7B1FA2 100%);
+    background: linear-gradient(90deg, #a0005a 0%, #f102b6 100%);
     color: white;
     border: none;
     padding: 10px 15px;
