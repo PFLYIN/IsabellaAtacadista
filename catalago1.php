@@ -1,11 +1,16 @@
 <?php 
+// Inclui o cabeçalho do site (menu, logo, etc)
 include "header.php";
+// Conexão com o banco de dados
 require_once 'conexao.php';
+// Classe Produto (modelo) e ProdutoDAO (acesso ao banco)
 require_once 'classes/Produto.php';
 require_once 'classes/ProdutoDAO.php';
- $produtoDAO = new ProdutoDAO($pdo);
- $categoriaId = 1; // Categoria 'Vestidos'
- $produtos = $produtoDAO->buscarPorCategoria($categoriaId);
+
+// Instancia o DAO e busca todos os produtos da categoria "Vestidos" (id=1)
+$produtoDAO = new ProdutoDAO($pdo);
+$categoriaId = 1; // Categoria 'Vestidos'
+$produtos = $produtoDAO->buscarPorCategoria($categoriaId);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,8 +35,10 @@ require_once 'classes/ProdutoDAO.php';
   <div class="grid">
     <?php foreach ($produtos as $produto): ?>
       <?php
+        // Pega a primeira imagem do produto, ou uma imagem padrão se não houver
         $img = (!empty($produto->imagens) && isset($produto->imagens[0])) ? $produto->imagens[0] : 'assets/img/sem-imagem.jpg';
       ?>
+      <!-- Cada produto é um link para a página de detalhes -->
       <a href="produto.php?id=<?php echo $produto->id; ?>" class="produto-link" style="text-decoration:none;color:inherit;">
         <div class="produto"
           data-id="<?php echo $produto->id; ?>"
@@ -39,6 +46,7 @@ require_once 'classes/ProdutoDAO.php';
           data-preco="<?php echo $produto->preco_varejo; ?>"
           data-preco-atacado="<?php echo $produto->preco_atacado; ?>"
           data-imagens='<?php echo json_encode($produto->imagens); ?>'>
+          <!-- Imagem principal do produto -->
           <img src="<?php echo $img; ?>" alt="<?php echo htmlspecialchars($produto->titulo); ?>" class="zoom-img">
           <div class="info">
             <h2 style="font-size:1.1rem;font-weight:500;margin-bottom:8px;"><?php echo $produto->titulo; ?></h2>
@@ -46,11 +54,13 @@ require_once 'classes/ProdutoDAO.php';
               <span class="preco-varejo" style="display:block;font-weight:600;color:#a0005a;">Varejo R$ <?php echo number_format($produto->preco_varejo,2,',','.'); ?></span>
               <span class="preco-atacado" style="display:block;font-weight:500;color:#ff00bf;">Atacado R$ <?php echo number_format($produto->preco_atacado,2,',','.'); ?></span>
             </div>
+            <!-- Controles de quantidade (frontend) -->
             <div class="quantidade">
               <button class="menos">-</button>
               <span class="qtd">1</span>
               <button class="mais">+</button>
             </div>
+            <!-- Botão para adicionar ao carrinho -->
             <button class="add-carrinho" type="button">🛒 + Adicionar</button>
           </div>
         </div>
@@ -59,6 +69,8 @@ require_once 'classes/ProdutoDAO.php';
   </div>
 </div>
 
+
+<!-- Paginação entre páginas do catálogo -->
 <div class="paginacao-container">
   <div class="botoes-paginas">
     <a href="catalago1.php" class="botao-pagina anterior-pagina">❮ Anterior</a>
@@ -68,10 +80,12 @@ require_once 'classes/ProdutoDAO.php';
   </div>
 </div>
 
+<!-- Link rápido para o carrinho -->
 <div class="paginacao-container">
   <a href="carrinho.php" class="botao-paginacao">Ir para o Carrinho 🛒</a>
 </div>
 
+<!-- Scripts de funcionalidades do carrinho -->
 <script src="carrinho.js"></script>
 <script src="carrinho-catalogo.js"></script>
 </body>
