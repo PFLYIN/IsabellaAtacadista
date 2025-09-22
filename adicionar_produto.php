@@ -7,9 +7,6 @@ if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
     header('Location: adminlogin.php');
     exit();
 }
-
-// Inclui o cabeçalho do seu site, se tiver um padrão
-// include "header.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,6 +21,16 @@ if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
         <h1>Adicionar Novo Produto</h1>
 
         <form action="processar_add_produto.php" method="post" enctype="multipart/form-data" class="form-produto">
+            <div class="form-group">
+                <label for="categoria_id">Categoria do Produto</label>
+                <select name="categoria_id" id="categoria_id" required>
+                    <option value="">Selecione a categoria</option>
+                    <option value="1">Vestido</option>
+                    <option value="2">Conjunto</option>
+                    <option value="3">Blusinhas</option>
+                    <option value="4">Vestido (Outros)</option>
+                </select>
+            </div>
             
             <div class="form-group">
                 <label for="titulo">Título do Produto</label>
@@ -47,8 +54,8 @@ if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
             </div>
             
             <div class="form-group">
-                <label for="imagem">Imagem Principal do Produto</label>
-                <input type="file" name="imagem" id="imagem" accept="image/jpeg, image/png, image/webp">
+                <label for="imagens">Imagens do Produto (você pode selecionar várias)</label>
+                <input type="file" name="imagens[]" id="imagens" accept="image/jpeg, image/png, image/webp" multiple>
             </div>
 
             <div class="form-actions">

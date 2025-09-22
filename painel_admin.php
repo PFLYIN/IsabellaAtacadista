@@ -39,7 +39,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <form action="logout.php" method="post">
                     <button type="submit" class="btn-logout">Sair do Perfil</button>
                 </form>
-                <a href="perfil.php" class="btn-logout">Perfil</a>
+                <a href="perfil.php?admin=1" class="btn-logout">Perfil</a>
             </div>
         </header>
 
