@@ -3,11 +3,9 @@ session_start();
 
 require_once 'conexao.php';
 
-// Verifica se é admin (parâmetro na URL e sessão de admin)
 $isAdmin = isset($_GET['admin']) && $_GET['admin'] == '1' && isset($_SESSION['admin_logado']) && $_SESSION['admin_logado'] === true;
 
 if ($isAdmin) {
-    // Perfil do ADMIN
     $admin_id = $_SESSION['admin_id'];
     $nome = $_SESSION['admin_nome'] ?? 'Administrador';
     $email = $_SESSION['admin_email'] ?? 'admin@seudominio.com';
@@ -109,7 +107,7 @@ if ($isAdmin) {
         sessionStorage.removeItem('usuarioLogado');
         sessionStorage.removeItem('adminLogado');
         alert('Você saiu da sua conta.');
-        window.location.href = '/IsabellaAtacadista/login'; // Usando caminho absoluto
+        window.location.href = '/IsabellaAtacadista/login';
     });
 </script>
     <?php include "footer.php"; ?>

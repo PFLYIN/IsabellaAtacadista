@@ -2,20 +2,19 @@
 
 require_once __DIR__ . '/Produto.php';
 
-// Classe responsável por acessar e manipular os produtos no banco de dados
 class ProdutoDAO {
-    // Instância do PDO para conexão com o banco
+
     private PDO $pdo;
     
-    // Construtor recebe a conexão PDO já aberta
+    // Construtor recebe a conexão 
     public function __construct(PDO $pdo) {
         $this->pdo = $pdo;
     }
     
     /**
-     * Busca todos os produtos de uma categoria específica.
-     * @param int $categoriaId ID da categoria desejada
-     * @return Produto[] Lista de objetos Produto encontrados
+     * 
+     * @param int
+     * @return Produto[] 
      */
     public function buscarPorCategoria(int $categoriaId): array {
         $produtos = [];
@@ -24,9 +23,9 @@ class ProdutoDAO {
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':categoria_id', $categoriaId, PDO::PARAM_INT);
         $stmt->execute();
-        // Para cada produto encontrado...
+ 
         while ($dadosProduto = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            // Cria um objeto Produto preenchendo os campos principais
+            // cria um objeto Produto preenchendo os campos principais
             $produto = new Produto(
                 $dadosProduto['titulo'],
                 $dadosProduto['preco_varejo'],
@@ -42,21 +41,21 @@ class ProdutoDAO {
             $stmtImagens->bindValue(':produto_id', $produto->id);
             $stmtImagens->execute();
             $urls = $stmtImagens->fetchAll(PDO::FETCH_COLUMN);
-            $produto->imagens = $urls; // Array de URLs das imagens
+            $produto->imagens = $urls;
 
             $produtos[] = $produto;
         }
-        // Retorna todos os produtos encontrados
+       
         return $produtos;
     }
 
     /**
-     * Busca um único produto pelo seu ID, incluindo suas imagens.
-     * @param int $id O ID do produto a ser buscado.
-     * @return ?Produto Retorna um objeto Produto completo ou null se não encontrar.
+     * 
+     * @param int 
+     * @return ?Produto 
      */
     public function buscarPorId(int $id): ?Produto {
-        // Busca o produto pelo ID
+        //busca o produto pelo ID
         $sqlProduto = "SELECT * FROM produtos WHERE id = :id";
         $stmtProduto = $this->pdo->prepare($sqlProduto);
         $stmtProduto->bindValue(':id', $id);
@@ -64,10 +63,10 @@ class ProdutoDAO {
 
         $dadosProduto = $stmtProduto->fetch(PDO::FETCH_ASSOC);
         if (!$dadosProduto) {
-            // Retorna null se não encontrar
+        
             return null;
         }
-        // Cria o objeto Produto preenchendo os campos
+
         $produto = new Produto(
             $dadosProduto['titulo'],
             $dadosProduto['preco_varejo'],

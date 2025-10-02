@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Segurança: Apenas um administrador logado pode acessar esta página.
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
     $_SESSION['mensagem_erro'] = 'Acesso negado. Você precisa ser um administrador.';
     header('Location: adminlogin.php');

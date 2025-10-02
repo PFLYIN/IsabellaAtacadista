@@ -1,5 +1,4 @@
 <?php 
-    // Inicia a sessão no topo para poder ler e escrever mensagens de feedback
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
@@ -27,11 +26,11 @@
         <?php 
             if (isset($_SESSION['mensagem_sucesso'])) {
                 echo '<div class="alerta sucesso">' . htmlspecialchars($_SESSION['mensagem_sucesso']) . '</div>';
-                unset($_SESSION['mensagem_sucesso']); // Limpa a mensagem para não aparecer de novo
+                unset($_SESSION['mensagem_sucesso']); 
             }
             if (isset($_SESSION['mensagem_erro'])) {
                 echo '<div class="alerta erro">' . htmlspecialchars($_SESSION['mensagem_erro']) . '</div>';
-                unset($_SESSION['mensagem_erro']); // Limpa a mensagem
+                unset($_SESSION['mensagem_erro']); 
             }
         ?>
         

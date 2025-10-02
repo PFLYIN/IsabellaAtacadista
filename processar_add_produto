@@ -2,31 +2,27 @@
 session_start();
 require_once 'conexao.php';
 
-// 1. SEGURANÇA: Apenas admins logados podem acessar este script.
-// Garante que só administradores autenticados possam acessar este endpoint.
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
     die('Acesso negado. Você precisa estar logado como administrador.');
 }
 
-// 2. Verifica se os dados foram enviados via formulário (POST)
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // 3. Pega os dados de TEXTO do formulário
-    // Recebe os campos enviados pelo formulário de cadastro de produto
+//Pega os dados
     $titulo = $_POST['titulo'] ?? '';
     $descricao = $_POST['descricao'] ?? '';
     $preco_varejo = $_POST['preco_varejo'] ?? 0;
     $preco_atacado = $_POST['preco_atacado'] ?? 0;
 
-    // Validação mínima
     if (empty($titulo) || empty($preco_varejo)) {
         die('Título e Preço de Varejo são campos obrigatórios.');
     }
 
     try {
-        // 4. Inicia a transação para garantir que tudo aconteça junto
+
         $pdo->beginTransaction();
 
-        // 5. PRIMEIRO, insere o produto na tabela 'produtos' para gerar um ID
+//insere o produto
         $sqlProduto = "INSERT INTO produtos (titulo, descricao, preco_varejo, preco_atacado) VALUES (:titulo, :descricao, :preco_varejo, :preco_atacado)";
         $stmtProduto = $pdo->prepare($sqlProduto);
         $stmtProduto->execute([
@@ -36,53 +32,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':preco_atacado' => $preco_atacado
         ]);
 
-        // 6. Pega o ID do produto que acabamos de criar
         $novoProdutoId = $pdo->lastInsertId();
 
-        // 7. AGORA, processa a imagem, se uma foi enviada
-        // Permite apenas uma imagem por produto (versão antiga)
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
             $imagem = $_FILES['imagem'];
-            // Garante que a pasta 'uploads' exista
+//pasta
             if (!is_dir('uploads')) {
                 mkdir('uploads', 0755, true);
             }
-            // Gera um nome de arquivo único para evitar conflitos
             $extensao = pathinfo($imagem['name'], PATHINFO_EXTENSION);
             $nomeArquivo = uniqid('produto_' . $novoProdutoId . '_', true) . '.' . $extensao;
             $caminhoDestino = 'uploads/' . $nomeArquivo;
 
-            // Move o arquivo da pasta temporária do PHP para a nossa pasta 'uploads'
             if (move_uploaded_file($imagem['tmp_name'], $caminhoDestino)) {
-                // Se o upload deu certo, salva o caminho na tabela 'produto_imagens'
                 $sqlImagem = "INSERT INTO produto_imagens (produto_id, url_imagem) VALUES (:produto_id, :url_imagem)";
                 $stmtImagem = $pdo->prepare($sqlImagem);
                 $stmtImagem->execute([
                     ':produto_id' => $novoProdutoId,
-                    ':url_imagem' => $caminhoDestino // Salva o caminho relativo
+                    ':url_imagem' => $caminhoDestino
                 ]);
 
             } else {
-                // Se falhar ao mover o arquivo, desfaz tudo
+
                 throw new Exception("Falha ao salvar o arquivo de imagem.");
             }
         }
 
-        // 8. Se chegou até aqui sem erros, confirma todas as operações no banco
         $pdo->commit();
 
-        // Mensagem de sucesso e redirecionamento
+ // sucesso
         $_SESSION['mensagem_sucesso'] = "Produto '".htmlspecialchars($titulo)."' criado com sucesso!";
-        header('Location: painel_admin.php'); // Redireciona de volta para o painel
+        header('Location: painel_admin.php');
         exit();
 
     } catch (Exception $e) {
-        // Se qualquer passo deu errado, desfaz a transação
+    
         $pdo->rollBack();
         die("Erro ao salvar o produto: " . $e->getMessage());
     }
 } else {
-    // Se não for POST, redireciona para o painel
+
     header('Location: painel_admin.php');
     exit();
 }
