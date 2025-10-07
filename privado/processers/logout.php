@@ -1,5 +1,4 @@
 <?php
-// Inicia a sessão para poder limpá-la
 session_start();
 
 // Destrói todas as variáveis da sessão
