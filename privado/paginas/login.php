@@ -2,8 +2,11 @@
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
     }
-    include "header.php"; 
+
 ?>
+
+<?php require_once __DIR__ . '/../includes/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Login de Usuário</title>
-    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="/CSS/login.css">
 </head>
 <body>
     <div class="container-login">
@@ -53,6 +56,6 @@
 
     <script src="js/script.js"></script>
 
-    <?php include "footer.php"; ?>
+    <?php require_once __DIR__ . '/../includes/footer.php'; ?>
 </body>
 </html>

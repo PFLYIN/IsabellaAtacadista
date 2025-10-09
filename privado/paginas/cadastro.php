@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <?php include "header.php"; ?>
+     <?php require_once __DIR__ . '/../includes/header.php'; ?>
 
      
         <div class="container-cadastro">
@@ -45,7 +45,7 @@
 
     <script src="js/script.js"></script>
 
-    <?php include "footer.php"; ?>
+  <?php require_once __DIR__ . '/../includes/footer.php'; ?>
     
 </body>
 
