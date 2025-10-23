@@ -1,6 +1,6 @@
 <?php 
-include "header.php";
-require_once 'conexao.php';
+require_once __DIR__ . '/../includes/header.php';
+require_once '../processers/conexao.php';
 
 require_once 'classes/Produto.php';
 require_once 'classes/ProdutoDAO.php';
@@ -17,7 +17,7 @@ $produtos = $produtoDAO->buscarPorCategoria($categoriaId);
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
   <title>Catálogo de Vestidos</title>
-  <link rel="stylesheet" href="CSS/catalago1.css">
+  <link rel="stylesheet" href="public/CSS/catalago1.css">
  
 </head>
 <body>
@@ -82,4 +82,4 @@ $produtos = $produtoDAO->buscarPorCategoria($categoriaId);
 <script src="carrinho-catalogo.js"></script>
 </body>
 </html>
-<?php include "footer.php"; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

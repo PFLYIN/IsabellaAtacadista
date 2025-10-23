@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'conexao.php';
+require_once '../processers/conexao.php';
 
 // Garante que só administradores autenticados possam acessar este endpoint.
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {

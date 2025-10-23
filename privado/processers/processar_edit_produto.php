@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'conexao.php';
+require_once '../processers/conexao.php';
 
 // Segurança: só admins podem editar produtos
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {

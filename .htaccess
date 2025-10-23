@@ -8,3 +8,9 @@ RewriteEngine On
 # e a reescreve para que passe por ela.
 RewriteCond %{REQUEST_URI} !^/IsabellaAtacadista/public/
 RewriteRule ^(.*)$ public/$1 [L,QSA]
+
+
+<Files "*.json">
+    Order allow,deny
+    Deny from all
+</Files>

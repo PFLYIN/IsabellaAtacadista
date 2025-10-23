@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'conexao.php';
+require_once '../processers/conexao.php';
 
 // Permite upload para usuário OU admin
 $isAdminUpload = isset($_SESSION['admin_logado']) && $_SESSION['admin_logado'] === true && isset($_POST['admin']) && $_POST['admin'] == '1';

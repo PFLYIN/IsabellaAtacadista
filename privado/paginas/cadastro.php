@@ -40,6 +40,10 @@
             </form>
             <p>Já tem uma conta?</p>
             <a href="login.php" class="login-link">Faça login</a>
+                     <!-- botão do google -->
+            <a href="processors/iniciar-login-google.php">
+                Cadastrar com o Google
+            </a>
         </div>
     </div>
 
