@@ -7,12 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/carrinho.css">
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/carrinho.css">
     <title>Meu Carrinho - Isabella Atacadista</title>
 </head>
 <body>
 
-<?php include 'header.php'; ?>
+<?php require_once __DIR__ . '/../includes/header.php'; ?>
 
 <div class="container">
     <h1 class="titulo">🛒 Meu Carrinho</h1>
@@ -327,9 +327,9 @@
 }
 </style>
 
-<script src="carrinho.js"></script>
+<script src="/IsabellaAtacadista/public/js/carrinho.js"></script>
 
-<?php include 'footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>
 
 </body>
 </html>

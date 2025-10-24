@@ -1,4 +1,15 @@
 
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Se já estiver logado como admin, redireciona para o painel
+if (isset($_SESSION['admin_logado']) && $_SESSION['admin_logado'] === true) {
+    header('Location: /IsabellaAtacadista/public/index.php?url=painel_admin');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <title>Login Administrativo</title>
-    <link rel="stylesheet" href="CSS/adminlogin.css">
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/adminlogin.css">
 </head>
 <body>
 
@@ -26,7 +37,7 @@
                 }
             ?>
             
-            <form action="processar_login_admin.php" method="post" id="form-admin-login">
+            <form action="/IsabellaAtacadista/public/index.php?url=processar_login_admin" method="post" id="form-admin-login">
                 <div class="form-group">
                     <input type="email" id="email" name="email" placeholder=" " required>
                     <label for="email">E-mail corporativo</label>
@@ -40,15 +51,8 @@
                 <button type="submit">Acessar Sistema</button>
             </form>
             <p>Ainda não tem acesso?</p>
-            <a href="admincadastro.php" class="cadastro-link">Solicitar Acesso</a>
+            <a href="/IsabellaAtacadista/public/index.php?url=admincadastro" class="cadastro-link">Solicitar Acesso</a>
         </div>
     </div>
 </body>
 </html>
-<?php
-
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-?>

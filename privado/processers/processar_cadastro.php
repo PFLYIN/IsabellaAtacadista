@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once '../processers/conexao.php';
+require_once '../includes/conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->commit();
 
         $_SESSION['mensagem_sucesso'] = "Cadastro realizado com sucesso! Por favor, faça o login.";
-        header('Location: login.php');
+        header('Location: /IsabellaAtacadista/public/login');
         exit();
 
     } catch (PDOException $e) {
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 } else {
     
-    header('Location: cadastro.php');
+    header('Location: /IsabellaAtacadista/public/cadastro');
     exit();
 }
 ?>

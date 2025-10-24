@@ -1,8 +1,12 @@
 <?php 
-include "header.php";
-require_once 'conexao.php';
-require_once 'classes/Produto.php';
-require_once 'classes/ProdutoDAO.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once __DIR__ . '/../includes/header.php';
+require_once __DIR__ . '/../includes/conexao.php';
+require_once __DIR__ . '/../classes/Produto.php';
+require_once __DIR__ . '/../classes/ProdutoDAO.php';
 $produtoDAO = new ProdutoDAO($pdo);
 $categoriaId = 2; // Categoria 'Conjuntos'
 $produtos = $produtoDAO->buscarPorCategoria($categoriaId);
@@ -15,7 +19,7 @@ $produtos = $produtoDAO->buscarPorCategoria($categoriaId);
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
   <title>Catálogo dos Conjuntos</title>
-  <link rel="stylesheet" href="CSS/conjunto1.css">
+  <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/conjunto1.css">
 </head>
 <body>
 <div class="container">
@@ -31,7 +35,7 @@ $produtos = $produtoDAO->buscarPorCategoria($categoriaId);
       <?php
         $img = (!empty($produto->imagens) && isset($produto->imagens[0])) ? $produto->imagens[0] : 'assets/img/sem-imagem.jpg';
       ?>
-      <a href="produto.php?id=<?php echo $produto->id; ?>" class="produto-link" style="text-decoration:none;color:inherit;">
+      <a href="/IsabellaAtacadista/public/index.php?url=produto&id=<?php echo $produto->id; ?>" class="produto-link" style="text-decoration:none;color:inherit;">
         <div class="produto"
           data-id="<?php echo $produto->id; ?>"
           data-nome="<?php echo htmlspecialchars($produto->titulo); ?>"
@@ -60,18 +64,18 @@ $produtos = $produtoDAO->buscarPorCategoria($categoriaId);
 
 <div class="paginacao-container">
   <div class="botoes-paginas">
-    <a href="catalagoconjunto.php" class="botao-pagina anterior-pagina">❮ Anterior</a>
-    <a href="catalagoconjunto.php" class="botao-pagina pagina-atual">1</a>
-    <a href="catalagoconjunto.php" class="botao-pagina proximo-pagina">Próximo ❯</a>
+    <a href="/IsabellaAtacadista/public/index.php?url=conjuntos" class="botao-pagina anterior-pagina">❮ Anterior</a>
+    <a href="/IsabellaAtacadista/public/index.php?url=conjuntos" class="botao-pagina pagina-atual">1</a>
+    <a href="/IsabellaAtacadista/public/index.php?url=conjuntos" class="botao-pagina proximo-pagina">Próximo ❯</a>
   </div>
 </div>
 
 <div class="paginacao-container">
-  <a href="carrinho.php" class="botao-paginacao">Ir para o Carrinho 🛒</a>
+  <a href="/IsabellaAtacadista/public/index.php?url=carrinho" class="botao-paginacao">Ir para o Carrinho 🛒</a>
 </div>
 
-<script src="carrinho.js"></script>
-<script src="carrinho-catalogo.js"></script>
+<script src="/IsabellaAtacadista/public/js/carrinho.js"></script>
+<script src="/IsabellaAtacadista/public/js/carrinho-catalogo.js"></script>
 </body>
 </html>
-<?php include "footer.php"; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

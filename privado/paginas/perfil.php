@@ -1,7 +1,9 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-require_once 'conexao.php';
+require_once __DIR__ . '/../includes/conexao.php';
 
 $isAdmin = isset($_GET['admin']) && $_GET['admin'] == '1' && isset($_SESSION['admin_logado']) && $_SESSION['admin_logado'] === true;
 
@@ -23,7 +25,7 @@ if ($isAdmin) {
     // Perfil do USUÁRIO normal
     if (!isset($_SESSION['usuario_logado']) || $_SESSION['usuario_logado'] !== true) {
         $_SESSION['mensagem_erro'] = 'Você precisa estar logado para acessar o perfil.';
-        header('Location: login.php');
+        header('Location: /IsabellaAtacadista/public/index.php?url=login');
         exit();
     }
     $usuario_id = $_SESSION['usuario_id'];
@@ -38,7 +40,7 @@ if ($isAdmin) {
             $foto_perfil = $usuario['foto_perfil'] ? $usuario['foto_perfil'] : 'uploads/padrao.png';
         } else {
             session_destroy();
-            header('Location: login.php');
+            header('Location: /IsabellaAtacadista/public/index.php?url=login');
             exit();
         }
     } catch (PDOException $e) {
@@ -51,17 +53,17 @@ if ($isAdmin) {
 <head>
     <meta charset="UTF-8">
     <title>Perfil de <?php echo htmlspecialchars($nome); ?></title>
-    <link rel="stylesheet" href="CSS/perfil.css">
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/perfil.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include "header.php"; ?>
+    <?php require_once __DIR__ . '/../includes/header.php'; ?>
     
     <div class="perfil-card">
         <div class="perfil-foto-container">
             <img src="<?php echo htmlspecialchars($foto_perfil); ?>" alt="" class="perfil-foto" id="perfil-foto">
             <div class="foto-overlay">
-                <form action="processar_upload_foto.php" method="post" enctype="multipart/form-data" id="form-upload">
+                <form action="/IsabellaAtacadista/public/index.php?url=processar_upload_foto" method="post" enctype="multipart/form-data" id="form-upload">
                     <label for="upload-foto" class="btn-upload">
                         <span>Alterar foto</span>
                     </label>
@@ -81,7 +83,7 @@ if ($isAdmin) {
                 <a href="painel_admin.php" class="btn-admin">Ir para o Painel Admin</a>
             <?php endif; ?>
             <a href="editar_perfil.php" class="btn-editar">Editar Perfil</a>
-            <form action="logout.php" method="post">
+            <form action="/IsabellaAtacadista/public/index.php?url=logout" method="post">
                 <button type="submit" class="btn-logout">Sair</button>
             </form>
         </div>
@@ -107,9 +109,9 @@ if ($isAdmin) {
         sessionStorage.removeItem('usuarioLogado');
         sessionStorage.removeItem('adminLogado');
         alert('Você saiu da sua conta.');
-        window.location.href = '/IsabellaAtacadista/login';
+        window.location.href = '/IsabellaAtacadista/public/index.php?url=login';
     });
 </script>
-    <?php include "footer.php"; ?>
+    <?php require_once __DIR__ . '/../includes/footer.php'; ?>
 </body>
 </html>

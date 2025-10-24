@@ -1,10 +1,13 @@
 <?php
-session_start();
-require_once 'conexao.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once __DIR__ . '/../includes/conexao.php';
 
 // 1. SEGURANÇA: Apenas admins logados podem editar.
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
-    header('Location: adminlogin.php');
+    header('Location: /IsabellaAtacadista/public/index.php?url=adminlogin');
     exit();
 }
 
@@ -32,12 +35,12 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Editar Produto</title>
-    <link rel="stylesheet" href="CSS/painel_admin.css"> </head>
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/painel_admin.css"> </head>
 <body>
     <div class="admin-container">
         <h1>Editar Produto: <?php echo htmlspecialchars($produto['titulo']); ?></h1>
 
-        <form action="processar_edit_produto.php" method="post" enctype="multipart/form-data" class="form-produto">
+        <form action="/IsabellaAtacadista/public/index.php?url=processar_edit_produto" method="post" enctype="multipart/form-data" class="form-produto">
             <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
             
             <div class="form-group">
@@ -60,7 +63,7 @@ try {
             </div>
             
             <div class="form-actions">
-                <a href="painel_admin.php" class="btn-cancelar">Cancelar</a>
+                <a href="/IsabellaAtacadista/public/index.php?url=painel_admin" class="btn-cancelar">Cancelar</a>
                 <button type="submit" class="btn-salvar">Atualizar Produto</button>
             </div>
         </form>

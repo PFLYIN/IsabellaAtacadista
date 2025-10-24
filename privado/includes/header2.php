@@ -2,18 +2,18 @@
 <!-- ESTILOS DESKTOP -->
 <div id="div-conta"> 
     <ul id="conta-simples">
-        <li><a href="carrinho.php">🛒 Carrinho</a></li>
+        <li><a href="/IsabellaAtacadista/public/carrinho">🛒 Carrinho</a></li>
     </ul>
 </div>
 <header class="header-baixo-desktop">    
     <nav class="nav-desktop">
         <ul class="list-desktop">
-            <li><a href="home.php">Home</a></li>
-            <li><a href="catalago1.php">Vestidos</a></li>
-            <li><a href="catalagoconjunto.php">Conjuntos</a></li>
-            <li><a href="blusinhas.php">Blusinhas</a></li>
-            <li><a href="sobrenos.php">Sobre Nós</a></li>
-            <li><a href="contato.php">Contato</a></li>
+            <li><a href="/IsabellaAtacadista/public/home">Home</a></li>
+            <li><a href="/IsabellaAtacadista/public/vestidos1">Vestidos</a></li>
+            <li><a href="/IsabellaAtacadista/public/conjuntos">Conjuntos</a></li>
+            <li><a href="/IsabellaAtacadista/public/blusinhas">Blusinhas</a></li>
+            <li><a href="/IsabellaAtacadista/public/sobre-nos">Sobre Nós</a></li>
+            <li><a href="/IsabellaAtacadista/public/contato">Contato</a></li>
         </ul>
     </nav>  
 </header>
@@ -349,7 +349,7 @@
 <!-- Novo Header Mobile -->
 <div class="mobile-container">
     <div class="mobile-logo">
-        <img src="Isabella/logo-isabella.png">
+        <img src="/IsabellaAtacadista/public/imagens/Isabella/logo-isabella.png">
     </div>
 </div>
 
@@ -363,13 +363,13 @@
 
 <nav id="nav-menu" class="nav-menu">
     <ul>
-        <li><a href="carrinho.php">🛒 Carrinho</a></li>
-        <li><a href="home.php">Home</a></li>
-        <li><a href="catalago1.php">Vestidos</a></li>
-        <li><a href="catalagoconjunto.php">Conjuntos</a></li>
-        <li><a href="blusinhas.php">Blusinhas</a></li>
-        <li><a href="sobrenos.php">Sobre Nós</a></li>
-        <li><a href="contato.php">Contato</a></li>
+        <li><a href="/IsabellaAtacadista/public/carrinho">🛒 Carrinho</a></li>
+        <li><a href="/IsabellaAtacadista/public/home">Home</a></li>
+        <li><a href="/IsabellaAtacadista/public/vestidos1">Vestidos</a></li>
+        <li><a href="/IsabellaAtacadista/public/conjuntos">Conjuntos</a></li>
+        <li><a href="/IsabellaAtacadista/public/blusinhas">Blusinhas</a></li>
+        <li><a href="/IsabellaAtacadista/public/sobre-nos">Sobre Nós</a></li>
+        <li><a href="/IsabellaAtacadista/public/contato">Contato</a></li>
     </ul>
 </nav>
 

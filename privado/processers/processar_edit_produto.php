@@ -1,10 +1,15 @@
 <?php
-session_start();
-require_once '../processers/conexao.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once __DIR__ . '/../includes/conexao.php';
 
 // Segurança: só admins podem editar produtos
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
-    die('Acesso negado.');
+    $_SESSION['mensagem_erro'] = 'Acesso negado. Você precisa ser um administrador.';
+    header('Location: /IsabellaAtacadista/public/index.php?url=adminlogin');
+    exit();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -40,15 +45,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Mensagem de sucesso e redirecionamento
         $_SESSION['mensagem_sucesso'] = "Produto atualizado com sucesso!";
-        header('Location: painel_admin.php');
+        header('Location: /IsabellaAtacadista/public/index.php?url=painel_admin');
         exit();
 
     } catch (PDOException $e) {
-        die("Erro ao atualizar o produto: " . $e->getMessage());
+        $_SESSION['mensagem_erro'] = "Erro ao atualizar o produto: " . $e->getMessage();
+        header('Location: /IsabellaAtacadista/public/index.php?url=painel_admin');
+        exit();
     }
 } else {
     // Se não for POST, volta para o painel
-    header('Location: painel_admin.php');
+    header('Location: /IsabellaAtacadista/public/index.php?url=painel_admin');
     exit();
 }
 ?>

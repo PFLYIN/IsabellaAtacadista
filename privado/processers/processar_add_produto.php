@@ -1,10 +1,15 @@
 <?php
-session_start();
-require_once '../processers/conexao.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once __DIR__ . '/../includes/conexao.php';
 
 // Garante que só administradores autenticados possam acessar este endpoint.
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
-    die('Acesso negado.');
+    $_SESSION['mensagem_erro'] = 'Acesso negado. Você precisa ser um administrador.';
+    header('Location: /IsabellaAtacadista/public/index.php?url=adminlogin');
+    exit();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -39,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Permite múltiplas imagens (campo imagens[] no formulário)
         if (isset($_FILES['imagens']) && isset($_FILES['imagens']['name']) && is_array($_FILES['imagens']['name'])) {
-            $pastaUploads = 'uploads';
+            $pastaUploads = '../../public/uploads';
             if (!is_dir($pastaUploads)) {
                 mkdir($pastaUploads, 0755, true);
             }
@@ -70,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->commit();
 
         $_SESSION['mensagem_sucesso'] = "Produto '".htmlspecialchars($titulo)."' criado com sucesso!";
-        header('Location: painel_admin.php');
+        header('Location: /IsabellaAtacadista/public/index.php?url=painel_admin');
         exit();
 
     } catch (Exception $e) {

@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
     <title>Cadastro de Usuário</title>
-    <link rel="stylesheet" href="CSS/cadastro.css">
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/cadastro.css">
 </head>
 <body>
     
@@ -15,7 +15,7 @@
      
         <div class="container-cadastro">
             <h1>Cadastrar novo Usuário</h1>
-            <form action="processar_cadastro.php" method="post" id="form-cadastro">
+            <form action="/IsabellaAtacadista/public/processar_cadastro" method="post" id="form-cadastro">
                 <div class="form-group">
                     <input type="text" id="nome" name="nome" placeholder=" " required>
                     <label for="nome">Digite um nome de usuário</label>
@@ -39,15 +39,15 @@
                 <button type="submit">Cadastrar</button>
             </form>
             <p>Já tem uma conta?</p>
-            <a href="login.php" class="login-link">Faça login</a>
+            <a href="/IsabellaAtacadista/public/login" class="login-link">Faça login</a>
                      <!-- botão do google -->
-            <a href="processors/iniciar-login-google.php">
+            <a href="/IsabellaAtacadista/public/iniciar-login-google">
                 Cadastrar com o Google
             </a>
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="/IsabellaAtacadista/public/js/script.js"></script>
 
   <?php require_once __DIR__ . '/../includes/footer.php'; ?>
     

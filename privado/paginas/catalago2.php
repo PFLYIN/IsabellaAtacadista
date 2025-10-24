@@ -1,4 +1,10 @@
-<?php include "header.php"; ?>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once __DIR__ . '/../includes/header.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +14,7 @@
 
   <title>Catálogo de Vestidos - Página 2</title>
  
-  <link rel="stylesheet" href="CSS/catalago2.css">
+  <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/catalago2.css">
 </head>
 <body>
 
@@ -17,9 +23,9 @@
 <div class="container-section">
   <div class="grid">
     <?php
-    require_once 'conexao.php';
-    require_once 'classes/Produto.php';
-    require_once 'classes/ProdutoDAO.php';
+    require_once __DIR__ . '/../includes/conexao.php';
+    require_once __DIR__ . '/../classes/Produto.php';
+    require_once __DIR__ . '/../classes/ProdutoDAO.php';
     $produtoDAO = new ProdutoDAO($pdo);
     $categoriaId = 1; // Categoria 'Vestidos'
     $produtos = $produtoDAO->buscarPorCategoria($categoriaId);
@@ -27,7 +33,7 @@
       <?php
         $img = (!empty($produto->imagens) && isset($produto->imagens[0])) ? $produto->imagens[0] : 'assets/img/sem-imagem.jpg';
       ?>
-      <a href="produto.php?id=<?php echo $produto->id; ?>" class="produto-link" style="text-decoration:none;color:inherit;">
+      <a href="/IsabellaAtacadista/public/index.php?url=produto&id=<?php echo $produto->id; ?>" class="produto-link" style="text-decoration:none;color:inherit;">
         <div class="produto"
           data-id="<?php echo $produto->id; ?>"
           data-nome="<?php echo htmlspecialchars($produto->titulo); ?>"
@@ -56,18 +62,19 @@
 
 <div class="paginacao-container">
   <div class="botoes-paginas">
-    <a href="catalago1.php" class="botao-pagina anterior-pagina">❮ Anterior</a>
-    <a href="catalago1.php" class="botao-pagina">1</a>
-    <a href="catalago2.php" class="botao-pagina pagina-atual">2</a>
+    <a href="/IsabellaAtacadista/public/index.php?url=vestidos1" class="botao-pagina anterior-pagina">❮ Anterior</a>
+    <a href="/IsabellaAtacadista/public/index.php?url=vestidos1" class="botao-pagina">1</a>
+    <a href="/IsabellaAtacadista/public/index.php?url=vestidos2" class="botao-pagina pagina-atual">2</a>
     <a href="#" class="botao-pagina proximo-pagina" style="opacity: 0.5; pointer-events: none;">Próximo ❯</a>
   </div>
 </div>
 
 <div class="paginacao-container">
-  <a href="carrinho.php" class="botao-paginacao">Ir para o Carrinho 🛒</a>
+  <a href="/IsabellaAtacadista/public/index.php?url=carrinho" class="botao-paginacao">Ir para o Carrinho 🛒</a>
 </div>
 
-<script src="carrinho.js"></script>
-<script src="carrinho-catalogo.js"></script>
+<script src="/IsabellaAtacadista/public/js/carrinho.js"></script>
+<script src="/IsabellaAtacadista/public/js/carrinho-catalogo.js"></script>
 </body>
 </html>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

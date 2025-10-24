@@ -1,7 +1,9 @@
 <?php
-session_start();
-require_once '../processers/conexao.php';
- //valida
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once __DIR__ . '/../includes/conexao.php';
+//valida
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -34,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['usuario_nome'] = $cadastro['nome'];
 
             // vai para o perfil
-            header('Location: perfil.php');
+            header('Location: /IsabellaAtacadista/public/index.php?url=perfil');
             exit();
             
         } else {

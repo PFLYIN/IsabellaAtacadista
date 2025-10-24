@@ -12,8 +12,8 @@
       <div class="footer-row">
         <div class="footer-col">
           <h4>Informação</h4>
-          <a href="sobrenos.php">Sobre Nós</a>
-          <a href="erro404.php">Persona</a>
+          <a href="/IsabellaAtacadista/public/sobre-nos">Sobre Nós</a>
+          <a href="/IsabellaAtacadista/public/erro404">Persona</a>
         </div>
         <div class="contato-footer">
           <div class="contato-titulo">Isabella Atacadista</div>
@@ -33,7 +33,7 @@
       </div>
       <div class="footer-col footer-ajuda">
         <h4>Ajuda</h4>
-        <a href="contato.php">Contato</a>
+        <a href="/IsabellaAtacadista/public/contato">Contato</a>
       </div>
     </div>
     <div class="footer-bottom">

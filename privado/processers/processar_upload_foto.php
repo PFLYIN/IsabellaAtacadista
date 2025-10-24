@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../processers/conexao.php';
+require_once '../includes/conexao.php';
 
 // Permite upload para usuário OU admin
 $isAdminUpload = isset($_SESSION['admin_logado']) && $_SESSION['admin_logado'] === true && isset($_POST['admin']) && $_POST['admin'] == '1';
@@ -23,8 +23,8 @@ if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
         die('O arquivo é muito grande. O tamanho máximo é de 5MB.');
     }
 
-    if (!is_dir('uploads')) {
-        mkdir('uploads', 0755, true);
+    if (!is_dir('../../public/uploads')) {
+        mkdir('../../public/uploads', 0755, true);
     }
 
     if ($isAdminUpload) {
@@ -34,7 +34,7 @@ if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
         $id = $_SESSION['usuario_id'];
         $nomeArquivo = 'user_' . $id . '_' . uniqid() . '.' . $extensao;
     }
-    $caminhoDestino = 'uploads/' . $nomeArquivo;
+    $caminhoDestino = '../../public/uploads/' . $nomeArquivo;
 
     if (move_uploaded_file($imagem['tmp_name'], $caminhoDestino)) {
         try {
@@ -47,7 +47,7 @@ if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
                     ':id_admincdst' => $id_admincdst
                 ]);
                 
-                header('Location: perfil.php?admin=1');
+                header('Location: /IsabellaAtacadista/public/perfil?admin=1');
                 exit();
             } else {
                 
@@ -58,7 +58,7 @@ if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
                     ':id_cadastro' => $id
                 ]);
                
-                header('Location: perfil.php');
+                header('Location: /IsabellaAtacadista/public/perfil');
                 exit();
             }
         } catch (PDOException $e) {

@@ -1,9 +1,11 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
     $_SESSION['mensagem_erro'] = 'Acesso negado. Você precisa ser um administrador.';
-    header('Location: adminlogin.php');
+    header('Location: /IsabellaAtacadista/public/index.php?url=adminlogin');
     exit();
 }
 ?>
@@ -13,13 +15,13 @@ if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Novo Produto</title>
-    <link rel="stylesheet" href="CSS/painel_admin.css"> 
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/painel_admin.css"> 
 </head>
 <body>
     <div class="admin-container">
         <h1>Adicionar Novo Produto</h1>
 
-        <form action="processar_add_produto.php" method="post" enctype="multipart/form-data" class="form-produto">
+        <form action="/IsabellaAtacadista/public/index.php?url=processar_add_produto" method="post" enctype="multipart/form-data" class="form-produto">
             <div class="form-group">
                 <label for="categoria_id">Categoria do Produto</label>
                 <select name="categoria_id" id="categoria_id" required>
@@ -58,7 +60,7 @@ if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
             </div>
 
             <div class="form-actions">
-                <a href="painel_admin.php" class="btn-cancelar">Cancelar</a>
+                <a href="/IsabellaAtacadista/public/index.php?url=painel_admin" class="btn-cancelar">Cancelar</a>
                 <button type="submit" class="btn-salvar">Salvar Produto</button>
             </div>
         </form>

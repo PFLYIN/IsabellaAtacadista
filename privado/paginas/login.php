@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Login de Usuário</title>
-    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/login.css">
 </head>
 <body>
     <div class="container-login">
@@ -37,7 +37,7 @@
             }
         ?>
         
-        <form id="form-login" action="processar_login.php" method="post">
+        <form id="form-login" action="/IsabellaAtacadista/public/processar_login" method="post">
             <div class="form-group">
                 <input type="email" id="email" name="email" placeholder=" " required>
                 <label for="email">E-mail</label>
@@ -50,11 +50,11 @@
             
             <button type="submit">Entrar</button>
             
-            <a href="cadastro.php" class="cadastro-link">Criar conta</a>
+            <a href="/IsabellaAtacadista/public/cadastro" class="cadastro-link">Criar conta</a>
         </form>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="/IsabellaAtacadista/public/js/script.js"></script>
 
     <?php require_once __DIR__ . '/../includes/footer.php'; ?>
 </body>

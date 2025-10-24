@@ -1,17 +1,17 @@
 <?php
-
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (!isset($_SESSION['admin_logado']) || $_SESSION['admin_logado'] !== true) {
     $_SESSION['mensagem_erro'] = 'Acesso negado. Você precisa ser um administrador.';
-    header('Location: adminlogin.php');
+    header('Location: /IsabellaAtacadista/public/index.php?url=adminlogin');
     exit();
 }
 
-
 $admin_nome = $_SESSION['admin_nome'] ?? 'Admin';
 
-require_once 'conexao.php';
+require_once __DIR__ . '/../includes/conexao.php';
 
 // Busca os produtos
 $stmt = $pdo->query("SELECT id, titulo, preco_varejo, preco_atacado FROM produtos ORDER BY id DESC");
@@ -23,7 +23,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel do Administrador</title>
-    <link rel="stylesheet" href="CSS/painel_admin.css"> 
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/painel_admin.css"> 
 </head>
 <body>
 
@@ -32,16 +32,16 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h1>Gerenciamento dos Produtos</h1>
             <div class="admin-info">
                 <span>Olá, <?php echo htmlspecialchars($admin_nome); ?></span>
-                <form action="logout.php" method="post">
+                <form action="/IsabellaAtacadista/public/index.php?url=logout" method="post">
                     <button type="submit" class="btn-logout">Sair do Perfil</button>
                 </form>
-                <a href="perfil.php?admin=1" class="btn-logout">Perfil</a>
+                <a href="/IsabellaAtacadista/public/index.php?url=perfil&admin=1" class="btn-logout">Perfil</a>
             </div>
         </header>
 
         <main class="admin-main">
             <div class="toolbar">
-                <a href="adicionar_produto.php" class="btn-novo-produto">Adicionar Novo Produto</a>
+                <a href="/IsabellaAtacadista/public/index.php?url=adicionar_produto" class="btn-novo-produto">Adicionar Novo Produto</a>
             </div>
             <table class="tabela-produtos">
                 <thead>
@@ -62,9 +62,9 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td>R$ <?php echo number_format($produto['preco_atacado'], 2, ',', '.'); ?></td>
                             <td class="acoes">
                              
-                                <a href="editar_produto.php?id=<?php echo $produto['id']; ?>" class="btn-editar">Editar</a>
+                                <a href="/IsabellaAtacadista/public/index.php?url=editar_produto&id=<?php echo $produto['id']; ?>" class="btn-editar">Editar</a>
                           
-                                <form action="excluir_produto.php" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este produto?');" style="display:inline;">
+                                <form action="/IsabellaAtacadista/public/index.php?url=excluir_produto" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este produto?');" style="display:inline;">
                                     <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
                                     <button type="submit" class="btn-excluir">Excluir</button>
                                 </form>

@@ -2,11 +2,11 @@
 <!--DESKTOP-->
 <header class="header-desktop">
     <div class="div-logo">
-        <a href="home.php"><img src="Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
+        <a href="/IsabellaAtacadista/public/home"><img src="/IsabellaAtacadista/public/imagens/Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
     </div>
     <div class="header-buttons">
-        <a href="perfil.php" class="btn-icon"><img src="Flaticon-Icons/Perfil-Icons.gif" alt="btn-perfil"></a>
-        <a href="carrinho.php" class="btn-icon"><img src="Flaticon-Icons/carrinho-icon.gif" alt="btn-carrinho"></a>
+        <a href="/IsabellaAtacadista/public/perfil" class="btn-icon"><img src="/IsabellaAtacadista/public/imagens/Flaticon-Icons/Perfil-Icons.gif" alt="btn-perfil"></a>
+        <a href="/IsabellaAtacadista/public/carrinho" class="btn-icon"><img src="/IsabellaAtacadista/public/imagens/Flaticon-Icons/carrinho-icon.gif" alt="btn-carrinho"></a>
     </div>
 </header>
 
@@ -15,12 +15,12 @@
 <header class="header-baixo-desktop">    
     <nav class="nav-desktop">
         <ul class="list-desktop">
-            <li><a href="home.php">Home</a></li>
-            <li><a href="catalago1.php">Vestidos</a></li>
-            <li><a href="catalagoconjunto.php">Conjuntos</a></li>
-            <li><a href="blusinhas.php">Blusinhas</a></li>
-            <li><a href="sobrenos.php">Sobre Nós</a></li>
-            <li><a href="contato.php">Contato</a></li>
+            <li><a href="/IsabellaAtacadista/public/home">Home</a></li>
+            <li><a href="/IsabellaAtacadista/public/vestidos1">Vestidos</a></li>
+            <li><a href="/IsabellaAtacadista/public/conjuntos">Conjuntos</a></li>
+            <li><a href="/IsabellaAtacadista/public/blusinhas">Blusinhas</a></li>
+            <li><a href="/IsabellaAtacadista/public/sobre-nos">Sobre Nós</a></li>
+            <li><a href="/IsabellaAtacadista/public/contato">Contato</a></li>
         </ul>
     </nav>  
 </header>
@@ -334,7 +334,7 @@ body {
 <!-- Novo Header Mobile -->
 <div class="mobile-container">
     <div class="mobile-logo">
-        <img src="Isabella/logo-isabella.png">
+        <img src="/IsabellaAtacadista/public/imagens/Isabella/logo-isabella.png">
     </div>
 </div>
 
@@ -348,13 +348,13 @@ body {
 
 <nav id="nav-menu" class="nav-menu">
     <ul>
-        <li><a href="carrinho.php">🛒 Carrinho</a></li>
-        <li><a href="home.php">Home</a></li>
-        <li><a href="catalago1.php">Vestidos</a></li>
-        <li><a href="catalagoconjunto.php">Conjuntos</a></li>
-        <li><a href="blusinhas.php">Blusinhas</a></li>
-        <li><a href="sobrenos.php">Sobre Nós</a></li>
-        <li><a href="contato.php">Contato</a></li>
+        <li><a href="/IsabellaAtacadista/public/carrinho">🛒 Carrinho</a></li>
+        <li><a href="/IsabellaAtacadista/public/home">Home</a></li>
+        <li><a href="/IsabellaAtacadista/public/vestidos1">Vestidos</a></li>
+        <li><a href="/IsabellaAtacadista/public/conjuntos">Conjuntos</a></li>
+        <li><a href="/IsabellaAtacadista/public/blusinhas">Blusinhas</a></li>
+        <li><a href="/IsabellaAtacadista/public/sobre-nos">Sobre Nós</a></li>
+        <li><a href="/IsabellaAtacadista/public/contato">Contato</a></li>
     </ul>
 </nav>
 

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
     <!-- CSS principal do site -->
-    <link rel="stylesheet" href="privado/paginas/CSS/style.css">
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -18,10 +18,10 @@
 <body>
     <div class="container-video-fundo">
         <video autoplay muted loop class="video-fundo">
-            <source src="Home-Destaque/fundo-home.mp4" type="video/mp4">
+            <source src="/IsabellaAtacadista/public/imagens/Home-Destaque/fundo-home.mp4" type="video/mp4">
         </video>
         <div class="video-content">
-            <img src="Isabella/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
+            <img src="/IsabellaAtacadista/public/imagens/Isabella/logo-isabella.png" alt="Isabella Atacadista Logo" class="video-logo">
             <div style="margin-top: 60px;" class="video-text">
                 <h2>O Melhor Da Moda Evangélica</h2>
                 <p>Elegância para mulheres de valor</p>
@@ -43,22 +43,22 @@
     <div id="carouselExampleAutoplaying" class="carousel slide animado" data-bs-ride="carousel" data-bs-interval="2000">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Carrossel/Banner para loja.png" class="d-block w-100" alt="Vestido Miss">
+                <img src="/IsabellaAtacadista/public/imagens/Carrossel/Banner para loja.png" class="d-block w-100" alt="Vestido Miss">
             </div>
             <div class="carousel-item">
-                <img src="Carrossel/Tri Conjunto Verônica.png" class="d-block w-100" alt="Vestido Salmão">
+                <img src="/IsabellaAtacadista/public/imagens/Carrossel/Tri Conjunto Verônica.png" class="d-block w-100" alt="Vestido Salmão">
             </div>
             <div class="carousel-item">
-                <img src="Carrossel/Banner dos Vestidos.png" class="d-block w-100" alt="amostra de vestidos">
+                <img src="/IsabellaAtacadista/public/imagens/Carrossel/Banner dos Vestidos.png" class="d-block w-100" alt="amostra de vestidos">
             </div>
             <div class="carousel-item">
-                <img src="Carrossel/VESTIDO ESTER.png" class="d-block w-100" alt="Vestidos Ester">
+                <img src="/IsabellaAtacadista/public/imagens/Carrossel/VESTIDO ESTER.png" class="d-block w-100" alt="Vestidos Ester">
             </div>
             <div class="carousel-item">
-                <img src="Carrossel/Conjunto Tedw.png" class="d-block w-100" alt="Conjunto TEDW">
+                <img src="/IsabellaAtacadista/public/imagens/Carrossel/Conjunto Tedw.png" class="d-block w-100" alt="Conjunto TEDW">
             </div>
             <div class="carousel-item">
-                <img src="Carrossel/Tri Conjunto Eliza.png" class="d-block w-100" alt="Conjunto TEDW">
+                <img src="/IsabellaAtacadista/public/imagens/Carrossel/Tri Conjunto Eliza.png" class="d-block w-100" alt="Conjunto TEDW">
             </div>
         </div>
         <!-- Indicadores -->
@@ -77,15 +77,15 @@
     <main>
         <div class="container">
           <section class="banners-destaque">
-            <a href="catalago1.php" class="animado">
+            <a href="/IsabellaAtacadista/public/vestidos1" class="animado">
                 <div class="banner-img-container">
-                    <img src="Home-Destaque/Banner Estilo.png" alt="Vestidos">
+                    <img src="/IsabellaAtacadista/public/imagens/Home-Destaque/Banner Estilo.png" alt="Vestidos">
                     <div class="banner-legenda">Vestidos</div>
                 </div>
             </a>
-            <a href="catalagoconjunto.php" class="animado">
+            <a href="/IsabellaAtacadista/public/conjuntos" class="animado">
                 <div class="banner-img-container">
-                    <img src="Home-Destaque/Conjunto Plush.png" alt="Conjuntos">
+                    <img src="/IsabellaAtacadista/public/imagens/Home-Destaque/Conjunto Plush.png" alt="Conjuntos">
                     <div class="banner-legenda">Conjuntos</div>
                 </div>
             </a>
@@ -129,7 +129,7 @@
     <section class="carousel-container animado">
       <div class="carousel-track" id="carousel-track">
         <div class="testimonial animado">
-      <img src="Fotos das pessoas dos comentários/Aelem.png" alt="Aelem" />
+      <img src="/IsabellaAtacadista/public/imagens/Fotos das pessoas dos comentários/Aelem.png" alt="Aelem" />
       <p>"Os vestidos são simplesmente lindos!"</p>
       <div class="stars">★★★★★</div>
       <h4>Aelem</h4>
@@ -182,11 +182,11 @@
     <!-- Scripts Bootstrap e carrinho -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
    
-    <script src="contador-atacado.js"></script>
-    <script src="carrinho.js"></script>
+    <script src="/IsabellaAtacadista/public/js/contador-atacado.js"></script>
+    <script src="/IsabellaAtacadista/public/js/carrinho.js"></script>
    
-    <script src="carrcomentario.js"></script>
-    <script src="js/home-animations.js"></script>
+    <script src="/IsabellaAtacadista/public/js/carrcomentario.js"></script>
+    <script src="/IsabellaAtacadista/public/js/home-animations.js"></script>
     <?php require_once __DIR__ . '/../includes/footer.php'; ?>
 </body>
 </html>

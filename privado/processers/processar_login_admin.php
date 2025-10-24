@@ -1,8 +1,9 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-
-require_once '../processers/conexao.php';
+require_once __DIR__ . '/../includes/conexao.php';
 
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -12,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($email) || empty($senha)) {
         $_SESSION['mensagem_erro'] = "Por favor, preencha todos os campos.";
-        header('Location: adminlogin.php');
+        header('Location: /IsabellaAtacadista/public/index.php?url=adminlogin');
         exit();
     }
 
@@ -40,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['admin_nome'] = $admin_cadastro['nome'];
 
             // Redireciona para o painel do admin
-            header('Location: painel_admin.php');
+            header('Location: /IsabellaAtacadista/public/index.php?url=painel_admin');
             exit();
             
         } else {

@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Requerimentos do PHPMailer
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require_once '../../PHPMailer/src/Exception.php';
+require_once '../../PHPMailer/src/PHPMailer.php';
+require_once '../../PHPMailer/src/SMTP.php';
 
 // Coletar dados do formulário
 $nome = $_POST['nome'] ?? '';
