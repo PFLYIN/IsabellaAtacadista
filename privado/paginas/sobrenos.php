@@ -1,11 +1,16 @@
-<?php include "header.php"; ?>
+<?php 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once __DIR__ . '/../includes/header.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre Nós | Isabella Atacadista</title>
-  <link rel="stylesheet" href="CSS/sobrenos.css"/>
+  <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/sobrenos.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,7 +26,7 @@
     <!-- Seção 2 — Nossa História -->
     <div class="bloco animado">
       <div class="imagem">
-        <img src="Isabella/Logo Elegante de Isabella Atacadista (2).png" alt="Loja Isabella Atacadista">
+        <img src="/IsabellaAtacadista/public/imagens/Isabella/Logo Elegante de Isabella Atacadista (2).png" alt="Loja Isabella Atacadista">
       </div>
       <div class="texto">
         <h2>Nossa História</h2>
@@ -40,7 +45,7 @@
     <!-- Seção 3 — Quem faz tudo acontecer -->
     <div class="bloco invertido animado">
       <div class="imagem">
-        <img src="Isabella/isabel-fundadora.jpg" alt="Isabel Meira - Fundadora">
+        <img src="/IsabellaAtacadista/public/imagens/Isabella/isabel-fundadora.jpg" alt="Isabel Meira - Fundadora">
       </div>
       <div class="texto">
         <h2>Conheça quem está por trás da Isabella Atacadista</h2>
@@ -76,11 +81,8 @@
       </div>
   </section>
 
-  <script src="sobrenos.js"></script>
-  <?php include "footer.php"; ?>
+  <script src="/IsabellaAtacadista/public/js/sobrenos.js"></script>
+  <?php require_once __DIR__ . '/../includes/footer.php'; ?>
 </body>
 </html>
-<?php include "footer.php"; ?>
-
-</body>
 </html>

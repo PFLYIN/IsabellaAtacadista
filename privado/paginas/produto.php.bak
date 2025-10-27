@@ -153,7 +153,6 @@ if (!$produto) {
 <?php include __DIR__ . "/../includes/footer.php"; ?>
 </body>
 </html>
-      "Vtds-MissIris/Vestido Taline/1Vermelho Taline.jpg",
       "Vtds-MissIris/Vestido Taline/2Vermelho Taline.jpg",
       "Vtds-MissIris/Vestido Taline/3Vermelho Taline.jpg"
     ],

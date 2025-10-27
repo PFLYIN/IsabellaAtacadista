@@ -1,10 +1,12 @@
-<?php include "header.php"; ?>
+<?php 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-<?php
-// Inclui os arquivos necessários para a conexão e o DAO
-require_once 'conexao.php';
-require_once 'classes/Produto.php';
-require_once 'classes/ProdutoDAO.php';
+require_once __DIR__ . '/../includes/header.php';
+require_once __DIR__ . '/../includes/conexao.php';
+require_once __DIR__ . '/../../classes/Produto.php';
+require_once __DIR__ . '/../../classes/ProdutoDAO.php';
 
 // Cria um objeto DAO
 $produtoDAO = new ProdutoDAO($pdo);

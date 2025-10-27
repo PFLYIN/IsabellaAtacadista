@@ -1,6 +1,8 @@
 <?php
-session_start();
-require_once '../includes/conexao.php';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once __DIR__ . '/../includes/conexao.php';
 
 // Permite upload para usuário OU admin
 $isAdminUpload = isset($_SESSION['admin_logado']) && $_SESSION['admin_logado'] === true && isset($_POST['admin']) && $_POST['admin'] == '1';

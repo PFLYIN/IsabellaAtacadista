@@ -28,6 +28,7 @@ $rotas = [
     'admincadastro' => $caminhoPrivado . 'paginas/admincadastro.php',
     'painel_admin' => $caminhoPrivado . 'paginas/painel_admin.php',
     'adicionar_produto' => $caminhoPrivado . 'paginas/adicionar_produto.php',
+    'processar_login' => $caminhoPrivado . 'processers/processar_login.php',
     'editar_produto' => $caminhoPrivado . 'paginas/editar_produto.php',
     'excluir_produto' => $caminhoPrivado . 'processers/excluir_produto.php',
     'processar_edit_produto' => $caminhoPrivado . 'processers/processar_edit_produto.php',

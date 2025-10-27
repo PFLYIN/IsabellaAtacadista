@@ -37,7 +37,7 @@
             }
         ?>
         
-        <form id="form-login" action="/IsabellaAtacadista/public/processar_login" method="post">
+        <form id="form-login" action="/IsabellaAtacadista/public/index.php?url=processar_login" method="post">
             <div class="form-group">
                 <input type="email" id="email" name="email" placeholder=" " required>
                 <label for="email">E-mail</label>

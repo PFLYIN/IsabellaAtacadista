@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($email) || empty($senha)) {
         $_SESSION['mensagem_erro'] = "Por favor, preencha o email e a senha.";
-        header('Location: login.php');
+        header('Location: /IsabellaAtacadista/privado/paginas/login.php');
         exit();
     }
 
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
         } else {
             $_SESSION['mensagem_erro'] = "Email ou senha inválidos.";
-            header('Location: login.php');
+            header('Location: /IsabellaAtacadista/privado/paginas/login.php');
             exit();
         }
 
@@ -49,8 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Erro ao consultar o banco de dados: " . $e->getMessage());
     }
 } else {
- 
-    header('Location: login.php');
+    header('Location: /IsabellaAtacadista/privado/paginas/login.php');
     exit();
 }
 ?>

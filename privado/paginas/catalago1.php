@@ -5,8 +5,8 @@ if (session_status() === PHP_SESSION_NONE) {
 
 require_once __DIR__ . '/../includes/header.php';
 require_once __DIR__ . '/../includes/conexao.php';
-require_once __DIR__ . '/../classes/Produto.php';
-require_once __DIR__ . '/../classes/ProdutoDAO.php';
+require_once __DIR__ . '/../../classes/Produto.php';
+require_once __DIR__ . '/../../classes/ProdutoDAO.php';
 
 $produtoDAO = new ProdutoDAO($pdo);
 $categoriaId = 1; 

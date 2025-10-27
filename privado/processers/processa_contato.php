@@ -45,9 +45,38 @@ if (empty($nome) || empty($email) || empty($mensagem)) {
 $mail = new PHPMailer(true);
 
 try {
-    // Desabilitar debug SMTP
-    $mail->SMTPDebug = 0;
+    // Configuração do servidor SMTP
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com'; // Ou outro servidor SMTP que você usar
+    $mail->SMTPAuth = true;
+    $mail->Username = 'seu-email@gmail.com'; // Seu e-mail
+    $mail->Password = 'sua-senha-de-app'; // Sua senha de aplicativo
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
     
+    // Configuração do e-mail
+    $mail->setFrom('seu-email@gmail.com', 'Isabella Atacadista');
+    $mail->addAddress('seu-email@gmail.com'); // E-mail que receberá as mensagens
+    $mail->addReplyTo($email, $nome);
+    
+    // Configuração da mensagem
+    $mail->isHTML(true);
+    $mail->Subject = "Contato do Site - $tipo_assunto";
+    
+    // Corpo do e-mail
+    $mail->Body = "
+        <h2>Nova mensagem de contato</h2>
+        <p><strong>Nome:</strong> $nome</p>
+        <p><strong>E-mail:</strong> $email</p>
+        <p><strong>Telefone:</strong> $telefone</p>
+        <p><strong>Cidade:</strong> $cidade</p>
+        <p><strong>Estado:</strong> $estado</p>
+        <p><strong>Tipo de Assunto:</strong> $tipo_assunto</p>
+        <p><strong>Mensagem:</strong></p>
+        <p>" . nl2br(htmlspecialchars($mensagem)) . "</p>
+    ";
+    
+    $mail->CharSet = 'UTF-8';
     // Configurações do servidor SMTP
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
