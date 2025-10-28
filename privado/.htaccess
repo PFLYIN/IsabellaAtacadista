@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Permitir execução de arquivos PHP
+<Files *.php>
+    Order allow,deny
+    Allow from all
+    Require all granted
+</Files>
+
+# Redirecionar erros 404 para uma página personalizada  
+ErrorDocument 404 /IsabellaAtacadista/privado/paginas/erro404.php

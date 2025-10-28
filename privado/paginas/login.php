@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Login de Usuário</title>
     <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/login.css">
+    <link rel="stylesheet" href="/IsabellaAtacadista/public/CSS/auth-buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container-login">
@@ -49,6 +51,19 @@
             </div>
             
             <button type="submit">Entrar</button>
+            
+            <div class="divisor">
+                <span>ou</span>
+            </div>
+            
+            <div class="google-login">
+                <a href="/IsabellaAtacadista/privado/processers/iniciar-login-google.php" class="google-btn">
+                    <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" 
+                         alt="Fazer login com Google"
+                         onmouseover="this.src='https://developers.google.com/identity/images/btn_google_signin_dark_focus_web.png'"
+                         onmouseout="this.src='https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png'">
+                </a>
+            </div>
             
             <a href="/IsabellaAtacadista/public/cadastro" class="cadastro-link">Criar conta</a>
         </form>

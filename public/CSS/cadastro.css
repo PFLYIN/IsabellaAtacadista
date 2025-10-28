@@ -140,6 +140,55 @@ div[id*="footer"] {
     }
 }
 
+.divisor {
+        text-align: center;
+        margin: 20px 0;
+        position: relative;
+    }
+    
+    .divisor::before,
+    .divisor::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 45%;
+        height: 1px;
+        background-color: #ccc;
+    }
+    
+    .divisor::before {
+        left: 0;
+    }
+    
+    .divisor::after {
+        right: 0;
+    }
+    
+    .divisor span {
+        background-color: white;
+        padding: 0 10px;
+        color: #666;
+        font-size: 14px;
+    }
+    
+    .google-login {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .google-btn {
+        display: inline-block;
+        transition: opacity 0.2s ease-in-out;
+    }
+    
+    .google-btn:hover {
+        opacity: 0.9;
+    }
+    
+    .google-btn img {
+        height: 40px;
+    }
+
 .container-cadastro h1  {
     color: #e0e0e0;
     text-align: center;

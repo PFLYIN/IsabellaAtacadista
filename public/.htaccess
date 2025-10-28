@@ -25,4 +25,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 # E se a requisição NÃO for para um diretório que existe...
 RewriteCond %{REQUEST_FILENAME} !-d
 # ...então, envie a requisição para o index.php
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L,B]

@@ -40,12 +40,25 @@
             </form>
             <p>Já tem uma conta?</p>
             <a href="/IsabellaAtacadista/public/login" class="login-link">Faça login</a>
-                     <!-- botão do google -->
-            <a href="/IsabellaAtacadista/public/iniciar-login-google">
-                Cadastrar com o Google
-            </a>
+            
+            <div class="divisor">
+                <span>ou</span>
+            </div>
+            
+            <div class="google-login">
+                <a href="/IsabellaAtacadista/privado/processers/iniciar-login-google.php" class="google-btn">
+                    <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" 
+                         alt="Fazer login com Google"
+                         onmouseover="this.src='https://developers.google.com/identity/images/btn_google_signin_dark_focus_web.png'"
+                         onmouseout="this.src='https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png'">
+                </a>
+            </div>
         </div>
     </div>
+
+    <style>
+    
+    </style>
 
     <script src="/IsabellaAtacadista/public/js/script.js"></script>
 
