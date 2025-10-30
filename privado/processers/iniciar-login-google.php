@@ -17,7 +17,7 @@ try {
     $client->setAuthConfig(__DIR__ . '/client_secret_78170903621-pm55rugd36hapl7k9hp58pnav5fqiq9h.apps.googleusercontent.com.json');
 
     // 4. Define o URI de redirecionamento (TEM QUE SER IDÊNTICO ao que está no JSON)
-    $client->setRedirectUri('http://localhost/IsabellaAtacadista/privado/processers/google-login-callback.php');
+    $client->setRedirectUri('http://localhost/isabellaAtacadista/processors/google-login-callback.php');
 
     // 5. Define o que você quer pedir ao usuário (escopo)
     $client->addScope('email'); // Pedir o e-mail

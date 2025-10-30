@@ -172,22 +172,71 @@ div[id*="footer"] {
     }
     
     .google-login {
-        text-align: center;
-        margin: 20px 0;
-    }
-    
-    .google-btn {
-        display: inline-block;
-        transition: opacity 0.2s ease-in-out;
-    }
-    
-    .google-btn:hover {
-        opacity: 0.9;
-    }
-    
-    .google-btn img {
-        height: 40px;
-    }
+    text-align: center;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.google-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #ffffff;
+    color: #3c4043;
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    border: 1px solid rgba(66, 66, 66, 0.12);
+    border-radius: 20px;
+    padding: 12px 24px;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(60,64,67,0.06);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    min-width: 240px;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    margin: 0 auto;
+}
+
+.google-btn:hover {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(60,64,67,0.1);
+    transform: translateY(-1px);
+    border-color: rgba(66, 66, 66, 0.15);
+}
+
+.google-btn:active {
+    background-color: #fafafa;
+    box-shadow: 0 2px 4px rgba(60,64,67,0.06);
+    transform: translateY(0);
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+.google-btn span {
+    color: #3c4043;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 14.5px;
+    letter-spacing: 0.25px;
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
 
 .container-cadastro h1  {
     color: #e0e0e0;

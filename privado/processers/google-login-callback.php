@@ -3,9 +3,9 @@ session_start();
 require_once '../../vendor/autoload.php';
 require_once '../includes/conexao.php';
 
-$client = new Google_Client();
-$client->setAuthConfig('../../client_credentials.json');
-$client->setRedirectUri('http://localhost/IsabellaAtacadista/privado/processers/google-login-callback.php');
+$client = new \Google\Client();
+$client->setAuthConfig(__DIR__ . '/client_secret_78170903621-pm55rugd36hapl7k9hp58pnav5fqiq9h.apps.googleusercontent.com.json');
+$client->setRedirectUri('http://localhost/isabellaAtacadista/processors/google-login-callback.php');
 
 if (isset($_GET['code'])) {
     try {
@@ -16,7 +16,7 @@ if (isset($_GET['code'])) {
         }
 
         $client->setAccessToken($token);
-        $google_oauth = new Google_Service_Oauth2($client);
+        $google_oauth = new \Google\Service\Oauth2($client);
         $user_info = $google_oauth->userinfo->get();
 
         $google_id = $user_info->id;
