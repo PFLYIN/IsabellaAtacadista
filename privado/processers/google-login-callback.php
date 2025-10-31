@@ -5,7 +5,7 @@ require_once '../includes/conexao.php';
 
 $client = new \Google\Client();
 $client->setAuthConfig(__DIR__ . '/client_secret_78170903621-pm55rugd36hapl7k9hp58pnav5fqiq9h.apps.googleusercontent.com.json');
-$client->setRedirectUri('http://localhost/isabellaAtacadista/processors/google-login-callback.php');
+$client->setRedirectUri('http://localhost/isabellaAtacadista/privado/processers/google-login-callback.php');
 
 if (isset($_GET['code'])) {
     try {
@@ -24,25 +24,56 @@ if (isset($_GET['code'])) {
         $email = $user_info->email;
         $foto_perfil = $user_info->picture;
         
-        $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
-        $stmt->execute([$email]);
-        $usuario = $stmt->fetch();
+        // Primeiro verifica se o usuário já existe na tabela google_login
+        $stmt = $pdo->prepare("SELECT * FROM google_login WHERE google_id = ? OR email = ?");
+        $stmt->execute([$google_id, $email]);
+        $google_usuario = $stmt->fetch();
 
-        if ($usuario) {
-            $update_stmt = $pdo->prepare("UPDATE usuarios SET google_id = ?, foto_perfil = ? WHERE id = ?");
-            $update_stmt->execute([$google_id, $foto_perfil, $usuario['id']]);
-            $id_usuario_logado = $usuario['id'];
+        if ($google_usuario) {
+            // Atualiza os dados do Google
+            $update_stmt = $pdo->prepare("UPDATE google_login SET nome = ?, foto_perfil = ?, access_token = ? WHERE id_google = ?");
+            $update_stmt->execute([$nome_completo, $foto_perfil, json_encode($token), $google_usuario['id_google']]);
+            
+            if ($google_usuario['id_cadastro']) {
+                $id_usuario_logado = $google_usuario['id_cadastro'];
+            } else {
+                // Se não tem id_cadastro, cria novo cadastro
+                $insert_cadastro = $pdo->prepare("INSERT INTO pessoa_cadastro (nome) VALUES (?)");
+                $insert_cadastro->execute([$nome_completo]);
+                $id_cadastro = $pdo->lastInsertId();
+                
+                // Atualiza o id_cadastro na tabela google_login
+                $update_google = $pdo->prepare("UPDATE google_login SET id_cadastro = ? WHERE id_google = ?");
+                $update_google->execute([$id_cadastro, $google_usuario['id_google']]);
+                
+                $id_usuario_logado = $id_cadastro;
+            }
         } else {
-            $senha_placeholder = null;
-            $insert_stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, senha, google_id, foto_perfil) VALUES (?, ?, ?, ?, ?)");
-            $insert_stmt->execute([$nome_completo, $email, $senha_placeholder, $google_id, $foto_perfil]);
-            $id_usuario_logado = $pdo->lastInsertId();
+            // Insere novo usuário no pessoa_cadastro
+            $insert_cadastro = $pdo->prepare("INSERT INTO pessoa_cadastro (nome) VALUES (?)");
+            $insert_cadastro->execute([$nome_completo]);
+            $id_cadastro = $pdo->lastInsertId();
+
+            // Insere na tabela google_login
+            $insert_google = $pdo->prepare("INSERT INTO google_login (google_id, email, nome, foto_perfil, access_token, id_cadastro) VALUES (?, ?, ?, ?, ?, ?)");
+            $insert_google->execute([$google_id, $email, $nome_completo, $foto_perfil, json_encode($token), $id_cadastro]);
+            
+            $id_usuario_logado = $id_cadastro;
         }
 
+        // Busca informações completas do usuário
+        $stmt = $pdo->prepare("SELECT pc.*, gl.email, gl.foto_perfil 
+                              FROM pessoa_cadastro pc 
+                              LEFT JOIN google_login gl ON gl.id_cadastro = pc.id_cadastro 
+                              WHERE pc.id_cadastro = ?");
+        $stmt->execute([$id_usuario_logado]);
+        $usuario_completo = $stmt->fetch();
+
         $_SESSION['usuario_id'] = $id_usuario_logado;
-        $_SESSION['usuario_nome'] = $nome_completo;
-        $_SESSION['usuario_email'] = $email;
-        $_SESSION['usuario_foto'] = $foto_perfil;
+        $_SESSION['usuario_nome'] = $usuario_completo['nome'];
+        $_SESSION['usuario_email'] = $usuario_completo['email'];
+        $_SESSION['usuario_foto'] = $usuario_completo['foto_perfil'];
+        $_SESSION['login_tipo'] = 'google';
 
         header('Location: ../paginas/dashboard.php');
         exit();
