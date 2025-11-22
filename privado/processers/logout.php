@@ -16,7 +16,7 @@ if (ini_get("session.use_cookies")) {
 // Finalmente, destrói a sessão
 session_destroy();
 
-// Redireciona para a página de login
-header("Location: /IsabellaAtacadista/public/login");
+// Redireciona para a página de autenticação
+header("Location: /IsabellaAtacadista/public/auth");
 exit;
 ?>

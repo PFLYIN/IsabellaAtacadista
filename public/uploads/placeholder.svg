@@ -1,0 +1,7 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#f0f0f0"/>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="48" fill="#999" text-anchor="middle" font-weight="bold">SEM IMAGEM</text>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="24" fill="#bbb" text-anchor="middle">Isabella Atacadista</text>
+  <circle cx="400" cy="250" r="80" fill="none" stroke="#ccc" stroke-width="8"/>
+  <path d="M 400 200 L 400 300 M 350 250 L 450 250" stroke="#ccc" stroke-width="8" stroke-linecap="round"/>
+</svg>

@@ -13,8 +13,17 @@ $admin_nome = $_SESSION['admin_nome'] ?? 'Admin';
 
 require_once __DIR__ . '/../includes/conexao.php';
 
-// Busca os produtos
-$stmt = $pdo->query("SELECT id, titulo, preco_varejo, preco_atacado FROM produtos ORDER BY id DESC");
+// Busca os produtos com suas imagens
+$stmt = $pdo->query("
+    SELECT 
+        p.id, 
+        p.titulo, 
+        p.preco_varejo, 
+        p.preco_atacado,
+        (SELECT url_imagem FROM produto_imagens WHERE produto_id = p.id LIMIT 1) as imagem
+    FROM produtos p 
+    ORDER BY p.id DESC
+");
 $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
@@ -43,38 +52,71 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="toolbar">
                 <a href="/IsabellaAtacadista/public/index.php?url=adicionar_produto" class="btn-novo-produto">Adicionar Novo Produto</a>
             </div>
-            <table class="tabela-produtos">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Título</th>
-                        <th>Preço Varejo</th>
-                        <th>Preço Atacado</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($produtos as $produto): ?>
-                        <tr>
-                            <td><?php echo $produto['id']; ?></td>
-                            <td><?php echo htmlspecialchars($produto['titulo']); ?></td>
-                            <td>R$ <?php echo number_format($produto['preco_varejo'], 2, ',', '.'); ?></td>
-                            <td>R$ <?php echo number_format($produto['preco_atacado'], 2, ',', '.'); ?></td>
-                            <td class="acoes">
-                             
-                                <a href="/IsabellaAtacadista/public/index.php?url=editar_produto&id=<?php echo $produto['id']; ?>" class="btn-editar">Editar</a>
-                          
-                                <form action="/IsabellaAtacadista/public/index.php?url=excluir_produto" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este produto?');" style="display:inline;">
-                                    <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
+            
+            <div class="produtos-grid">
+                <?php foreach ($produtos as $produto): ?>
+                    <div class="produto-card">
+                        <img 
+                            src="/IsabellaAtacadista/public/<?= htmlspecialchars($produto['imagem'] ?? 'uploads/placeholder.svg') ?>" 
+                            alt="<?= htmlspecialchars($produto['titulo']) ?>" 
+                            class="produto-imagem"
+                            onerror="this.src='/IsabellaAtacadista/public/uploads/placeholder.svg'"
+                        >
+                        <div class="produto-info">
+                            <div class="produto-header">
+                                <div class="produto-id">ID: <?= $produto['id'] ?></div>
+                                <h3 class="produto-titulo"><?= htmlspecialchars($produto['titulo']) ?></h3>
+                            </div>
+                            
+                            <div class="produto-precos">
+                                <div class="preco-item">
+                                    <div class="preco-label">Varejo</div>
+                                    <div class="preco-valor">R$ <?= number_format($produto['preco_varejo'], 2, ',', '.') ?></div>
+                                </div>
+                                <div class="preco-item">
+                                    <div class="preco-label">Atacado</div>
+                                    <div class="preco-valor">R$ <?= number_format($produto['preco_atacado'], 2, ',', '.') ?></div>
+                                </div>
+                            </div>
+                            
+                            <div class="produto-acoes">
+                                <a href="/IsabellaAtacadista/public/index.php?url=editar_produto&id=<?= $produto['id'] ?>" class="btn-editar">Editar</a>
+                                <form action="/IsabellaAtacadista/public/index.php?url=excluir_produto" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este produto?');" style="flex: 1;">
+                                    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                                     <button type="submit" class="btn-excluir">Excluir</button>
                                 </form>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </main>
     </div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="voltarTopo" class="btn-voltar-topo" title="Voltar ao topo">
+        ↑
+    </button>
+
+    <script>
+        // Botão voltar ao topo
+        const btnVoltarTopo = document.getElementById('voltarTopo');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btnVoltarTopo.classList.add('show');
+            } else {
+                btnVoltarTopo.classList.remove('show');
+            }
+        });
+        
+        btnVoltarTopo.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 
 </body>
 </html>

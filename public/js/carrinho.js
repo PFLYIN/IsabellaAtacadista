@@ -183,9 +183,9 @@ class Carrinho {
         let html = `
             <div class="carrinho-header">
                 <h3>Seu Carrinho (${totalItens} itens)</h3>
-                <button onclick="carrinho.limparCarrinho()" class="btn-limpar">Limpar</button>
+                <button onclick="carrinho.limparCarrinho()" class="btn-limpar">Limpar Carrinho</button>
             </div>
-            <div class="carrinho-items">
+            <div class="carrinho-grid">
         `;
 
         this.itens.forEach((item, index) => {
@@ -196,19 +196,32 @@ class Carrinho {
             const subtotal = precoUnitario * quantidade;
             
             html += `
-                <div class="carrinho-item">
-                    <img src="${item.imagem || ''}" alt="${item.nome}" class="item-imagem">
-                    <div class="item-info">
-                        <h4>${item.nome}</h4>
-                        <p class="preco-unitario">R$ ${precoUnitario.toFixed(2)} cada</p>
-                        <div class="quantidade-controles">
-                            <button onclick="carrinho.atualizarQuantidade(${index}, ${quantidade - 1})">-</button>
-                            <span>${quantidade}</span>
-                            <button onclick="carrinho.atualizarQuantidade(${index}, ${quantidade + 1})">+</button>
+                <div class="carrinho-card">
+                    <img src="${item.imagem || '/IsabellaAtacadista/public/uploads/placeholder.svg'}" 
+                         alt="${item.nome}" 
+                         class="card-imagem"
+                         onerror="this.src='/IsabellaAtacadista/public/uploads/placeholder.svg'">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <h4>${item.nome}</h4>
+                            <button onclick="carrinho.removerItem(${index})" class="btn-remover-card" title="Remover">×</button>
                         </div>
-                        <p class="subtotal">Subtotal: R$ ${subtotal.toFixed(2)}</p>
+                        <div class="card-precos">
+                            <div class="preco-box">
+                                <span class="preco-label">Preço Unit.</span>
+                                <span class="preco-valor">R$ ${precoUnitario.toFixed(2)}</span>
+                            </div>
+                            <div class="preco-box destaque">
+                                <span class="preco-label">Subtotal</span>
+                                <span class="preco-valor">R$ ${subtotal.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <div class="quantidade-controles">
+                            <button onclick="carrinho.atualizarQuantidade(${index}, ${quantidade - 1})" class="btn-quantidade">-</button>
+                            <span class="quantidade-display">${quantidade}</span>
+                            <button onclick="carrinho.atualizarQuantidade(${index}, ${quantidade + 1})" class="btn-quantidade">+</button>
+                        </div>
                     </div>
-                    <button onclick="carrinho.removerItem(${index})" class="btn-remover">×</button>
                 </div>
             `;
         });

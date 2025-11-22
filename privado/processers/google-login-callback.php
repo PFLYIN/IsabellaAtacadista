@@ -67,15 +67,20 @@ if (isset($_GET['code'])) {
                               LEFT JOIN google_login gl ON gl.id_cadastro = pc.id_cadastro 
                               WHERE pc.id_cadastro = ?");
         $stmt->execute([$id_usuario_logado]);
-        $usuario_completo = $stmt->fetch();
+        $usuario_completo = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        // Define todas as variáveis de sessão
+        $_SESSION['usuario_logado'] = true;
         $_SESSION['usuario_id'] = $id_usuario_logado;
         $_SESSION['usuario_nome'] = $usuario_completo['nome'];
         $_SESSION['usuario_email'] = $usuario_completo['email'];
         $_SESSION['usuario_foto'] = $usuario_completo['foto_perfil'];
         $_SESSION['login_tipo'] = 'google';
 
-        header('Location: ../paginas/dashboard.php');
+        // Debug - remover depois
+        error_log("Sessão criada: " . print_r($_SESSION, true));
+
+        header('Location: /IsabellaAtacadista/public/perfil');
         exit();
 
     } catch (Exception $e) {

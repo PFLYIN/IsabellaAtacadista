@@ -327,7 +327,32 @@
 }
 </style>
 
+<!-- Botão Voltar ao Topo -->
+<button id="voltarTopo" class="btn-voltar-topo" title="Voltar ao topo">
+    ↑
+</button>
+
 <script src="/IsabellaAtacadista/public/js/carrinho.js"></script>
+
+<script>
+    // Botão voltar ao topo
+    const btnVoltarTopo = document.getElementById('voltarTopo');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            btnVoltarTopo.classList.add('show');
+        } else {
+            btnVoltarTopo.classList.remove('show');
+        }
+    });
+    
+    btnVoltarTopo.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 <?php require_once __DIR__ . '/../includes/footer.php'; ?>
 

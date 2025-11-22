@@ -1,7 +1,7 @@
 <?php
 // ME LEMBRAR DE RODAR ISSO SÓ UMA VEZ!
 
-require_once 'conexao.php';
+require_once __DIR__ . '/privado/includes/conexao.php';
 
 
 $produtos = [
