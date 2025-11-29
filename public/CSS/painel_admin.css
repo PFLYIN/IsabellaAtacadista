@@ -102,6 +102,7 @@ a.btn-logout {
   margin-bottom: var(--spacing-6);
   display: flex;
   justify-content: flex-end;
+  gap: 15px;
 }
 
 .btn-novo-produto {
@@ -132,6 +133,30 @@ a.btn-logout {
   background: rgb(160, 0, 88);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(122, 0, 67, 0.4);
+}
+
+.btn-avaliacoes {
+  background: linear-gradient(135deg, #ffd700, #ff9800);
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: var(--spacing-4) var(--spacing-6);
+  border-radius: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.btn-avaliacoes:hover {
+  background: linear-gradient(135deg, #ffed4e, #ffa726);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
 }
 
 /* GRID DE PRODUTOS (CARDS) */

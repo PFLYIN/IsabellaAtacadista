@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(135deg, #ffe6f2 0%, #fff5f8 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.admin-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(212, 82, 110, 0.2);
+}
+
+.admin-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #a6004f;
+}
+
+.btn-voltar {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(212, 82, 110, 0.3);
+    border-radius: 10px;
+    color: #a6004f;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background: linear-gradient(135deg, #d4526e, #a6004f);
+    color: white;
+    transform: translateX(-5px);
+}
+
+.mensagem {
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mensagem.sucesso {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 2px solid rgba(76, 175, 80, 0.4);
+}
+
+.mensagem.erro {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 2px solid rgba(244, 67, 54, 0.4);
+}
+
+.mensagem.info {
+    background: rgba(33, 150, 243, 0.2);
+    color: #2196f3;
+    border: 2px solid rgba(33, 150, 243, 0.4);
+}
+
+/* Estatísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 25px;
+    border: 2px solid rgba(212, 82, 110, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 82, 110, 0.2);
+    border-color: rgba(212, 82, 110, 0.4);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon.total {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.stat-icon.aprovadas {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+}
+
+.stat-icon.pendentes {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.stat-icon.media {
+    background: linear-gradient(135deg, #ffd700, #ff9800);
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #a6004f;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-filtro {
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(212, 82, 110, 0.2);
+    border-radius: 10px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-filtro:hover {
+    background: rgba(212, 82, 110, 0.1);
+    color: #a6004f;
+    border-color: rgba(212, 82, 110, 0.4);
+}
+
+.btn-filtro.active {
+    background: linear-gradient(135deg, #d4526e, #a6004f);
+    color: white;
+    border-color: #a6004f;
+}
+
+/* Grid de Avaliações */
+.avaliacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 25px;
+}
+
+.vazio-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    color: #999;
+}
+
+.vazio-state svg {
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.vazio-state p {
+    font-size: 18px;
+}
+
+.avaliacao-admin-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 25px;
+    border: 2px solid rgba(212, 82, 110, 0.2);
+    transition: all 0.3s ease;
+}
+
+.avaliacao-admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 82, 110, 0.2);
+}
+
+.avaliacao-admin-card.pendente {
+    border-left: 4px solid #ff9800;
+}
+
+.avaliacao-admin-card.aprovado {
+    border-left: 4px solid #4caf50;
+}
+
+.avaliacao-admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.usuario-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(212, 82, 110, 0.3);
+}
+
+.usuario-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d4526e, #a6004f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.usuario-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.data {
+    font-size: 12px;
+    color: #999;
+}
+
+.estrelas {
+    font-size: 20px;
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+
+.comentario {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(212, 82, 110, 0.05);
+    border-radius: 10px;
+    border-left: 3px solid #d4526e;
+}
+
+.avaliacao-admin-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(212, 82, 110, 0.2);
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.pendente {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.status-badge.aprovado {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-acao {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+}
+
+.btn-acao.aprovar {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.btn-acao.aprovar:hover {
+    background: #4caf50;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-acao.reprovar {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.btn-acao.reprovar:hover {
+    background: #ff9800;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-acao.excluir {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.btn-acao.excluir:hover {
+    background: #f44336;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+    .avaliacoes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .avaliacoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        flex-wrap: wrap;
+    }
+
+    .avaliacao-admin-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .acoes {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

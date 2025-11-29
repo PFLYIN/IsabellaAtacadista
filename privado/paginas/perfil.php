@@ -32,23 +32,31 @@ try {
     
     $nome = $usuario['nome'];
     
-    // Busca email e foto (login normal ou Google)
-    $sql = "SELECT email, foto_perfil FROM login_pessoa WHERE id_cadastro = :id";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([':id' => $usuario_id]);
-    $login = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    if ($login) {
-        $email = $login['email'];
-        $foto_perfil = $login['foto_perfil'] ?? '';
-    } else {
-        $sql = "SELECT email, foto_perfil FROM google_login WHERE id_cadastro = :id";
+    // Se não tem email/foto na sessão, busca do banco
+    if (empty($email) || empty($foto_perfil)) {
+        // Busca email e foto (login normal ou Google)
+        $sql = "SELECT email, foto_perfil FROM login_pessoa WHERE id_cadastro = :id";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([':id' => $usuario_id]);
-        $google = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($google) {
-            $email = $google['email'];
-            $foto_perfil = $google['foto_perfil'] ?? '';
+        $login = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($login) {
+            $email = $email ?: $login['email'];
+            $foto_perfil = $foto_perfil ?: ($login['foto_perfil'] ?? '');
+        } else {
+            $sql = "SELECT email, foto_perfil FROM google_login WHERE id_cadastro = :id";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([':id' => $usuario_id]);
+            $google = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($google) {
+                $email = $email ?: $google['email'];
+                $foto_perfil = $foto_perfil ?: ($google['foto_perfil'] ?? '');
+                
+                // Atualiza a sessão com a foto se encontrou
+                if (!empty($google['foto_perfil'])) {
+                    $_SESSION['usuario_foto'] = $google['foto_perfil'];
+                }
+            }
         }
     }
 } catch (PDOException $e) {
@@ -126,6 +134,12 @@ $primeiro_nome = explode(' ', trim($nome))[0];
                     </div>
 
                     <div class="form-actions">
+                        <a href="/IsabellaAtacadista/public/minhas_avaliacoes" class="btn btn-secondary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            Minhas Avaliações
+                        </a>
                         <a href="/IsabellaAtacadista/public/home" class="btn btn-ghost">Cancelar</a>
                         <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                     </div>

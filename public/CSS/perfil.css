@@ -333,6 +333,22 @@ body {
   transform: translateY(0) scale(0.98);
 }
 
+.btn-secondary {
+  background: linear-gradient(135deg, #ffd700, #ff9800);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #ffed4e, #ffa726);
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-secondary:active {
+  transform: translateY(0) scale(0.98);
+}
+
 /* FOOTER */
 .profile-footer {
   margin-top: var(--spacing-6);

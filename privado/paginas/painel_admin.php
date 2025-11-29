@@ -44,13 +44,19 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <form action="/IsabellaAtacadista/public/index.php?url=logout" method="post">
                     <button type="submit" class="btn-logout">Sair do Perfil</button>
                 </form>
-                <a href="/IsabellaAtacadista/public/index.php?url=perfil&admin=1" class="btn-logout">Perfil</a>
+                <a href="/IsabellaAtacadista/public/perfil_admin" class="btn-logout">Perfil Admin</a>
             </div>
         </header>
 
         <main class="admin-main">
             <div class="toolbar">
                 <a href="/IsabellaAtacadista/public/index.php?url=adicionar_produto" class="btn-novo-produto">Adicionar Novo Produto</a>
+                <a href="/IsabellaAtacadista/public/index.php?url=admin_avaliacoes" class="btn-avaliacoes">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    Gerenciar Avaliações
+                </a>
             </div>
             
             <div class="produtos-grid">

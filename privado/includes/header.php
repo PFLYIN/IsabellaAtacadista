@@ -1,3 +1,12 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$usuario_foto = $_SESSION['usuario_foto'] ?? '';
+$usuario_nome = $_SESSION['usuario_nome'] ?? '';
+$usuario_logado = $_SESSION['usuario_logado'] ?? false;
+$primeiro_nome = $usuario_nome ? explode(' ', trim($usuario_nome))[0] : '';
+?>
 <body>
 <!--DESKTOP-->
 <header class="header-desktop">
@@ -5,8 +14,29 @@
         <a href="/IsabellaAtacadista/public/home"><img src="/IsabellaAtacadista/public/imagens/Isabella/logo-isabella.png" alt="Isabella Atacadista"></a>
     </div>
     <div class="header-buttons">
-        <a href="/IsabellaAtacadista/public/perfil" class="btn-icon"><img src="/IsabellaAtacadista/public/imagens/Flaticon-Icons/Perfil-Icons.gif" alt="btn-perfil"></a>
-        <a href="/IsabellaAtacadista/public/carrinho" class="btn-icon"><img src="/IsabellaAtacadista/public/imagens/Flaticon-Icons/carrinho-icon.gif" alt="btn-carrinho"></a>
+        <!-- Botão Perfil com Foto -->
+        <a href="/IsabellaAtacadista/public/perfil" class="btn-perfil" title="<?= $usuario_logado ? 'Meu Perfil' : 'Entrar' ?>">
+            <?php if ($usuario_logado && $usuario_foto): ?>
+                <img src="<?= htmlspecialchars($usuario_foto) ?>" alt="Perfil" class="perfil-foto">
+            <?php elseif ($usuario_logado && $primeiro_nome): ?>
+                <div class="perfil-placeholder"><?= strtoupper(substr($primeiro_nome, 0, 1)) ?></div>
+            <?php else: ?>
+                <svg class="perfil-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                    <path d="M4 20C4 16.6863 6.68629 14 10 14H14C17.3137 14 20 16.6863 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            <?php endif; ?>
+        </a>
+        
+        <!-- Botão Carrinho com Contador -->
+        <a href="/IsabellaAtacadista/public/carrinho" class="btn-carrinho" title="Meu Carrinho">
+            <svg class="carrinho-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3H5L5.4 5M5.4 5H19L17 13H7L5.4 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="9" cy="19" r="1.5" fill="currentColor"/>
+                <circle cx="16" cy="19" r="1.5" fill="currentColor"/>
+            </svg>
+            <span class="carrinho-contador" id="carrinho-contador">0</span>
+        </a>
     </div>
 </header>
 
@@ -66,6 +96,107 @@ body {
     top: 20px;
     display: flex;
     gap: 15px;
+    align-items: center;
+}
+
+/* Botão Perfil Moderno */
+.btn-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(212, 82, 110, 0.1), rgba(166, 0, 79, 0.1));
+    border: 2px solid rgba(212, 82, 110, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-perfil:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 82, 110, 0.3);
+    border-color: rgb(212, 82, 110);
+}
+
+.perfil-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.perfil-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgb(212, 82, 110), rgb(166, 0, 79));
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.perfil-icon {
+    width: 24px;
+    height: 24px;
+    color: rgb(122, 0, 67);
+}
+
+/* Botão Carrinho Moderno */
+.btn-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(212, 82, 110, 0.1), rgba(166, 0, 79, 0.1));
+    border: 2px solid rgba(212, 82, 110, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-carrinho:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 82, 110, 0.3);
+    border-color: rgb(212, 82, 110);
+}
+
+.carrinho-icon {
+    width: 24px;
+    height: 24px;
+    color: rgb(122, 0, 67);
+}
+
+.carrinho-contador {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: rgb(122, 0, 67);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.carrinho-contador.vazio {
+    display: none;
+}
+
+.btn-carrinho:hover .carrinho-contador {
+    transform: scale(1.15);
 }
 
 .btn-icon {
@@ -285,6 +416,7 @@ body {
   width: 100%;
   z-index: 1000;
   background: transparent;
+  position: relative;
 }
 .mobile-logo {
   text-align: center;
@@ -294,6 +426,54 @@ body {
 .mobile-logo img {
   max-width: 180px;
   height: auto;
+}
+
+/* Botões Mobile no Header */
+.mobile-header-buttons {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-perfil-mobile,
+.btn-carrinho-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(212, 82, 110, 0.1), rgba(166, 0, 79, 0.1));
+  border: 2px solid rgba(212, 82, 110, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-perfil-mobile:active,
+.btn-carrinho-mobile:active {
+  transform: scale(0.95);
+  background: rgba(212, 82, 110, 0.2);
+}
+
+.btn-carrinho-mobile .carrinho-contador {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: rgb(122, 0, 67);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Novo container só para o hamburguer */
@@ -336,6 +516,32 @@ body {
     <div class="mobile-logo">
         <img src="/IsabellaAtacadista/public/imagens/Isabella/logo-isabella.png">
     </div>
+    <!-- Botões Mobile -->
+    <div class="mobile-header-buttons">
+        <!-- Botão Perfil Mobile -->
+        <a href="/IsabellaAtacadista/public/perfil" class="btn-perfil-mobile" title="<?= $usuario_logado ? 'Meu Perfil' : 'Entrar' ?>">
+            <?php if ($usuario_logado && $usuario_foto): ?>
+                <img src="<?= htmlspecialchars($usuario_foto) ?>" alt="Perfil" class="perfil-foto">
+            <?php elseif ($usuario_logado && $primeiro_nome): ?>
+                <div class="perfil-placeholder"><?= strtoupper(substr($primeiro_nome, 0, 1)) ?></div>
+            <?php else: ?>
+                <svg class="perfil-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                    <path d="M4 20C4 16.6863 6.68629 14 10 14H14C17.3137 14 20 16.6863 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            <?php endif; ?>
+        </a>
+        
+        <!-- Botão Carrinho Mobile -->
+        <a href="/IsabellaAtacadista/public/carrinho" class="btn-carrinho-mobile" title="Meu Carrinho">
+            <svg class="carrinho-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3H5L5.4 5M5.4 5H19L17 13H7L5.4 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="9" cy="19" r="1.5" fill="currentColor"/>
+                <circle cx="16" cy="19" r="1.5" fill="currentColor"/>
+            </svg>
+            <span class="carrinho-contador" id="carrinho-contador-mobile">0</span>
+        </a>
+    </div>
 </div>
 
 <div class="mobile-hamburguer-container">
@@ -366,5 +572,46 @@ body {
     hamburguer.classList.toggle('active');
     navMenu.classList.toggle('active');
   });
+
+  // Atualiza contador do carrinho
+  function atualizarContadorCarrinho() {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const totalItens = carrinho.reduce((total, item) => total + (parseInt(item.quantidade) || 0), 0);
+    
+    // Desktop
+    const contadorElement = document.getElementById('carrinho-contador');
+    if (contadorElement) {
+      contadorElement.textContent = totalItens;
+      if (totalItens === 0) {
+        contadorElement.classList.add('vazio');
+      } else {
+        contadorElement.classList.remove('vazio');
+      }
+    }
+    
+    // Mobile
+    const contadorMobileElement = document.getElementById('carrinho-contador-mobile');
+    if (contadorMobileElement) {
+      contadorMobileElement.textContent = totalItens;
+      if (totalItens === 0) {
+        contadorMobileElement.classList.add('vazio');
+      } else {
+        contadorMobileElement.classList.remove('vazio');
+      }
+    }
+  }
+
+  // Atualiza ao carregar a página
+  document.addEventListener('DOMContentLoaded', atualizarContadorCarrinho);
+
+  // Atualiza quando o localStorage mudar (em outras abas)
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'carrinho') {
+      atualizarContadorCarrinho();
+    }
+  });
+
+  // Verifica periodicamente (caso o carrinho.js adicione itens)
+  setInterval(atualizarContadorCarrinho, 1000);
 </script>
 </body>
